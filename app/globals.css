@@ -3,12 +3,36 @@
 @tailwind utilities;
 
 :root {
+  --primary-black: #0f0f0f;
+  --secondary-black: #383838;
+  --primary-white: #f8f8f8;
+  --primary-blue: #3183fd;
+}
+
+:root:has(.prevent-scroll) {
+  overflow: hidden;
+  scrollbar-gutter: stable;
+}
+
+body {
+  background-color: rgb(var(--primary-white));
+  color: rgb(var(--secondary-black));
+  padding: 0 1rem;
+}
+
+@layer components {
+  .center {
+    @apply flex items-center justify-center;
+  }
+}
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -16,18 +40,8 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */

@@ -77,7 +77,7 @@ export default function Form() {
           />
         </div>
       </form>
-      <br />
+
       <button className="ms-96 mr-12 mb-14 w-28 h-10 pb-2 pt-2 border-none bg-indigo-600 rounded-lg text-center text-white text-sm">
         Next
       </button>

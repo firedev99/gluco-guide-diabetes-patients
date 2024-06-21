@@ -14,8 +14,8 @@ export default function Form() {
         <input
           type="image"
           src=""
-          alt=""
-          className="mt-5 w-full h-28 border-2 border-sky-300 border-dashed rounded-xl"
+          alt="drag and drop your picture"
+          className="text-xs text-center pt-12 text-slate-500 mt-5 w-full h-28 border-2 border-sky-300 border-dashed rounded-xl"
         />
 
         <div className="pt-6 grid grid-cols-2 gap-2">

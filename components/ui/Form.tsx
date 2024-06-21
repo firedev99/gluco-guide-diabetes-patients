@@ -20,58 +20,58 @@ export default function Form() {
 
         <div className="pt-6 grid grid-cols-2 gap-2">
           <input
-            className="p-4 text-sm w-auto h-10 border-2 border-sky-500 border-solid rounded-xl"
+            className="p-4 text-sm w-auto h-10 border-2 hover:border-sky-500 border-slate-400 border-solid rounded-xl"
             type="text"
             placeholder="First Name"
           />
           <input
-            className="p-4 text-sm w-auto h-10 border-2 border-sky-500 border-solid rounded-xl"
+            className="p-4 text-sm w-auto h-10 border-2 hover:border-sky-500 border-slate-400 border-solid rounded-xl"
             type="text"
             placeholder="Last Name"
           />
         </div>
         <div className="pt-3 grid grid-cols-3 gap-2">
           <input
-            className="p-4 text-sm w-auto h-10 border-2 border-sky-500 border-solid rounded-xl"
+            className="p-4 text-sm w-auto h-10 border-2 hover:border-sky-500 border-slate-400 border-solid rounded-xl"
             type="text"
             placeholder="Age"
           />
           <input
-            className="p-4 text-sm w-auto h-10 border-2 border-sky-500 border-solid rounded-xl"
+            className="p-4 text-sm w-auto h-10 border-2 hover:border-sky-500 border-slate-400 border-solid rounded-xl"
             type="text"
             placeholder="Gender"
           />
           <input
-            className="p-4 text-sm w-auto h-10 border-2 border-sky-500 border-solid rounded-xl"
+            className="p-4 text-sm w-auto h-10 border-2 hover:border-sky-500 border-slate-400 border-solid rounded-xl"
             type="text"
             placeholder="Profession"
           />
         </div>
         <div className="pt-3 grid grid-cols-2 gap-2">
           <input
-            className="p-4 text-sm w-auto h-10 border-2 border-sky-500 border-solid rounded-xl"
+            className="p-4 text-sm w-auto h-10 border-2 hover:border-sky-500 border-slate-400 border-solid rounded-xl"
             type="text"
             placeholder="Contact Number"
           />
           <input
-            className="p-4 text-sm w-auto h-10 border-2 border-sky-500 border-solid rounded-xl"
+            className="p-4 text-sm w-auto h-10 border-2 hover:border-sky-500 border-slate-400 border-solid rounded-xl"
             type="text"
             placeholder="E-mail Address"
           />
         </div>
         <div className="pt-3 grid grid-cols-3 gap-2">
           <input
-            className="p-4 text-sm w-auto h-10 border-2 border-sky-500 border-solid rounded-xl"
+            className="p-4 text-sm w-auto h-10 border-2 hover:border-sky-500 border-slate-400 border-solid rounded-xl"
             type="text"
             placeholder="Blood Group"
           />
           <input
-            className="p-4 text-sm w-auto h-10 border-2 border-sky-500 border-solid rounded-xl"
+            className="p-4 text-sm w-auto h-10 border-2 hover:border-sky-500 border-slate-400 border-solid rounded-xl"
             type="text"
             placeholder="Weight"
           />
           <input
-            className="p-4 text-sm w-auto h-10 border-2 border-sky-500 border-solid rounded-xl"
+            className="p-4 text-sm w-auto h-10 border-2 hover:border-sky-500 border-slate-400 border-solid rounded-xl"
             type="text"
             placeholder="Height"
           />

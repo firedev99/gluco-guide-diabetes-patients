@@ -8,9 +8,11 @@ export default function PatientLayout({
   children: React.ReactNode
 }) {
   return (
-    <div>
+    <>
       <Navigation />
-      {children}
-    </div>
+      <div className="ml-auto md:w-[calc(100%-72px)] xl:w-[calc(100%-240px)] min-h-[calc(100vh-64px)] flex items-center justify-center">
+        {children}
+      </div>
+    </>
   )
 }

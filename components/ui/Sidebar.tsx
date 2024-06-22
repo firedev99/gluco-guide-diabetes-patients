@@ -1,91 +1,71 @@
 "use client"
 
-import { forwardRef } from "react"
-import { motion } from "framer-motion"
-import { fadingAnimation, slideInAnimation } from "@/lib/animations"
-import { userContent as content } from "@/lib/dummy/routes"
-import { Icon } from "@/components"
 import Link from "next/link"
+import Icon from "../icons"
+import { routeLinks as content } from "@/lib/dummy/routes"
 import { usePathname } from "next/navigation"
 
-const Sidebar = forwardRef<HTMLDivElement>((_, ref) => {
-  const pathname = usePathname()
+export default function Sidebar() {
+  let pathname = usePathname()
 
   return (
-    <>
-      <motion.aside
-        variants={slideInAnimation}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        ref={ref}
-        className="py-6 max-h-screen overflow-y-auto flex flex-col prevent-scroll px-4 bg-[--primary-white] fixed z-50 top-0 left-0 min-h-full w-60"
-      >
-        {/* logo */}
-        <div className="center gap-2">
-          <Icon className="w-8 h-8 -ml-4" name="gluco-guide" />
-          <h3 className="font-bold text-[#0067FF]">GlucoGuide</h3>
-        </div>
+    <aside className="hidden fixed z-50 min-h-full h-full w-[72px] xl:w-60 top-0 left-0 xl:pt-6 md:flex flex-col">
+      {/* logo */}
+      <div className="hidden xl:flex justify-center items-center gap-2 mb-4">
+        <Icon className="w-8 h-8 -ml-4" name="gluco-guide" />
+        <h3 className="font-bold text-[#0067FF]">GlucoGuide</h3>
+      </div>
 
+      <div className="h-full w-full flex items-center xl:items-stretch flex-col py-4 xl:px-4 xl:pb-3 xl:justify-between overflow-y-auto justify-center [@media(max-height:600px)]:justify-start no-scrollbar xl:show-scrollbar xl:custom-scroll">
         {/* overview routes */}
         <div className="flex flex-col gap-3">
-          <span className="text-xs text-opacity-70 ml-2 mt-8 font-medium">
+          <span className="hidden xl:block text-xs text-opacity-70 ml-2 font-medium">
             Overview
           </span>
           {content.slice(0, 7).map(({ name, icon, dest }, idx) => (
             <Link
               href={dest ?? "#"}
-              className={`group flex transition duration-200 items-center py-2 px-2 gap-2 rounded-md hover:bg-[--primary-blue] hover:text-[--primary-white] ${
-                pathname === dest &&
-                `bg-[--primary-blue] text-[--primary-white]`
+              className={`rounded-xl xl:rounded-md transition duration-200 relative xl:flex xl:items-center ${
+                pathname === dest
+                  ? `text-[--primary-white] before:absolute before:content-[''] before:w-[5px] before:h-5/6 before:bg-[--primary-blue] bg-neutral-200 xl:bg-[--primary-blue] before:top-[5px] before:left-[-12px] before:rounded-r-xl xl:before:hidden`
+                  : `hover:bg-neutral-200`
               }`}
               key={`sidebar_upper_link_${idx}`}
             >
-              <div>
+              <div className="w-12 h-12 flex items-center justify-center">
                 <Icon
                   name={icon}
-                  pathClassName={`group-hover:stroke-[--primary-white] transition duration-200 ${
-                    pathname === dest && `stroke-[--primary-white]`
+                  pathClassName={`transition duration-200 ${
+                    pathname === dest && `xl:stroke-[--primary-white]`
                   }`}
                 />
               </div>
-              <span className="text-sm font-bold">{name}</span>
+              <span className="hidden xl:block text-sm font-bold">{name}</span>
             </Link>
           ))}
         </div>
 
         {/* support routes */}
-        <div className="flex flex-col gap-3 mt-auto pt-6">
-          <span className="text-xs text-opacity-70 ml-2  font-medium">
+        <div className="flex flex-col gap-3 mt-3 xl:mt-6">
+          <span className="hidden xl:block text-xs text-opacity-70 ml-2  font-medium">
             Support
           </span>
           {content.slice(7, content.length).map(({ name, icon }, idx) => (
-            <button key={`sidebar_bottom_link_${idx}`}>
-              <div
-                className={`flex items-center py-2 px-2 gap-2 rounded-md ${
-                  idx === 2 && `mt-8`
-                }`}
-              >
-                <div>
-                  <Icon name={icon} />
-                </div>
-                <span className="text-sm font-bold">{name}</span>
+            <button
+              className={`flex items-center transition duration-200 gap-2 rounded-md hover:bg-neutral-200 ${
+                idx === 2 &&
+                `xl:mt-8 xl:mb-4 [@media(max-height:800px)]:xl:mb-2`
+              }`}
+              key={`sidebar_bottom_link_${idx}`}
+            >
+              <div className="rounded-xl w-12 h-12 flex items-center justify-center">
+                <Icon name={icon} />
               </div>
+              <span className="hidden  xl:block text-sm font-bold">{name}</span>
             </button>
           ))}
         </div>
-      </motion.aside>
-      <motion.div
-        className="min-h-full min-w-full bg-black/35 backdrop-blur contrast-75 fixed z-40 top-0 right-0 bottom-0 left-0"
-        variants={fadingAnimation}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-      />
-    </>
+      </div>
+    </aside>
   )
-})
-
-Sidebar.displayName = `ForwardedSidebar`
-
-export default Sidebar
+}

@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --primary-black: #0f0f0f;
-  --secondary-black: #383838;
-  --primary-white: #f8f8f8;
-  --primary-blue: #3183fd;
+  --primary-black: rgb(15, 15, 15);
+  --secondary-black: rgb(56, 56, 56);
+  --primary-white: rgb(248, 248, 248);
+  --primary-blue: rgb(49, 131, 253);
 }
 
 :root:has(.prevent-scroll) {
   overflow: hidden;
-  scrollbar-gutter: stable;
+  /* scrollbar-gutter: stable; */
 }
 
 body {
-  background-color: rgb(var(--primary-white));
+  background: rgb(var(--primary-white));
   color: rgb(var(--secondary-black));
   padding: 0 1rem;
 }
@@ -23,6 +23,22 @@ body {
 @layer components {
   .center {
     @apply flex items-center justify-center;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  .show-scrollbar::-webkit-scrollbar {
+    @apply block;
+  }
+
+  .custom-scroll::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  .custom-scroll:hover::-webkit-scrollbar-thumb {
+    @apply rounded-sm bg-zinc-300;
   }
 }
 

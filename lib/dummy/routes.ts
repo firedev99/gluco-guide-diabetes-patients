@@ -6,7 +6,7 @@ type Props = {
   dest?: string
 }
 
-export const userContent: Props[] = [
+export const routeLinks: Props[] = [
   {
     name: "Dashboard",
     icon: "home",

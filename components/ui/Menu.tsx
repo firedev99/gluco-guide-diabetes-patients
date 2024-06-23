@@ -1,15 +1,21 @@
 "use client"
 
-import { forwardRef } from "react"
+import { useRef } from "react"
 import { motion } from "framer-motion"
 import { fadingAnimation, slideInAnimation } from "@/lib/animations"
 import { routeLinks as content } from "@/lib/dummy/routes"
 import { Icon } from "@/components"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { useClickOutside } from "@/hooks/useClickOutside"
+import { useAppContext } from "@/hooks/useAppContext"
 
-const Menu = forwardRef<HTMLDivElement>((_, ref) => {
+export default function Menu() {
+  const containerRef = useRef<HTMLDivElement | null>(null)
   const pathname = usePathname()
+  const { closeMenu } = useAppContext()
+
+  useClickOutside(containerRef, () => closeMenu())
 
   return (
     <>
@@ -19,7 +25,7 @@ const Menu = forwardRef<HTMLDivElement>((_, ref) => {
         initial="initial"
         animate="animate"
         exit="exit"
-        ref={ref}
+        ref={containerRef}
         className="bg-[--primary-white] fixed z-50 min-h-full h-full w-60 top-0 left-0 pt-6 flex flex-col prevent-scroll md:hidden"
       >
         {/* logo */}
@@ -48,7 +54,9 @@ const Menu = forwardRef<HTMLDivElement>((_, ref) => {
                   <Icon
                     name={icon}
                     pathClassName={`transition duration-200 ${
-                      pathname === dest && `stroke-[--primary-white]`
+                      pathname === dest
+                        ? `stroke-[--primary-white]`
+                        : `opacity-90`
                     }`}
                   />
                 </div>
@@ -70,7 +78,7 @@ const Menu = forwardRef<HTMLDivElement>((_, ref) => {
                   }`}
                 >
                   <div>
-                    <Icon name={icon} />
+                    <Icon pathClassName="opacity-90" name={icon} />
                   </div>
                   <span className="text-sm font-bold">{name}</span>
                 </div>
@@ -90,8 +98,4 @@ const Menu = forwardRef<HTMLDivElement>((_, ref) => {
       />
     </>
   )
-})
-
-Menu.displayName = `ForwardedSidebar`
-
-export default Menu
+}

@@ -17,7 +17,7 @@ export default function Header() {
       />
 
       {/* header controls */}
-      <div className="center gap-x-3 hover:cursor-pointer md:w-full md:justify-end">
+      <div className="center gap-x-3 md:w-full md:justify-end">
         {/* search control */}
         <div className="w-9 h-9 center rounded-full hover:cursor-pointer">
           <Icon name="search" className="h-7 w-7 opacity-95" />

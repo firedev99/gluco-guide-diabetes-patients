@@ -4,14 +4,21 @@ import {
   CalenderIcon,
   ChartGraphIcon,
   ChartPieIcon,
+  FireIcon,
   GlucoGuideLogo,
   HeartIcon,
+  HeartOrganIcon,
   HomeIcon,
+  HumanIcon,
   LogoutIcon,
+  RightArrowIcon,
+  RotatedArrowIcon,
   SearchIcon,
   SettingsIcon,
   ThreePeopleIcon,
   TwoPeopleIcon,
+  UpArrowIcon,
+  WeightMachineIcon,
   WrittenPageIcon,
 } from "./svg"
 
@@ -75,6 +82,38 @@ export default function Icon({ name, className, pathClassName }: Props) {
 
     case "gluco-guide":
       return <GlucoGuideLogo className={className} />
+
+    case "rotated-arrow":
+      return (
+        <RotatedArrowIcon className={className} pathClassName={pathClassName} />
+      )
+
+    case "fire":
+      return <FireIcon className={className} pathClassName={pathClassName} />
+
+    case "human":
+      return <HumanIcon className={className} pathClassName={pathClassName} />
+
+    case "heart-organ":
+      return (
+        <HeartOrganIcon className={className} pathClassName={pathClassName} />
+      )
+
+    case "up-arrow":
+      return <UpArrowIcon className={className} pathClassName={pathClassName} />
+
+    case "right-arrow":
+      return (
+        <RightArrowIcon className={className} pathClassName={pathClassName} />
+      )
+
+    case "weight-machine":
+      return (
+        <WeightMachineIcon
+          className={className}
+          pathClassName={pathClassName}
+        />
+      )
 
     default:
       return <div />

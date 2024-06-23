@@ -7,6 +7,7 @@
   --secondary-black: rgb(56, 56, 56);
   --primary-white: rgb(248, 248, 248);
   --primary-blue: rgb(49, 131, 253);
+  --primary-red: rgb(228, 61, 61);
 }
 
 :root:has(.prevent-scroll) {
@@ -15,8 +16,8 @@
 }
 
 body {
-  background: rgb(var(--primary-white));
-  color: rgb(var(--secondary-black));
+  background: #f8f8f8;
+  color: #383838;
   padding: 0 1rem;
 }
 
@@ -39,6 +40,14 @@ body {
 
   .custom-scroll:hover::-webkit-scrollbar-thumb {
     @apply rounded-sm bg-zinc-300;
+  }
+
+  .custom-border {
+    background: linear-gradient(135deg, #f8f8f8, #d0d0d0) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
   }
 }
 

@@ -8,6 +8,7 @@
   --primary-white: rgb(248, 248, 248);
   --primary-blue: rgb(49, 131, 253);
   --primary-red: rgb(228, 61, 61);
+  --primary-green: rgb(182, 216, 127);
 }
 
 :root:has(.prevent-scroll) {
@@ -42,13 +43,46 @@ body {
     @apply rounded-sm bg-zinc-300;
   }
 
-  .custom-border {
-    background: linear-gradient(135deg, #f8f8f8, #d0d0d0) border-box;
+  .blue-scroll::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  .blue-scroll::-webkit-scrollbar-thumb {
+    @apply rounded-sm bg-[--primary-blue];
+  }
+
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 28px;
+    border: 2px solid transparent;
+    background: linear-gradient(
+        120deg,
+        rgba(219, 255, 240, 0.584),
+        #9999992f 100%
+      )
+      border-box;
     -webkit-mask: linear-gradient(#fff 0 0) padding-box,
       linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
     mask-composite: exclude;
   }
+}
+
+.gradient-border-black::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 28px;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, rgba(108, 113, 111, 0.584), #9999992f 100%)
+    border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
 }
 
 /* :root {

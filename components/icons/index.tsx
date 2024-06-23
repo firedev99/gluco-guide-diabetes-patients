@@ -2,19 +2,26 @@ import { IconNames } from "@/types"
 import {
   BellIcon,
   CalenderIcon,
+  CapsulePillIcon,
   ChartGraphIcon,
   ChartPieIcon,
   FireIcon,
   GlucoGuideLogo,
   HeartIcon,
   HeartOrganIcon,
+  HeartWithPulseIcon,
   HomeIcon,
+  HumanCyclingIcon,
   HumanIcon,
+  HumanJogginIcon,
+  HumanYogaIcon,
   LogoutIcon,
   RightArrowIcon,
   RotatedArrowIcon,
   SearchIcon,
   SettingsIcon,
+  SoupBowlIcon,
+  TabletPillIcon,
   ThreePeopleIcon,
   TwoPeopleIcon,
   UpArrowIcon,
@@ -105,6 +112,44 @@ export default function Icon({ name, className, pathClassName }: Props) {
     case "right-arrow":
       return (
         <RightArrowIcon className={className} pathClassName={pathClassName} />
+      )
+
+    case "capsule-pill":
+      return (
+        <CapsulePillIcon className={className} pathClassName={pathClassName} />
+      )
+
+    case "tablet-pill":
+      return (
+        <TabletPillIcon className={className} pathClassName={pathClassName} />
+      )
+
+    case "human-jogging":
+      return (
+        <HumanJogginIcon className={className} pathClassName={pathClassName} />
+      )
+
+    case "human-cycling":
+      return (
+        <HumanCyclingIcon className={className} pathClassName={pathClassName} />
+      )
+
+    case "soup-bowl":
+      return (
+        <SoupBowlIcon className={className} pathClassName={pathClassName} />
+      )
+
+    case "human-yoga":
+      return (
+        <HumanYogaIcon className={className} pathClassName={pathClassName} />
+      )
+
+    case "heart-w-pulse":
+      return (
+        <HeartWithPulseIcon
+          className={className}
+          pathClassName={pathClassName}
+        />
       )
 
     case "weight-machine":

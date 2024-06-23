@@ -24,3 +24,5 @@ export type IconNames =
   | "soup-bowl"
   | "capsule-pill"
   | "tablet-pill"
+  | "human-yoga"
+  | "heart-w-pulse"

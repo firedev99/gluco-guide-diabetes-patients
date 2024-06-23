@@ -17,7 +17,9 @@ export default function HealthInformations() {
             <Icon name="rotated-arrow" className="w-8 h-8" />
           </div>
         </div>
-        <h3 className="text-center py-4 text-2xl font-bold">37°C</h3>
+        <h3 className="text-center py-4 text-2xl font-bold text-[--primary-red]">
+          37°C
+        </h3>
       </div>
 
       {/* blood glucose */}

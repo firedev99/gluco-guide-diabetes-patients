@@ -1,101 +1,13 @@
-import { IconNames } from "@/types"
 import Icon from "../icons"
-
-const days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-] as string[]
-
-const dates = [
-  "16-06-2024",
-  "17-06-2024",
-  "18-06-2024",
-  "19-06-2024",
-  "20-06-2024",
-  "21-06-2024",
-  "22-06-2024",
-] as string[]
-
-const upcomingAppointments = [
-  {
-    name: "Consultation",
-    time: "1:00PM-8:00PM",
-    location: "Banani 27, Prime Diabetics Diagnosis Center",
-  },
-  {
-    name: "Diagnosis Test",
-    time: "11:00AM-6:00PM",
-    location: "Banani 27, Prime Diabetics Diagnosis Center",
-  },
-] as { name: string; time: string; location: string }[]
-
-const medications = [
-  {
-    type: "exercise",
-    logo: "human-jogging",
-    name: "Exercise",
-    time: "8:00AM-9:00AM",
-    info: "Jogging for 45mins",
-  },
-  {
-    type: "medicine",
-    name: "Metaformin",
-    time: "9:00AM-10:00AM",
-    info: "Medication",
-    recommended: {
-      type: "pill",
-      amount: 1,
-      logo: "tablet-pill",
-    },
-  },
-  {
-    type: "recommendation",
-    time: "9:30AM-11:00AM",
-    logo: "soup-bowl",
-    info: "Recommended Breakfast",
-    recommended: {
-      type: "goal",
-      amount: 400,
-    },
-  },
-  {
-    type: "exercise",
-    logo: "human-cycling",
-    name: "Exercise",
-    time: "6:30PM-7:30AM",
-    info: "Cycling for 60mins",
-  },
-  {
-    type: "medicine",
-    name: "Metaformin",
-    time: "9:00AM-10:00AM",
-    info: "Medication",
-    recommended: {
-      type: "pill",
-      amount: 1,
-      logo: "capsule-pill",
-    },
-  },
-] as {
-  type: string
-  logo?: IconNames
-  name?: string
-  time: string
-  info: string
-  recommended?: { type: string; amount: number; logo?: IconNames }
-}[]
+import { dates, days, upcomingAppointments } from "@/lib/dummy/appointments"
+import { recommendations } from "@/lib/dummy/recommendations"
 
 export default function Recommendations() {
   return (
     // bg-gradient-to-l from-purple-500 to-red-300
     <div className="bg-[#F0F0F0] rounded-xl col-span-2 lg:order-3 lg:col-span-1 lg:row-span-3 py-4">
       {/* upcoming appointments */}
-      <div className="flex flex-col w-full h-full">
+      <div className="flex flex-col">
         {/* upcoming appointment headers */}
         <div className="flex items-center justify-between border-b-2  px-4 pb-3">
           <div className="flex items-center">
@@ -134,6 +46,7 @@ export default function Recommendations() {
             </div>
           ))}
         </div>
+
         {/* upcoming appointment details */}
         <div className="px-4 flex flex-col gap-4 mt-8">
           {upcomingAppointments.map(({ name, time, location }, idx) => (
@@ -141,7 +54,7 @@ export default function Recommendations() {
               key={`appointment_dets_${idx}`}
               className="flex items-center justify-between"
             >
-              <div className="flex items-center relative w-1/2 after:absolute after:contents[''] after:w-[3px] after:rounded-sm after:h-9 after:bg-neutral-300 after:right-0 after:-mr-5">
+              <div className="flex items-center relative w-1/2 after:absolute after:contents[''] after:w-[3px] after:rounded-sm after:h-9 after:bg-neutral-300 after:right-0 after:-mr-7">
                 <div
                   className={`w-5 h-5 min-w-5 rounded-full relative bg-transparent border-2 mr-3 ${
                     idx === 0 ? `border-[#FF881A]` : `border-[#355A38]`
@@ -157,12 +70,84 @@ export default function Recommendations() {
                   </span>
                 </div>
               </div>
-              <div className="text-center w-1/2 font-bold opacity-80 text-sm 2xl:text-base">
+              <div className="text-center w-1/3 font-bold opacity-80 text-sm 2xl:text-base">
                 {name}
               </div>
             </div>
           ))}
         </div>
+      </div>
+
+      {/* recommendations for today */}
+      <div className="px-4 flex flex-col mt-8 overflow-y-auto max-h-[486px] blue-scroll">
+        <h3 className="opacity-90 font-bold">Today</h3>
+        <div>
+          {recommendations.map(
+            ({ name, time, info, logo, recommended, type }, idx) => (
+              <div
+                key={`daily_recommendations_${idx}`}
+                className="flex items-center justify-between min-h-16"
+              >
+                <div className="flex items-center relative w-1/2 after:absolute after:contents[''] after:w-[3px] after:rounded-sm after:h-10 after:bg-neutral-300 after:right-0 after:-mr-8">
+                  <div
+                    className={`h-6 min-w-6 rounded-full center mr-3 relative before:absolute before:contents[''] before:w-1 before:h-10 before:bg-gradient-to-b before:border-dotted before:border-r-2 before:opacity-50 before:top-full before:left-1/2 before:-ml-0.5 ${
+                      logo
+                        ? `bg-white before:border-[#FF881A]`
+                        : `bg-transparent border-2`
+                    } ${
+                      idx === recommendations.length - 1 && `before:hidden`
+                    } ${
+                      type === "medicine" &&
+                      `border-[--primary-blue] before:border-[--primary-blue]`
+                    } ${
+                      type === "exercise"
+                        ? name === "Yoga"
+                          ? `before:border-[#881337]`
+                          : `before:border-[#CB4AF8]`
+                        : ``
+                    }`}
+                  >
+                    {logo && <Icon name={logo} />}
+                  </div>
+
+                  <div className="flex flex-col">
+                    <span className="text-sm font-bold">{time}</span>
+                    <span className="text-xs min-w-36 line-clamp-1 font-bold opacity-80 ">
+                      {info}
+                    </span>
+                  </div>
+                </div>
+                <div
+                  className={`text-center w-1/3 font-bold opacity-80 text-sm 2xl:text-base `}
+                >
+                  <span
+                    className={`${type === "medicine" && `text-[#001459]`}`}
+                  >
+                    {type === "recommendation"
+                      ? `${recommended?.amount || 0}kcal`
+                      : name}
+                  </span>
+                  {recommended && recommended.logo && (
+                    <div className="flex items-center justify-center -ml-1">
+                      <Icon
+                        name={recommended.logo}
+                        className={`${type === "medicine" && `mr-1`}`}
+                        pathClassName="stroke-[1.5px]"
+                      />
+                      <span className="text-sm">
+                        {type === "medicine" && recommended.amount}{" "}
+                        {recommended.type}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )
+          )}
+        </div>
+      </div>
+      <div className="text-right mt-1 mr-5 font-bold opacity-70 hover:underline hover:cursor-pointer">
+        see all
       </div>
     </div>
   )

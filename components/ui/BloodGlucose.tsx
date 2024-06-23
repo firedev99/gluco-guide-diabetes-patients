@@ -36,7 +36,7 @@ export default function BloodGlucose() {
       <div className="flex flex-col px-4">
         <div className="flex justify-between">
           <h4 className="text-xl font-bold">Blood Glucose</h4>
-          <div className="w-10 h-10 bg-neutral-200 rounded-full -mt-4 -mr-4 center transition duration-300 hover:cursor-pointer  animate-bounce hover:animate-none hover:bg-neutral-300">
+          <div className="w-10 h-10 bg-neutral-200 rounded-full -mt-4 -mr-4 center transition duration-300 hover:cursor-pointer hover:bg-neutral-300">
             <Icon name="rotated-arrow" className="w-8 h-8" />
           </div>
         </div>
@@ -56,7 +56,6 @@ export default function BloodGlucose() {
             <XAxis dataKey="name" tick={{ dy: 16 }} />
             <YAxis domain={[0, 200]} tick={{ dx: -8 }} />
             <Tooltip />
-            {/* <Legend /> */}
             <Area
               type="monotone"
               dataKey="glucose"

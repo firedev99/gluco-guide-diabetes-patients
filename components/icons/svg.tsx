@@ -2,6 +2,7 @@ type Props = {
   className?: string
   pathClassName?: string
 }
+
 export function SearchIcon({ className, pathClassName }: Props) {
   return (
     <svg
@@ -204,7 +205,7 @@ export function ThreePeopleIcon({ className, pathClassName }: Props) {
   )
 }
 
-export function CalenderIcon({ className, pathClassName }: Props) {
+export function CalendarIcon({ className, pathClassName }: Props) {
   return (
     <svg
       width="24"
@@ -604,8 +605,8 @@ export function FireIcon({ className, pathClassName }: Props) {
           y2="20.9991"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF8383" />
-          <stop offset="1" stop-color="#994F4F" />
+          <stop stopColor="#FF8383" />
+          <stop offset="1" stopColor="#994F4F" />
         </linearGradient>
       </defs>
     </svg>
@@ -766,8 +767,8 @@ export function HeartOrganIcon({ className, pathClassName }: Props) {
           y2="19.1839"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF9494" />
-          <stop offset="1" stop-color="#B77C7C" />
+          <stop stopColor="#FF9494" />
+          <stop offset="1" stopColor="#B77C7C" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_2829_318"
@@ -777,8 +778,8 @@ export function HeartOrganIcon({ className, pathClassName }: Props) {
           y2="3.61106"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF9494" />
-          <stop offset="1" stop-color="#B77C7C" />
+          <stop stopColor="#FF9494" />
+          <stop offset="1" stopColor="#B77C7C" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_2829_318"
@@ -788,8 +789,8 @@ export function HeartOrganIcon({ className, pathClassName }: Props) {
           y2="3.36349"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF9494" />
-          <stop offset="1" stop-color="#B77C7C" />
+          <stop stopColor="#FF9494" />
+          <stop offset="1" stopColor="#B77C7C" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_2829_318"
@@ -799,8 +800,8 @@ export function HeartOrganIcon({ className, pathClassName }: Props) {
           y2="10.2795"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF9494" />
-          <stop offset="1" stop-color="#B77C7C" />
+          <stop stopColor="#FF9494" />
+          <stop offset="1" stopColor="#B77C7C" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_2829_318"
@@ -810,8 +811,8 @@ export function HeartOrganIcon({ className, pathClassName }: Props) {
           y2="9.99991"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF9494" />
-          <stop offset="1" stop-color="#B77C7C" />
+          <stop stopColor="#FF9494" />
+          <stop offset="1" stopColor="#B77C7C" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_2829_318"
@@ -821,8 +822,8 @@ export function HeartOrganIcon({ className, pathClassName }: Props) {
           y2="6.00693"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF9494" />
-          <stop offset="1" stop-color="#B77C7C" />
+          <stop stopColor="#FF9494" />
+          <stop offset="1" stopColor="#B77C7C" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_2829_318"
@@ -832,8 +833,8 @@ export function HeartOrganIcon({ className, pathClassName }: Props) {
           y2="10.3993"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF9494" />
-          <stop offset="1" stop-color="#B77C7C" />
+          <stop stopColor="#FF9494" />
+          <stop offset="1" stopColor="#B77C7C" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_2829_318"
@@ -843,8 +844,8 @@ export function HeartOrganIcon({ className, pathClassName }: Props) {
           y2="16.3889"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF9494" />
-          <stop offset="1" stop-color="#B77C7C" />
+          <stop stopColor="#FF9494" />
+          <stop offset="1" stopColor="#B77C7C" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_2829_318"
@@ -854,8 +855,8 @@ export function HeartOrganIcon({ className, pathClassName }: Props) {
           y2="14.3923"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#FF9494" />
-          <stop offset="1" stop-color="#B77C7C" />
+          <stop stopColor="#FF9494" />
+          <stop offset="1" stopColor="#B77C7C" />
         </linearGradient>
       </defs>
     </svg>
@@ -900,8 +901,8 @@ export function HumanIcon({ className, pathClassName }: Props) {
           y2="6.45846"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#81B4FF" />
-          <stop offset="1" stop-color="#4D6C99" />
+          <stop stopColor="#81B4FF" />
+          <stop offset="1" stopColor="#4D6C99" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_2829_344"
@@ -911,8 +912,8 @@ export function HumanIcon({ className, pathClassName }: Props) {
           y2="19.3749"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#4B93FF" />
-          <stop offset="1" stop-color="#2D5899" />
+          <stop stopColor="#4B93FF" />
+          <stop offset="1" stopColor="#2D5899" />
         </linearGradient>
       </defs>
     </svg>
@@ -928,7 +929,7 @@ export function WeightMachineIcon({ className, pathClassName }: Props) {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <g opacity="0.7" clip-path="url(#clip0_2829_369)">
+      <g opacity="0.7" clipPath="url(#clip0_2829_369)">
         <path
           d="M2.46347 16.6224C2.48211 16.7989 2.5654 16.9623 2.69731 17.081C2.82922 17.1998 3.00041 17.2656 3.17791 17.2656H14.8217C14.9992 17.2656 15.1703 17.1998 15.3023 17.081C15.4342 16.9623 15.5175 16.7989 15.5361 16.6224L16.8658 3.99176C16.8783 3.87195 16.8605 3.7509 16.8141 3.63975C16.7676 3.5286 16.6939 3.43091 16.5998 3.35567C14.4428 1.6348 11.759 0.709149 8.99978 0.73439C6.24053 0.709149 3.55674 1.6348 1.39972 3.35567C1.30564 3.43091 1.23197 3.5286 1.1855 3.63975C1.13904 3.7509 1.12125 3.87195 1.13378 3.99176L2.46347 16.6224Z"
           fill="#B8B8B8"
@@ -941,7 +942,7 @@ export function WeightMachineIcon({ className, pathClassName }: Props) {
           d="M14.9469 3.9314C14.9969 3.96413 15.0379 4.00882 15.0663 4.0614C15.0947 4.11398 15.1095 4.17281 15.1094 4.23255V6.12502C15.1094 6.22033 15.0715 6.31174 15.0041 6.37914C14.9367 6.44653 14.8453 6.48439 14.75 6.48439H3.25C3.15469 6.48439 3.06328 6.44653 2.99588 6.37914C2.92849 6.31174 2.89063 6.22033 2.89063 6.12502V4.23255C2.89053 4.17281 2.90534 4.11398 2.9337 4.0614C2.96206 4.00882 3.00309 3.96413 3.05306 3.9314C4.33168 3.10324 5.76903 2.55096 7.27322 2.30988C8.77741 2.06879 10.3154 2.1442 11.7888 2.53127C12.91 2.82495 13.9764 3.29774 14.9469 3.9314Z"
           fill="#B8B8B8"
           stroke="#0F0F0F"
-          stroke-width="0.5"
+          strokeWidth="0.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           className={pathClassName}
@@ -949,7 +950,7 @@ export function WeightMachineIcon({ className, pathClassName }: Props) {
         <path
           d="M4.16549 13.5461C4.20327 13.9736 4.40471 14.37 4.72775 14.6525C5.05079 14.935 5.47047 15.0819 5.89919 15.0624C6.32792 15.043 6.73256 14.8586 7.02865 14.548C7.32474 14.2373 7.48941 13.8243 7.48827 13.3951V10.4863C7.48897 10.2431 7.44026 10.0022 7.34509 9.77829C7.24992 9.5544 7.11028 9.35216 6.93463 9.18384C6.75899 9.01552 6.55099 8.88462 6.32324 8.79908C6.0955 8.71353 5.85276 8.67513 5.60973 8.68618C5.36671 8.69724 5.12846 8.75753 4.90942 8.86341C4.69039 8.96928 4.49514 9.11853 4.3355 9.3021C4.17586 9.48568 4.05516 9.69976 3.98072 9.93137C3.90628 10.163 3.87964 10.4073 3.90243 10.6495L4.16549 13.5461Z"
           stroke="#0F0F0F"
-          stroke-width="0.5"
+          strokeWidth="0.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           className={pathClassName}
@@ -957,7 +958,7 @@ export function WeightMachineIcon({ className, pathClassName }: Props) {
         <path
           d="M13.8345 13.5461C13.7967 13.9736 13.5953 14.37 13.2723 14.6525C12.9492 14.935 12.5295 15.0819 12.1008 15.0624C11.6721 15.043 11.2674 14.8586 10.9714 14.548C10.6753 14.2373 10.5106 13.8243 10.5117 13.3951V10.4863C10.511 10.2431 10.5597 10.0022 10.6549 9.77829C10.7501 9.5544 10.8897 9.35216 11.0654 9.18384C11.241 9.01552 11.449 8.88462 11.6768 8.79908C11.9045 8.71353 12.1472 8.67513 12.3903 8.68618C12.6333 8.69724 12.8715 8.75753 13.0906 8.86341C13.3096 8.96928 13.5049 9.11853 13.6645 9.3021C13.8241 9.48568 13.9448 9.69976 14.0193 9.93137C14.0937 10.163 14.1204 10.4073 14.0976 10.6495L13.8345 13.5461Z"
           stroke="#0F0F0F"
-          stroke-width="0.5"
+          strokeWidth="0.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           className={pathClassName}
@@ -965,7 +966,7 @@ export function WeightMachineIcon({ className, pathClassName }: Props) {
         <path
           d="M8.28125 6.48444L9.00003 4.49463L9.71875 6.48444"
           stroke="#0F0F0F"
-          stroke-width="0.5"
+          strokeWidth="0.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           className={pathClassName}
@@ -973,14 +974,14 @@ export function WeightMachineIcon({ className, pathClassName }: Props) {
         <path
           d="M9 3.25V2.17188"
           stroke="#0F0F0F"
-          stroke-width="0.5"
+          strokeWidth="0.5"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M10.7969 3.41747L10.996 2.35803"
           stroke="#0F0F0F"
-          stroke-width="0.5"
+          strokeWidth="0.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           className={pathClassName}
@@ -988,7 +989,7 @@ export function WeightMachineIcon({ className, pathClassName }: Props) {
         <path
           d="M12.5312 3.91559L12.9244 2.9115"
           stroke="#0F0F0F"
-          stroke-width="0.5"
+          strokeWidth="0.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           className={pathClassName}
@@ -996,7 +997,7 @@ export function WeightMachineIcon({ className, pathClassName }: Props) {
         <path
           d="M7.203 3.41747L7.00391 2.35803"
           stroke="#0F0F0F"
-          stroke-width="0.5"
+          strokeWidth="0.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           className={pathClassName}
@@ -1004,7 +1005,7 @@ export function WeightMachineIcon({ className, pathClassName }: Props) {
         <path
           d="M5.46861 3.91559L5.07617 2.9115"
           stroke="#0F0F0F"
-          stroke-width="0.5"
+          strokeWidth="0.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           className={pathClassName}
@@ -1163,29 +1164,74 @@ export function TabletPillIcon({ className, pathClassName }: Props) {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <g opacity="0.5">
-        <path
-          d="M9.81089 15.4883C8.84296 16.4562 7.53016 17 6.1613 17C4.79244 17 3.47964 16.4562 2.51171 15.4883C1.54378 14.5204 1 13.2076 1 11.8387C1 10.4698 1.54378 9.15704 2.51171 8.18911L8.18911 2.51171C9.15704 1.54378 10.4698 1 11.8387 1C13.2076 1 14.5204 1.54378 15.4883 2.51171C16.4562 3.47964 17 4.79244 17 6.1613C17 7.53016 16.4562 8.84296 15.4883 9.81089L9.81089 15.4883Z"
-          stroke="black"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className={pathClassName}
-        />
-        <path
-          d="M5.35059 5.35034L12.6498 12.6495"
-          stroke="black"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className={pathClassName}
-        />
-        <path
-          d="M9.81055 4.13352C10.2116 3.73238 10.7226 3.4592 11.279 3.34855C11.8353 3.23789 12.412 3.29473 12.936 3.51188"
-          stroke="black"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className={pathClassName}
-        />
-      </g>
+      <path
+        d="M9.81089 15.4883C8.84296 16.4562 7.53016 17 6.1613 17C4.79244 17 3.47964 16.4562 2.51171 15.4883C1.54378 14.5204 1 13.2076 1 11.8387C1 10.4698 1.54378 9.15704 2.51171 8.18911L8.18911 2.51171C9.15704 1.54378 10.4698 1 11.8387 1C13.2076 1 14.5204 1.54378 15.4883 2.51171C16.4562 3.47964 17 4.79244 17 6.1613C17 7.53016 16.4562 8.84296 15.4883 9.81089L9.81089 15.4883Z"
+        fill="url(#paint0_linear_2851_433)"
+        stroke="#383838"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={pathClassName}
+      />
+      <path
+        d="M5.35059 5.35034L12.6498 12.6495Z"
+        fill="url(#paint1_linear_2851_433)"
+      />
+      <path
+        d="M5.35059 5.35034L12.6498 12.6495"
+        stroke="#383838"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={pathClassName}
+      />
+      <path
+        d="M9.81055 4.13352C10.2116 3.73238 10.7226 3.4592 11.279 3.34855C11.8353 3.23789 12.412 3.29473 12.936 3.51188"
+        fill="url(#paint2_linear_2851_433)"
+      />
+      <path
+        d="M9.81055 4.13352C10.2116 3.73238 10.7226 3.4592 11.279 3.34855C11.8353 3.23789 12.412 3.29473 12.936 3.51188"
+        stroke="#383838"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={pathClassName}
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_2851_433"
+          x1="9"
+          y1="1"
+          x2="9"
+          y2="17"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FFE1E1" />
+          <stop offset="1" stopColor="#FF8484" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_2851_433"
+          x1="9.00018"
+          y1="5.35034"
+          x2="9.00018"
+          y2="12.6495"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FFE1E1" />
+          <stop offset="1" stopColor="#FF8484" />
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_2851_433"
+          x1="11.3733"
+          y1="3.29346"
+          x2="11.3733"
+          y2="4.13352"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#FFE1E1" />
+          <stop offset="1" stopColor="#FF8484" />
+        </linearGradient>
+      </defs>
     </svg>
   )
 }
@@ -1200,29 +1246,68 @@ export function CapsulePillIcon({ className, pathClassName }: Props) {
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <g opacity="0.5">
-        <path
-          d="M1 9C1 11.1217 1.84285 13.1566 3.34315 14.6569C4.84344 16.1571 6.87827 17 9 17C11.1217 17 13.1566 16.1571 14.6569 14.6569C16.1571 13.1566 17 11.1217 17 9C17 6.87827 16.1571 4.84344 14.6569 3.34315C13.1566 1.84285 11.1217 1 9 1C6.87827 1 4.84344 1.84285 3.34315 3.34315C1.84285 4.84344 1 6.87827 1 9Z"
-          stroke="black"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className={pathClassName}
-        />
-        <path
-          d="M16.786 7.15405H1.21436"
-          stroke="black"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className={pathClassName}
-        />
-        <path
-          d="M1.21436 10.8462H16.786"
-          stroke="black"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className={pathClassName}
-        />
-      </g>
+      <path
+        d="M1 9C1 11.1217 1.84285 13.1566 3.34315 14.6569C4.84344 16.1571 6.87827 17 9 17C11.1217 17 13.1566 16.1571 14.6569 14.6569C16.1571 13.1566 17 11.1217 17 9C17 6.87827 16.1571 4.84344 14.6569 3.34315C13.1566 1.84285 11.1217 1 9 1C6.87827 1 4.84344 1.84285 3.34315 3.34315C1.84285 4.84344 1 6.87827 1 9Z"
+        fill="url(#paint0_linear_2842_709)"
+        stroke="#383838"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={pathClassName}
+      />
+      <path d="M16.786 7.15405H1.21436Z" fill="url(#paint1_linear_2842_709)" />
+      <path
+        d="M16.786 7.15405H1.21436"
+        stroke="#383838"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={pathClassName}
+      />
+      <path d="M1.21436 10.8462H16.786Z" fill="url(#paint2_linear_2842_709)" />
+      <path
+        d="M1.21436 10.8462H16.786"
+        stroke="#383838"
+        strokeWidth="0.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={pathClassName}
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_2842_709"
+          x1="4"
+          y1="5"
+          x2="14"
+          y2="15"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#ADD1FC" />
+          <stop offset="1" stopColor="#F4F4F4" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_2842_709"
+          x1="4.13405"
+          y1="7.40405"
+          x2="4.21399"
+          y2="8.64892"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#ADD1FC" />
+          <stop offset="1" stopColor="#F4F4F4" />
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_2842_709"
+          x1="4.13405"
+          y1="11.0962"
+          x2="4.21399"
+          y2="12.3411"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#ADD1FC" />
+          <stop offset="1" stopColor="#F4F4F4" />
+        </linearGradient>
+      </defs>
     </svg>
   )
 }
@@ -1267,7 +1352,7 @@ export function HeartWithPulseIcon({ className, pathClassName }: Props) {
         <path
           d="M10.0054 17.4064L2.47298 10.5835C-1.62073 6.48983 4.39702 -1.37009 10.0054 4.98881C15.6138 -1.37009 21.6043 6.51713 17.5378 10.5835L10.0054 17.4064Z"
           stroke="#383838"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           strokeLinecap="round"
           strokeLinejoin="round"
           className={pathClassName}
@@ -1280,6 +1365,82 @@ export function HeartWithPulseIcon({ className, pathClassName }: Props) {
           className={pathClassName}
         />
       </g>
+    </svg>
+  )
+}
+
+export function BeatGraphics({ className, pathClassName }: Props) {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M10.4082 11.9333C10.5248 11.5727 10.6194 11.2053 10.6916 10.8333C10.9166 9.74995 10.9916 8.60828 11.1832 7.49995L11.4166 6.49995C11.4666 6.91662 11.4916 7.33328 11.5249 7.68328C11.5329 7.96268 11.5608 8.24116 11.6082 8.51661C11.6228 8.57414 11.6497 8.62779 11.6872 8.67385C11.7246 8.7199 11.7716 8.75724 11.8249 8.78328C11.9896 8.84563 12.1659 8.87123 12.3416 8.85828C12.6749 8.85828 13.0666 8.77495 13.2749 8.76662H14.2999C14.3706 8.76662 14.4385 8.73852 14.4885 8.68851C14.5385 8.6385 14.5666 8.57067 14.5666 8.49995C14.5666 8.42922 14.5385 8.3614 14.4885 8.31139C14.4385 8.26138 14.3706 8.23328 14.2999 8.23328H13.2749C13.0832 8.23328 12.7582 8.28328 12.4416 8.29161H12.2499C12.2589 7.16791 12.0611 6.05214 11.6666 4.99995C11.6268 4.94004 11.571 4.89252 11.5055 4.86283C11.44 4.83313 11.3675 4.82246 11.2962 4.83202C11.225 4.84158 11.1578 4.87099 11.1025 4.91689C11.0471 4.9628 11.0058 5.02334 10.9832 5.09162C10.8916 5.33328 10.3666 7.34995 10.3582 7.37495C10.1832 8.20828 10.0749 9.10828 9.9249 9.98328C9.81657 9.39995 9.73324 8.81661 9.60824 8.23328C9.51989 7.78542 9.40581 7.34302 9.26657 6.90828C9.19616 6.6229 9.10136 6.3441 8.98324 6.07495C8.92097 5.95151 8.8258 5.84769 8.70824 5.77495C8.60367 5.74657 8.49261 5.75414 8.39287 5.79646C8.29312 5.83877 8.21049 5.91337 8.15824 6.00828C8.05824 6.20828 7.81657 6.71662 7.7999 6.74162C7.6499 7.05828 7.46657 7.68328 7.23324 8.14162C7.16959 8.29883 7.06964 8.43875 6.94157 8.54995H6.2999L4.00824 8.63328C3.94628 8.63739 3.88806 8.66441 3.84493 8.70908C3.8018 8.75376 3.77684 8.81288 3.7749 8.87495C3.77706 8.93759 3.80348 8.99694 3.84856 9.04047C3.89365 9.084 3.95389 9.10832 4.01657 9.10828H6.35824H6.9249C7.05672 9.10237 7.18524 9.06524 7.2999 8.99995C7.51627 8.83924 7.69301 8.63115 7.81657 8.39161C7.9249 8.19161 8.48324 6.97495 8.51657 6.89995C8.51657 7.12495 8.6249 7.36661 8.7499 8.01661C8.8749 8.66661 8.99157 9.54161 9.10824 10.2916L9.39157 11.9583C9.40144 12.0648 9.41814 12.1706 9.44157 12.2749C9.46939 12.3444 9.51471 12.4054 9.57312 12.4522C9.63153 12.4989 9.70105 12.5297 9.7749 12.5416C9.82853 12.5579 9.88494 12.5629 9.94061 12.5565C9.99628 12.55 10.05 12.5321 10.0985 12.504C10.147 12.4758 10.1891 12.438 10.2223 12.3929C10.2555 12.3478 10.2791 12.2963 10.2916 12.2416"
+        fill="#0067FF"
+        className={pathClassName}
+      />
+      <path
+        d="M2.50004 12.8333C2.42504 12.4833 2.35837 12.125 2.30837 11.7583C2.25837 11.3917 2.25004 10.9917 2.20837 10.4167C2.16671 9.84168 2.13337 9.06668 2.07504 8.33335C1.91671 6.58335 1.73337 4.88335 1.73337 4.88335C1.7323 4.84832 1.72433 4.81385 1.70992 4.78191C1.69551 4.74997 1.67495 4.72118 1.64941 4.69719C1.62387 4.67319 1.59386 4.65447 1.56108 4.64209C1.5283 4.6297 1.4934 4.6239 1.45837 4.62501C1.42335 4.62609 1.38888 4.63406 1.35694 4.64847C1.32499 4.66287 1.2962 4.68343 1.27221 4.70897C1.24822 4.73451 1.2295 4.76453 1.21711 4.79731C1.20473 4.83009 1.19893 4.86499 1.20004 4.90001C1.20004 4.90001 1.13337 7.10001 1.20004 9.06668C1.20004 9.67501 1.29171 10.25 1.35004 10.7333C1.40117 11.1176 1.4735 11.4987 1.56671 11.875C1.67504 12.2417 1.79171 12.6083 1.91671 12.9667C1.99171 13.15 2.06671 13.3333 2.15004 13.5167C2.37504 13.7 2.55004 13.6667 2.68337 13.4667C2.65004 13.2833 2.58337 13.0667 2.50004 12.8333Z"
+        fill="#3183FD"
+        className={pathClassName}
+      />
+      <path
+        d="M19.5417 5.3833C19.5648 4.81479 19.4712 4.24758 19.2667 3.71663C19.1996 3.55844 19.0994 3.4164 18.9729 3.3C18.8465 3.1836 18.6966 3.09552 18.5334 3.04163C16.9081 2.73466 15.2506 2.63387 13.6001 2.74163C8.95008 2.8583 2.85842 3.57497 2.39175 3.52497C2.33034 3.52252 2.27031 3.54357 2.22386 3.58382C2.17742 3.62407 2.14806 3.6805 2.14175 3.74163C2.13948 3.77229 2.14329 3.80309 2.15297 3.83228C2.16264 3.86146 2.17799 3.88844 2.19812 3.91167C2.21825 3.9349 2.24278 3.95392 2.27029 3.96765C2.2978 3.98137 2.32775 3.98952 2.35842 3.99163C2.82508 3.99163 8.95842 3.66663 13.6167 3.6333C15.174 3.54623 16.7361 3.63006 18.2751 3.8833C18.4417 3.9333 18.5084 4.1083 18.5751 4.3333C18.7254 5.04808 18.762 5.78211 18.6834 6.5083C18.5334 8.69997 17.9501 11.55 17.6917 13.3333C17.5751 13.8166 18.0834 13.925 18.2584 13.3333C18.6334 11.2083 19.5167 7.6333 19.5417 5.3833Z"
+        fill="#FF3C3C"
+        className={pathClassName}
+      />
+      <path
+        d="M19.8918 14.425C19.9257 14.4 19.9532 14.3674 19.972 14.3297C19.9908 14.292 20.0005 14.2505 20.0001 14.2084C20.0001 14.1737 19.9932 14.1394 19.9797 14.1075C19.9662 14.0756 19.9464 14.0468 19.9215 14.0227C19.8967 13.9986 19.8672 13.9797 19.8349 13.9672C19.8026 13.9548 19.7681 13.9489 19.7335 13.95C18.3251 13.95 15.6585 13.775 12.7585 13.725C11.2085 13.725 9.65846 13.65 8.10013 13.675C8.02513 13.675 4.8418 13.675 0.341795 14.15C0.282844 14.1542 0.227692 14.1807 0.187476 14.224C0.14726 14.2673 0.124977 14.3243 0.125128 14.3834C0.121515 14.3998 0.121515 14.4169 0.125128 14.4334C-0.0252844 14.8023 -0.0453264 15.2114 0.0683148 15.5933C0.181956 15.9751 0.422477 16.3067 0.750128 16.5334C1.70912 17.0382 2.78382 17.2824 3.8668 17.2417C5.0418 17.3 6.20846 17.325 7.38346 17.3167C8.75013 17.3167 10.1085 17.2667 11.4668 17.2334C12.8251 17.2 14.1751 17.1667 15.5335 17.1917H16.4501C17.2587 17.2624 18.0732 17.2119 18.8668 17.0417C19.1888 16.976 19.4779 16.8004 19.6846 16.545C19.8914 16.2896 20.0029 15.9703 20.0001 15.6417V14.8084C19.9168 14.65 19.9001 14.525 19.8918 14.425ZM19.3668 15.625C19.3691 15.826 19.2986 16.021 19.1685 16.1742C19.0383 16.3273 18.8572 16.4282 18.6585 16.4584C17.9238 16.5703 17.1764 16.5703 16.4418 16.4584L15.5418 16.4167C14.3706 16.3556 13.1979 16.3278 12.0251 16.3334C10.6585 16.3334 9.30013 16.3334 7.93346 16.425C6.5668 16.5167 5.22513 16.5334 3.8668 16.525C2.90213 16.6195 1.92938 16.4645 1.04179 16.075C0.809336 15.9192 0.635022 15.6908 0.546074 15.4255C0.457125 15.1601 0.458551 14.8728 0.550128 14.6084C1.78346 14.5584 3.00846 14.525 4.2418 14.525H7.33346H10.4251C13.4085 14.525 16.3835 14.525 19.3501 14.4334V14.7584C19.3748 15.0466 19.3803 15.3361 19.3668 15.625Z"
+        fill="#008F42"
+        className={pathClassName}
+      />
+    </svg>
+  )
+}
+
+export function DoctorIcon({ className, pathClassName }: Props) {
+  return (
+    <svg
+      width="16"
+      height="16"
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M4.81087 11.1472C4.5244 11.3231 4.33333 11.6393 4.33333 12C4.33333 12.5523 4.78103 13 5.33333 13C5.88563 13 6.33333 12.5523 6.33333 12C6.33333 11.492 5.95453 11.0725 5.46397 11.0085C5.45303 10.9693 5.44163 10.9242 5.43003 10.8736C5.3901 10.6991 5.352 10.4778 5.32363 10.2504C5.2952 10.0227 5.27757 9.79684 5.2764 9.61254C5.27597 9.54497 5.2778 9.48611 5.28153 9.43674C5.40977 9.39994 5.53837 9.36681 5.66667 9.33757C5.81377 9.30407 5.90083 9.47771 5.97137 9.61841C5.9812 9.63801 5.9907 9.65694 6 9.67461H7.35463C7.6599 9.67454 7.8108 9.67457 7.96343 9.67461C8.11253 9.67464 8.26353 9.67467 8.5617 9.67461H9.91643C9.9925 9.53011 10.1657 9.29941 10.3333 9.33757C10.5121 9.37831 10.6915 9.42664 10.8696 9.48191L10.8685 9.48244C10.8681 9.48167 10.8682 9.48181 10.8686 9.48294C10.8701 9.48761 10.8775 9.50941 10.8847 9.55667C10.893 9.61047 10.8988 9.68041 10.9012 9.76461C10.9059 9.93271 10.8965 10.137 10.8766 10.3429C10.8566 10.5486 10.827 10.7477 10.7937 10.9048C10.7863 10.9396 10.779 10.9714 10.7717 11H10.3333C10.2071 11 10.0917 11.0714 10.0352 11.1843L9.70187 11.851C9.6787 11.8972 9.66667 11.9483 9.66667 12V12.6667C9.66667 12.8508 9.8159 13 10 13H10.6667V12.3334H10.3333V12.0787L10.5393 11.6667H11.4607L11.6667 12.0787V12.3334H11.3333V13H12C12.1841 13 12.3333 12.8508 12.3333 12.6667V12C12.3333 11.9483 12.3213 11.8972 12.2981 11.851L11.9648 11.1843C11.9083 11.0714 11.7929 11 11.6667 11H11.4548C11.4904 10.8225 11.52 10.615 11.5401 10.4071C11.5619 10.1825 11.5733 9.94931 11.5676 9.74591L11.5673 9.73674C12.8965 10.2983 14 11.2221 14 12.19V14H2V12.19C2 11.1792 3.20331 10.2167 4.61033 9.66437C4.61413 9.87157 4.63377 10.1061 4.66207 10.333C4.69263 10.5779 4.7343 10.8218 4.7802 11.0223C4.79003 11.0653 4.80027 11.1071 4.81087 11.1472ZM5.33333 12.3383C5.5128 12.3383 5.66667 12.1914 5.66667 12C5.66667 11.8086 5.5128 11.6618 5.33333 11.6618C5.15387 11.6618 5 11.8086 5 12C5 12.1914 5.15387 12.3383 5.33333 12.3383Z"
+        fill="url(#paint0_linear_3159_508)"
+        className={pathClassName}
+      />
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M7.99984 8C9.4726 8 10.6665 6.8061 10.6665 5.33333C10.6665 3.86057 9.4726 2.66667 7.99984 2.66667C6.52707 2.66667 5.33317 3.86057 5.33317 5.33333C5.33317 6.8061 6.52707 8 7.99984 8ZM7.99984 8.66667C9.84077 8.66667 11.3332 7.17427 11.3332 5.33333C11.3332 3.4924 9.84077 2 7.99984 2C6.1589 2 4.6665 3.4924 4.6665 5.33333C4.6665 7.17427 6.1589 8.66667 7.99984 8.66667Z"
+        fill="#FF7878"
+        className={pathClassName}
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_3159_508"
+          x1="8"
+          y1="9.33337"
+          x2="8"
+          y2="14"
+          gradientUnits="userSpaceOnUse"
+          className={pathClassName}
+        >
+          <stop stopColor="#4D9AF5" />
+          <stop offset="1" stopColor="#00193F" />
+        </linearGradient>
+      </defs>
     </svg>
   )
 }

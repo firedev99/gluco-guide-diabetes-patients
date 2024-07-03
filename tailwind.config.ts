@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import defaultTheme from "tailwindcss/defaultTheme"
 
 const config: Config = {
   content: [
@@ -7,15 +8,17 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      xxs: "375px",
+      xs: "475px",
+      ...defaultTheme.screens,
+      "2xl": "1440px",
+      "3xl": "1536px",
+    },
     extend: {
       transformOrigin: {
         "0": "0% 0%",
         "top-bottom": "0% 100%",
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },

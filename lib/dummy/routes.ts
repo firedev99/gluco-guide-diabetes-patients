@@ -20,11 +20,11 @@ export const routeLinks: Props[] = [
   {
     name: "Doctors",
     icon: "three-people",
-    dest: "/doctors",
+    dest: "/hospitals/doctors",
   },
   {
     name: "Appointments",
-    icon: "calender",
+    icon: "calendar",
     dest: "/patient/appointments",
   },
   {

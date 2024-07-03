@@ -1,10 +1,12 @@
 import { IconNames } from "@/types"
 import {
+  BeatGraphics,
   BellIcon,
-  CalenderIcon,
+  CalendarIcon,
   CapsulePillIcon,
   ChartGraphIcon,
   ChartPieIcon,
+  DoctorIcon,
   FireIcon,
   GlucoGuideLogo,
   HeartIcon,
@@ -56,9 +58,9 @@ export default function Icon({ name, className, pathClassName }: Props) {
         <ThreePeopleIcon className={className} pathClassName={pathClassName} />
       )
 
-    case "calender":
+    case "calendar":
       return (
-        <CalenderIcon className={className} pathClassName={pathClassName} />
+        <CalendarIcon className={className} pathClassName={pathClassName} />
       )
 
     case "chart-graph":
@@ -159,6 +161,14 @@ export default function Icon({ name, className, pathClassName }: Props) {
           pathClassName={pathClassName}
         />
       )
+
+    case "beat-graphics":
+      return (
+        <BeatGraphics className={className} pathClassName={pathClassName} />
+      )
+
+    case "doctor":
+      return <DoctorIcon className={className} pathClassName={pathClassName} />
 
     default:
       return <div />

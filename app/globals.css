@@ -13,13 +13,12 @@
 
 :root:has(.prevent-scroll) {
   overflow: hidden;
-  /* scrollbar-gutter: stable; */
 }
 
 body {
   background: #f8f8f8;
   color: #383838;
-  padding: 0 1rem;
+  /* padding: 0 1rem; */
 }
 
 @layer components {
@@ -47,15 +46,15 @@ body {
     @apply w-2;
   }
 
-  .blue-scroll::-webkit-scrollbar-thumb {
+  .blue-scroll:hover::-webkit-scrollbar-thumb {
     @apply rounded-sm bg-[--primary-blue];
   }
 
-  .gradient-border::before {
+  .gradient-border-green::before {
     content: "";
     position: absolute;
     inset: 0;
-    border-radius: 28px;
+    border-radius: 24px;
     border: 2px solid transparent;
     background: linear-gradient(
         120deg,
@@ -69,38 +68,53 @@ body {
     -webkit-mask-composite: destination-out;
     mask-composite: exclude;
   }
-}
 
-.gradient-border-black::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 28px;
-  border: 2px solid transparent;
-  background: linear-gradient(45deg, rgba(108, 113, 111, 0.584), #9999992f 100%)
-    border-box;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: destination-out;
-  mask-composite: exclude;
-}
+  .gradient-border-black::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    border: 2px solid transparent;
+    background: linear-gradient(
+        45deg,
+        rgba(108, 113, 111, 0.584),
+        #9999992f 100%
+      )
+      border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+      linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
 
-/* :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-} */
+  .radial-gradient-shinny {
+    background: radial-gradient(
+        circle at 50% 0%,
+        rgba(250, 250, 250, 0.05) 0%,
+        transparent 60%
+      ),
+      rgba(250, 250, 250, 0.2);
+  }
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  .linear-mask-shinny {
+    mask-image: linear-gradient(
+      -75deg,
+      white calc(var(--x) + 20%),
+      transparent calc(var(--x) + 30%),
+      white calc(var(--x) + 100%)
+    );
+    -webkit-mask-image: linear-gradient(
+      -75deg,
+      white calc(var(--x) + 20%),
+      transparent calc(var(--x) + 30%),
+      white calc(var(--x) + 100%)
+    );
+  }
+
+  @media (min-width: 1440px) {
+    .gradient-border-black::before {
+      border-radius: 28px;
+    }
   }
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */

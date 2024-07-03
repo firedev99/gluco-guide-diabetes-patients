@@ -40,3 +40,20 @@ export const slideInAnimation: Variants = {
     },
   },
 }
+
+export const visibleAnimation: Variants = {
+  visible: {
+    y: "0%",
+    transition: {
+      duration: 0.35,
+      ease: "easeInOut",
+    },
+  },
+  hidden: {
+    y: "-100%",
+    transition: {
+      duration: 0.35,
+      ease: "easeInOut",
+    },
+  },
+}

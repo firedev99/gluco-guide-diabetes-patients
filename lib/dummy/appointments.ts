@@ -1,3 +1,12 @@
+import { IconNames } from "@/types"
+
+type AppointmentProps = {
+  name: string
+  type: string
+  start: string
+  end: string
+  location: string
+}
 export const days = [
   "Sunday",
   "Monday",
@@ -21,12 +30,16 @@ export const dates = [
 export const upcomingAppointments = [
   {
     name: "Consultation",
-    time: "1:00PM-8:00PM",
+    type: "appointment",
+    start: "1:00PM",
+    end: "8:00PM",
     location: "Banani 27, Prime Diabetics Diagnosis Center",
   },
   {
     name: "Diagnosis Test",
-    time: "11:00AM-6:00PM",
+    type: "test",
+    start: "11:00AM",
+    end: "6:00PM",
     location: "Banani 27, Prime Diabetics Diagnosis Center",
   },
-] as { name: string; time: string; location: string }[]
+] as AppointmentProps[]

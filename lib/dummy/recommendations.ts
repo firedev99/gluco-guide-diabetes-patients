@@ -4,33 +4,44 @@ type RecommendationProps = {
   type: string
   logo?: IconNames
   name?: string
-  time: string
+  start: string
+  end: string
   info: string
-  recommended?: { type: string; amount: number; logo?: IconNames }
+  recommended?: {
+    type: string
+    quantity?: number
+    amount?: number
+    note?: string
+    logo?: IconNames
+  }
 }
 
 export const recommendations: RecommendationProps[] = [
   {
     type: "exercise",
+    name: "Jogging",
+    start: "8:00AM",
+    end: "8:45AM",
     logo: "human-jogging",
-    name: "Exercise",
-    time: "8:00AM-9:00AM",
     info: "Jogging for 45mins",
   },
   {
     type: "medicine",
     name: "Metaformin",
-    time: "9:00AM-10:00AM",
+    start: "9:00AM",
+    end: "10:00AM",
     info: "Medication",
+    logo: "tablet-pill",
     recommended: {
       type: "tablet",
-      amount: 1,
-      logo: "tablet-pill",
+      quantity: 1,
+      note: "before lunch",
     },
   },
   {
     type: "recommendation",
-    time: "9:30AM-11:00AM",
+    start: "9:30AM",
+    end: "11:00AM",
     logo: "soup-bowl",
     info: "Recommended Breakfast",
     recommended: {
@@ -41,117 +52,51 @@ export const recommendations: RecommendationProps[] = [
   },
   {
     type: "recommendation",
-    time: "1:30PM-2:30PM",
+    start: "1:30PM",
+    end: "2:30PM",
     logo: "soup-bowl",
     info: "Recommended Breakfast",
     recommended: {
       type: "goal",
       logo: "fire",
-      amount: 400,
+      amount: 1200,
     },
   },
   {
     type: "exercise",
     logo: "human-cycling",
-    name: "Exercise",
-    time: "6:30PM-7:30PM",
+    name: "Cycling",
+    start: "6:30PM",
+    end: "7:30PM",
     info: "Cycling for 60mins",
   },
   {
     type: "exercise",
     logo: "human-yoga",
     name: "Yoga",
-    time: "8:30PM-8:50PM",
+    start: "8:30PM",
+    end: "8:50PM",
     info: "Sun Salutation for 20mins",
   },
   {
     type: "exercise",
     logo: "human-yoga",
     name: "Yoga",
-    time: "9:00PM-9:10PM",
+    start: "9:00PM",
+    end: "9:10PM",
     info: "Bridge Pose for 10mins",
   },
   {
     type: "medicine",
-    name: "Metaformin",
-    time: "9:00PM-10:00PM",
+    name: "Glucovance",
+    start: "9:00PM",
+    end: "10:00PM",
     info: "Medication",
+    logo: "capsule-pill",
     recommended: {
       type: "capsule",
-      amount: 1,
-      logo: "capsule-pill",
-    },
-  },
-  {
-    type: "exercise",
-    logo: "human-jogging",
-    name: "Exercise",
-    time: "8:00AM-9:00AM",
-    info: "Jogging for 45mins",
-  },
-  {
-    type: "medicine",
-    name: "Metaformin",
-    time: "9:00AM-10:00AM",
-    info: "Medication",
-    recommended: {
-      type: "tablet",
-      amount: 1,
-      logo: "tablet-pill",
-    },
-  },
-  {
-    type: "recommendation",
-    time: "9:30AM-11:00AM",
-    logo: "soup-bowl",
-    info: "Recommended Breakfast",
-    recommended: {
-      type: "goal",
-      logo: "fire",
-      amount: 400,
-    },
-  },
-  {
-    type: "recommendation",
-    time: "1:30PM-2:30PM",
-    logo: "soup-bowl",
-    info: "Recommended Breakfast",
-    recommended: {
-      type: "goal",
-      logo: "fire",
-      amount: 400,
-    },
-  },
-  {
-    type: "exercise",
-    logo: "human-cycling",
-    name: "Exercise",
-    time: "6:30PM-7:30PM",
-    info: "Cycling for 60mins",
-  },
-  {
-    type: "exercise",
-    logo: "human-yoga",
-    name: "Yoga",
-    time: "8:30PM-8:50PM",
-    info: "Sun Salutation for 20mins",
-  },
-  {
-    type: "exercise",
-    logo: "human-yoga",
-    name: "Yoga",
-    time: "9:00PM-9:10PM",
-    info: "Bridge Pose for 10mins",
-  },
-  {
-    type: "medicine",
-    name: "Metaformin",
-    time: "9:00PM-10:00PM",
-    info: "Medication",
-    recommended: {
-      type: "capsule",
-      amount: 1,
-      logo: "capsule-pill",
+      quantity: 1,
+      note: "after dinner",
     },
   },
 ]

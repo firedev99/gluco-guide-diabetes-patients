@@ -13,6 +13,9 @@
 /.next/
 /out/
 
+# fastAPI cache
+/server/__pycache__
+
 # production
 /build
 

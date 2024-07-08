@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "server": "pip3 install --no-cache-dir --upgrade -r ./server/requirements.txt && python3 -m uvicorn server.main:app --reload",
+    "uvicorn": "pip3 install --no-cache-dir --upgrade -r ./server/requirements.txt && python3 -m uvicorn server.main:app --reload",
+    "server": "fastapi dev ./server/main.py",
     "client": "next dev",
     "dev": "npm-run-all --parallel server client",
     "build": "next build",

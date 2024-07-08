@@ -1,6 +1,5 @@
 import Image from "next/image"
-import imgSrc from "@/public/doctor.png"
-import { FlipEfButton } from ".."
+import { FlipEfButton } from "@/components"
 
 export default function ConsultDoctors() {
   return (
@@ -21,7 +20,7 @@ export default function ConsultDoctors() {
         <div className="relative w-32 h-32 xs:w-40 xs:h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 3xl:w-80 3xl:h-80">
           <Image
             fill
-            src={imgSrc}
+            src="https://res.cloudinary.com/dwhlynqj3/image/upload/v1720447971/glucoguide/doctor.png"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             alt="doctor.png"
             style={{ objectFit: "cover", filter: "contrast(0.9)" }}

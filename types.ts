@@ -28,3 +28,5 @@ export type IconNames =
   | "heart-w-pulse"
   | "beat-graphics"
   | "doctor"
+  | "edit-icon"
+  | "watch"

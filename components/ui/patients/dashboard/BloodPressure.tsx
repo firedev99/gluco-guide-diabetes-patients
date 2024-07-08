@@ -1,5 +1,7 @@
 "use client"
 
+import { useState } from "react"
+import { Icon } from "@/components"
 import {
   CartesianGrid,
   ResponsiveContainer,
@@ -9,28 +11,7 @@ import {
   XAxis,
   YAxis,
 } from "recharts"
-import Icon from "../icons"
-import { useState } from "react"
-
-const systolicPressures = [
-  { systolic: 120, day: "Sunday" },
-  { systolic: 129, day: "Monday" },
-  { systolic: 132, day: "Tuesday" },
-  { systolic: 136, day: "Wednesday" },
-  { systolic: 140, day: "Thursday" },
-  { systolic: 131, day: "Friday" },
-  { systolic: 128, day: "Saturday" },
-]
-
-const diastolicPressures = [
-  { diastolic: 80, day: "Sunday" },
-  { diastolic: 82, day: "Monday" },
-  { diastolic: 86, day: "Tuesday" },
-  { diastolic: 85, day: "Wednesday" },
-  { diastolic: 80, day: "Thursday" },
-  { diastolic: 83, day: "Friday" },
-  { diastolic: 82, day: "Saturday" },
-]
+import { diastolicPressureData, systolicPressureData } from "@/lib/dummy/health"
 
 export default function BloodPressure() {
   const [selected, setSelected] = useState<"systolic" | "diastolic">("systolic")
@@ -125,7 +106,9 @@ export default function BloodPressure() {
                   : "Diastolic Pressures"
               }
               data={
-                selected === "systolic" ? systolicPressures : diastolicPressures
+                selected === "systolic"
+                  ? systolicPressureData
+                  : diastolicPressureData
               }
               fill={selected === "systolic" ? "#e43d3d" : "#b6d87f"}
               fillOpacity="0.7"

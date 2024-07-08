@@ -1,6 +1,5 @@
 import Image from "next/image"
-import imgSrc from "@/public/device.png"
-import { ShinnyEfBtn } from ".."
+import { ShinnyEfBtn } from "@/components"
 
 export default function ConnectDevice() {
   return (
@@ -9,13 +8,13 @@ export default function ConnectDevice() {
       <div className="relative xs:w-4/5 left-0 xs:left-20 2xl:left-16 md:left-28 w-full h-full -scale-x-100">
         <Image
           fill
-          src={imgSrc}
+          src="https://res.cloudinary.com/dwhlynqj3/image/upload/v1720447971/glucoguide/device.png"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt="device.png"
           style={{ objectFit: "cover", filter: "contrast(0.9)" }}
         />
       </div>
-      <ShinnyEfBtn className="absolute 2xl:left-12 bottom-6 xxs:bottom-10 md:bottom-14 text-xs xxs:text-sm px-5 xs:px-8 py-3 xs:text-lg  gradient-border-green rounded-3xl z-10 backdrop-blur-[20px]">
+      <ShinnyEfBtn className="absolute 2xl:left-12 text-neutral-100 bottom-6 xxs:bottom-10 md:bottom-14 text-xs xxs:text-sm px-5 xs:px-8 py-3 xs:text-lg  gradient-border-green rounded-3xl z-10 backdrop-blur-[20px]">
         connect device
       </ShinnyEfBtn>
     </div>

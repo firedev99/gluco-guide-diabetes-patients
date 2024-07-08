@@ -9,26 +9,8 @@ import {
   Area,
   AreaChart,
 } from "recharts"
-import Icon from "../icons"
-
-const data = [
-  {
-    name: "12AM",
-    glucose: 98,
-  },
-  {
-    name: "9AM",
-    glucose: 124,
-  },
-  {
-    name: "3PM",
-    glucose: 104,
-  },
-  {
-    name: "6PM",
-    glucose: 136,
-  },
-]
+import { Icon } from "@/components"
+import { bloodGlucoseData } from "@/lib/dummy/health"
 
 export default function BloodGlucose() {
   return (
@@ -57,7 +39,7 @@ export default function BloodGlucose() {
       </div>
       <div className="w-full h-56 md:h-64 mt-8 md:mt-16 -ml-4">
         <ResponsiveContainer width="100%" height="100%">
-          <AreaChart width={300} height={300} data={data}>
+          <AreaChart width={300} height={300} data={bloodGlucoseData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" tick={{ dy: 16 }} />
             <YAxis domain={[0, 200]} tick={{ dx: -8 }} />

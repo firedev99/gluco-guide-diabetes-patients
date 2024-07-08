@@ -7,6 +7,7 @@ import {
   ChartGraphIcon,
   ChartPieIcon,
   DoctorIcon,
+  EditIcon,
   FireIcon,
   GlucoGuideLogo,
   HeartIcon,
@@ -27,6 +28,7 @@ import {
   ThreePeopleIcon,
   TwoPeopleIcon,
   UpArrowIcon,
+  WatchIcon,
   WeightMachineIcon,
   WrittenPageIcon,
 } from "./svg"
@@ -170,6 +172,11 @@ export default function Icon({ name, className, pathClassName }: Props) {
     case "doctor":
       return <DoctorIcon className={className} pathClassName={pathClassName} />
 
+    case "edit-icon":
+      return <EditIcon className={className} pathClassName={pathClassName} />
+
+    case "watch":
+      return <WatchIcon className={className} pathClassName={pathClassName} />
     default:
       return <div />
   }

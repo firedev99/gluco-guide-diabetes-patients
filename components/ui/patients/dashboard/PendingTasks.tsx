@@ -1,8 +1,7 @@
 import React from "react"
-import Icon from "../icons"
+import { Icon, WalkingDog } from "@/components"
 import { dates, days, upcomingAppointments } from "@/lib/dummy/appointments"
 import { recommendations } from "@/lib/dummy/recommendations"
-import WalkingDog from "../fancy/WalkingDog"
 
 export default function PendingTasks() {
   return (

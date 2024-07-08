@@ -97,7 +97,7 @@ body {
       rgba(250, 250, 250, 0.2);
   }
 
-  .linear-mask-shinny {
+  .linear-mask-shinny-light {
     mask-image: linear-gradient(
       -75deg,
       white calc(var(--x) + 20%),

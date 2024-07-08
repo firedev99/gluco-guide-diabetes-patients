@@ -13,8 +13,12 @@
 /.next/
 /out/
 
-# fastAPI cache
-/server/__pycache__
+
+# python
+*.log
+*.pyc
+__pycache__
+*.sqlite3
 
 # production
 /build

@@ -17,6 +17,10 @@ export default function FlipButton({ children, className, href }: Props) {
       href={href}
       initial="initial"
       whileHover="hovered"
+      whileTap={{
+        scale: 0.975,
+        transition: { ease: "easeInOut", duration: 0.2 },
+      }}
       className={`relative block overflow-hidden whitespace-nowrap ${className}`}
     >
       <motion.div

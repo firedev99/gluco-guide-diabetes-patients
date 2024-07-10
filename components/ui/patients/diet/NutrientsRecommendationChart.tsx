@@ -99,7 +99,7 @@ export default function NutrientsRecommendationChart() {
 
   return (
     <div>
-      <div className="mt-5 relative overflow-hidden w-full rounded-xl bg-gradient-to-b from-[#8FAEFF] to-[#5574E1] min-h-[324px] lg:mt-[22px] center min-[425px]:block lg:w-[546px]">
+      <div className="mt-5 relative overflow-hidden w-full rounded-xl bg-gradient-to-b from-[#8FAEFF] to-[#5574E1] min-h-[324px] lg:mt-3.5 center min-[425px]:block lg:w-[546px]">
         {/* food diet chart */}
         <div className="hidden min-[425px]:block w-full h-[286px] relative z-10">
           <ResponsiveContainer width="100%" height="100%">

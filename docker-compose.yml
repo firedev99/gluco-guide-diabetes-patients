@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  backend:
+    container_name: gluco-guide-backend
+    build: ./server
+    develop:
+      watch:
+        - path: ./server
+          target: /code
+          action: sync
+        - path: ./server/requirements.txt
+          action: rebuild
+    ports:
+      - "8000:8000"
+
+  frontend:
+    container_name: gluco-guide-frontend
+    build:
+      context: .
+    develop:
+      watch:
+        - path: .
+          target: /app
+          action: sync
+        - path: ./package.json
+          action: rebuild
+        - path: ./next.config.mjs
+          action: rebuild
+    ports:
+      - "3000:3000"

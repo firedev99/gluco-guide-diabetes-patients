@@ -16,6 +16,6 @@ app.add_middleware(
 # root page 
 @app.get("/api")
 async def root():
-  return {"message": "Hello, World!"}
+  return {"message": "Hello, Fire!"}
 
 

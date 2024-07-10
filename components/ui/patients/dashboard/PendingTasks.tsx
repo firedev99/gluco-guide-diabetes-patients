@@ -69,8 +69,11 @@ export default function PendingTasks() {
                       name={type === "appointment" ? "doctor" : "beat-graphics"}
                     />
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-sm font-bold line-clamp-1">{`${start}-${end}`}</span>
+                  <div className="flex flex-col relative">
+                    <span
+                      data-tooltip={`Appointment at ${start}-${end} - ${location}`}
+                      className="text-sm font-bold line-clamp-1"
+                    >{`${start}-${end}`}</span>
                     <span className="text-xs line-clamp-1 font-bold opacity-80">
                       {location}
                     </span>
@@ -137,8 +140,15 @@ export default function PendingTasks() {
                         {logo && <Icon name={logo} />}
                       </div>
 
-                      <div className="flex flex-col">
-                        <span className="text-sm line-clamp-1 font-bold">
+                      <div className="flex flex-col relative">
+                        <span
+                          // data-tooltip={`${
+                          //   type === "recommendation"
+                          //     ? `${info.toUpperCase()}`
+                          //     : `${type.toUpperCase()}`
+                          // } at ${start} - ${end}`}
+                          className="text-sm line-clamp-1 font-bold"
+                        >
                           {`${start}-${end}`}
                         </span>
                         <span className="text-xs line-clamp-1 font-bold opacity-80 ">

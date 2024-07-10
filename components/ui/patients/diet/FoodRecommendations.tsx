@@ -101,18 +101,18 @@ export default function FoodRecommendations() {
       </div>
 
       {/* meal recommendation items */}
-      <motion.div className="mt-2 mb-4 flex justify-center flex-wrap w-full xl:mt-3">
+      <motion.div className="mt-2 mb-4 grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 3xl:grid-cols-5 gap-2 md:gap-2.5 lg:gap-3 2xl:gap-4 xl:mt-3">
         {activeMeals && activeMeals.length > 0 ? (
           activeMeals.map((meal, idx) => (
             <motion.div
               key={`meal-recommendation-${meal.category}-${idx}`}
-              className="w-1/2 sm:w-1/3 lg:w-1/4 2xl:w-1/5 flex flex-col p-2 mb-1 lg:p-2.5"
+              className="flex flex-col p-1 pb-3 lg:p-2 lg:pb-4 shadow rounded-2xl"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1, transition: { delay: idx * 0.05 } }}
               exit={{ opacity: 0 }}
             >
               {/* meal image */}
-              <div className="relative w-full h-32 xs:h-40 sm:h-56">
+              <div className="relative w-full h-48 xs:h-64 lg:h-72 2xl:h-80">
                 <Image
                   fill
                   src={meal.imgSrc}
@@ -126,14 +126,14 @@ export default function FoodRecommendations() {
               </div>
 
               {/* meal details */}
-              <div className="mt-1 sm:mt-2">
+              <div className="mt-1 sm:mt-2 px-2">
                 <h4 className="text-sm font-bold 2xl:text-base">{meal.name}</h4>
-                <p className="text-xs opacity-90 line-clamp-3 2xl:text-sm">
+                <p className="text-xs line-clamp-2 opacity-90 md:line-clamp-3 2xl:text-sm">
                   {meal.description}
                 </p>
               </div>
-              <div className="mt-auto pt-2 flex justify-between md:pt-4">
-                <div className="flex">
+              <div className="mt-auto pt-2 px-2 flex justify-between md:pt-4">
+                <div className="flex -ml-0.5">
                   <Icon
                     name="watch"
                     className="w-4 h-4 opacity-70 2xl:w-5 2xl:h-5"
@@ -142,8 +142,8 @@ export default function FoodRecommendations() {
                     {meal.time}
                   </span>
                 </div>
-                <div className="flex items-center">
-                  <div className="-mt-1 -ml-0.5">
+                <div className="flex items-center mr-1">
+                  <div className="-mt-1">
                     <Icon
                       name="fire"
                       className="w-5 h-5 opacity-70 2xl:w-6 2xl:h-6"
@@ -154,7 +154,7 @@ export default function FoodRecommendations() {
                   </span>
                 </div>
               </div>
-              <div className="flex justify-end mt-3 -mr-0.5 md:mt-4">
+              <div className="flex justify-end mt-3 mr-2 md:mt-4">
                 <motion.button
                   whileTap={{ scale: 0.97 }}
                   className="bg-red-200 py-2 px-3 rounded-md hover:bg-red-300 transition duration-300"

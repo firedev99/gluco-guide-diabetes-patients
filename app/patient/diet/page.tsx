@@ -9,17 +9,14 @@ import Image from "next/image"
 export default function DietPage() {
   return (
     <div>
-      {/* page */}
-      <div className="flex flex-col">
-        <span className="text-sm font-bold opacity-70 ml-[1px]">
-          for 17th, April
-        </span>
+      <div className="flex flex-col ml-1">
+        <span className="text-sm font-bold opacity-70">for 17th, April</span>
         <h3 className="text-2xl font-extrabold leading-7">Daily Plan</h3>
       </div>
 
       <div className="flex flex-col lg:flex-row w-full lg:gap-2 lg:items">
-        {/* daily recommendation options */}
-        <div className="mt-7 grid grid-cols-2 2xl:grid-cols-4 gap-2 lg:w-full min-h-[324px] lg:items-center lg:mt-6">
+        {/* recommendation categories */}
+        <div className="mt-7 grid grid-cols-2 2xl:grid-cols-4 gap-2 lg:w-full min-h-[324px] lg:items-center lg:mt-4">
           {recommendationOptions.map((option, idx) => (
             <div
               key={`recommendation_option_${idx}`}

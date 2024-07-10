@@ -50,6 +50,18 @@ body {
     @apply rounded-sm bg-[--primary-blue];
   }
 
+  [data-tooltip]::after {
+    @apply opacity-100 min-w-36 z-20 invisible absolute px-2.5 py-1.5 text-[#ededed] font-light text-xs tracking-wide top-1/2 text-center left-1/4 bg-[#282828];
+  }
+
+  [data-tooltip]:hover::after {
+    @apply invisible xs:visible;
+    content: attr(data-tooltip);
+    -webkit-box-shadow: inset 0px 0px 0px 2px #fff;
+    -moz-box-shadow: inset 0px 0px 0px 2px #fff;
+    box-shadow: inset 0px 0px 0px 2px #fff;
+  }
+
   .gradient-border-green::before {
     content: "";
     position: absolute;

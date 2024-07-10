@@ -27,5 +27,5 @@ export function useClickOutside<T extends HTMLElement>(
 }
 
 // how to use it
-// useClickOutside takes two params, one for the reference and the other one is a callback function
+// useClickOutside takes two params, one for the reference and the other one is the callback function
 // e.g -> useClickOutside(ref, () => {})

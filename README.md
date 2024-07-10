@@ -1,57 +1,34 @@
 Gluco Guide is an Integrated Heath Monitoring System for Diabetes Patients.
 
-## Getting Started
+## Getting Started using Docker
+
+1. [Install Docker](https://docs.docker.com/get-docker/) on your machine.
+1. Build your container: `docker-compose up --build`.
+1. Run your container: `docker-compose up`.
+
+You can view your images created with `docker images`.
+
+## Getting Started Locally
 
 First, install the packages using the following command:
 
 ```bash
 yarn
-# or
-npm install
 ```
 
-To run the project in development mode use the following command:
+Then to run the project in development mode use the following command:
 
 ```bash
-yarn dev
-# or
-npm run dev
+yarn fire
 ```
-
-Client: Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-Server: Open [http://localhost:3000/api](http://127.0.0.1:8000/api) with your browser to see the result.
-
-## Learn More
-
-To learn more about HTML, CSS and JavaScript take a look at the following resources:
-
-- [HTML](https://www.w3schools.com/html)
-- [CSS](https://www.w3schools.com/css)
-- [JavaScript](https://www.w3schools.com/js)
-- [TailwindCSS](https://tailwindcss.com/docs)
-
-To learn more about ReactJS, take a look at the following resources:
-
-- [ReactJS Reference](https://react.dev/reference/react) - learn about ReactJS features.
-- [Learn ReactJS](https://react.dev/learn) - an interactive ReactJS tutorial.
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-To learn more about FastAPI, take a look at the following resources:
-
-- [Learn FastAPI](https://fastapi.tiangolo.com/tutorial) - learn about FastAPI features.
 
 ## Collaborate to this project
 
-- For collaboration you need to fork or clone the repository.
+- For collaboration you need to fork and `clone` or `dowload` the repository.
 
 ### How to Fork the repository
 
-- If you go this page [GlucoGuide](https://fastapi.tiangolo.com/tutorial), you will see a button named 'Fork' in the top right corner of the page.
+- Go to this page [GlucoGuide](https://fastapi.tiangolo.com/tutorial), there is a button named `Fork` in the top right corner of the page.
 
 ### How to Clone the repository
 
@@ -83,3 +60,26 @@ git remote add upstream https://github.com/firedev99/gluco-guide-diabetes-patien
 git fetch upstream
 git merge upstream/master
 ```
+
+## Learn More
+
+To learn more about HTML, CSS and JavaScript take a look at the following resources:
+
+- [HTML](https://www.w3schools.com/html)
+- [CSS](https://www.w3schools.com/css)
+- [JavaScript](https://www.w3schools.com/js)
+- [TailwindCSS](https://tailwindcss.com/docs)
+
+To learn more about ReactJS, take a look at the following resources:
+
+- [ReactJS Reference](https://react.dev/reference/react) - learn about ReactJS features.
+- [Learn ReactJS](https://react.dev/learn) - an interactive ReactJS tutorial.
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+To learn more about FastAPI, take a look at the following resources:
+
+- [Learn FastAPI](https://fastapi.tiangolo.com/tutorial) - learn about FastAPI features.

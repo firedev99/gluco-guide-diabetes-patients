@@ -1,5 +1,5 @@
-# use the offifical python runtime as the base image`
-FROM python:3.9
+# use the offifical python runtime as the base image
+FROM python:3.12-slim-bookworm
 
 # set the working directory inside the container
 WORKDIR /code

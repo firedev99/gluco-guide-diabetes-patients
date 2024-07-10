@@ -2,24 +2,46 @@ Gluco Guide is an Integrated Heath Monitoring System for Diabetes Patients.
 
 ## Getting Started using Docker
 
-1. [Install Docker](https://docs.docker.com/get-docker/) on your machine.
-1. Build your container: `docker-compose up --build`.
-1. Run your container: `docker-compose up`.
+- First [Install Docker](https://docs.docker.com/get-docker/) on your machine.
 
-You can view your images created with `docker images`.
+Build the project container with the following command:
+
+```bash
+docker-compose up --build
+```
+
+Run the container with the following command:
+
+```bash
+docker-compose up
+# or
+docker compose up --watch
+```
+
+Development: To view live changes in the code either run `docker compose up --watch` or press `w` after running the command `docker-compose up` from the terminal.
 
 ## Getting Started Locally
+
+Before starting the project from locallay make sure to have the following packages installed in your machine.
+
+- [Python](https://www.python.org/downloads/)
+- [NodeJS](https://nodejs.org/en/download/source-code)
+- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) `optional but recommended`
 
 First, install the packages using the following command:
 
 ```bash
 yarn
+# or
+or npm run dev
 ```
 
-Then to run the project in development mode use the following command:
+Run the project in development mode use the following command:
 
 ```bash
 yarn fire
+# or
+npm run fire
 ```
 
 ## Collaborate to this project
@@ -55,8 +77,15 @@ git push -u origin master
 
 ### How to Merge or Sync update codes from the main repository (original repository):
 
+To add upstream remote to the forked repository, run the following command
+
 ```bash
 git remote add upstream https://github.com/firedev99/gluco-guide-diabetes-patients.git
+```
+
+To synchronized with the original repository, run the following command
+
+```bash
 git fetch upstream
 git merge upstream/master
 ```

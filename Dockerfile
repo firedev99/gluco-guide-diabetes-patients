@@ -10,10 +10,10 @@ COPY package.json yarn.lock ./
 # install the dependencies
 RUN yarn install --frozen-lockfile
 
-# copy the rest of the application code 
+# copy the rest of the application to working directory 
 COPY . .
 
-# export the port of development mode
+# expose the development port
 EXPOSE 3000
 
 # run the development command

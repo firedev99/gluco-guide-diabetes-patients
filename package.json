@@ -7,7 +7,7 @@
     "server": "fastapi dev ./server/main.py",
     "client": "next dev",
     "dev": "next dev",
-    "server-n-client": "npm-run-all --parallel uvicorn client",
+    "fire": "npm-run-all --parallel uvicorn client",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

@@ -22,21 +22,21 @@ Development: To view live changes in the code either run `docker compose up --wa
 
 ## Getting Started Locally
 
-Before starting the project from locallay make sure to have the following packages installed in your machine.
+To start the project locallay make sure to have the following requirements installed in your machine.
 
 - [Python](https://www.python.org/downloads/)
 - [NodeJS](https://nodejs.org/en/download/source-code)
-- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable) `optional but recommended`
+- `optional` [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#windows-stable)
 
-First, install the packages using the following command:
+Then open your terminal and install the project packages using the following command:
 
 ```bash
 yarn
 # or
-or npm run dev
+npm install
 ```
 
-Run the project in development mode use the following command:
+Run the project locally in development mode using the following command:
 
 ```bash
 yarn fire
@@ -55,7 +55,7 @@ npm run fire
 ### How to Clone the repository
 
 - Create a directory, for example `gluco-guide-diabetes-patients`.
-- Enter into the new directory:
+- Enter in the newly created directory:
 
 ```bash
 cd gluco-guide-diabetes-patients
@@ -92,7 +92,7 @@ git merge upstream/master
 
 ## Learn More
 
-To learn more about HTML, CSS and JavaScript take a look at the following resources:
+To learn more about HTML, CSS, JavaScript, and TailwindCSS take a look at the following resources:
 
 - [HTML](https://www.w3schools.com/html)
 - [CSS](https://www.w3schools.com/css)

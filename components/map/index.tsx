@@ -5,22 +5,29 @@ import ReactMap, { Marker, Popup } from "react-map-gl"
 import "mapbox-gl/dist/mapbox-gl.css"
 import Image from "next/image"
 import Icon from "../icons"
-import { HOSPITALS } from "@/lib/dummy/hospitals"
+import { HospitalType } from "@/lib/dummy/hospitals"
+
+type Props = {
+  hospitals: HospitalType[]
+  coordinates?: number[]
+}
+
+type GeoCordProps = {
+  coordinates: number[]
+  type: string
+}
 
 type MapFeatureType = {
   type: string
   properties: any
-  geometry: {
-    coordinates: number[]
-    type: string
-  }
+  geometry: GeoCordProps
   id: string
 }
 
-export default function Map() {
+export default function Map({ hospitals, coordinates }: Props) {
   const [viewState, setViewState] = useState({
-    latitude: 23.752,
-    longitude: 90.391,
+    latitude: coordinates ? coordinates[1] : 23.752,
+    longitude: coordinates ? coordinates[0] : 90.391,
     zoom: 12.5,
   })
 
@@ -41,7 +48,7 @@ export default function Map() {
         ref={mapRef}
         {...viewState}
       >
-        {HOSPITALS.map((hospital) => (
+        {hospitals.map((hospital) => (
           <Marker
             key={hospital.id}
             latitude={hospital.geometry.coordinates[1]}

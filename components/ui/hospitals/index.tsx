@@ -38,7 +38,7 @@ function Component({ hospital }: { hospital: HospitalType }) {
           src={hospital.properties.img_src}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt="doctor.png"
-          style={{ objectFit: "cover", filter: "contrast(0.9)" }}
+          style={{ objectFit: "cover" }}
           priority
           className="rounded-lg"
         />

@@ -71,40 +71,46 @@ export default function Doctors() {
       </div>
       <div className="grid grid-cols-1 xxs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 3xl:grid-cols-5 gap-2 md:gap-3 md:gap-y-4 mt-0 md:mt-1">
         {modDoctors.map((props, idx) => (
-          <div
+          <Link
             key={`doctor_l_${idx}`}
-            className="p-2 bg-white shadow rounded-lg hover:shadow-md hover:cursor-pointer"
+            href={{
+              pathname: "/hospitals/doctors/profile",
+              query: {
+                id: props.id,
+                type: "view",
+              },
+            }}
           >
-            {/* doctor image */}
-            <div className="relative w-full h-72 xxs:h-44 xs:h-64 lg:h-72 xl:h-80">
-              <Image
-                fill
-                src={props.imgSrc}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                alt="doctor.png"
-                style={{ objectFit: "cover", filter: "contrast(0.9)" }}
-                priority
-                className="rounded-lg"
-              />
-            </div>
-            {/* doctor description */}
-            <div className="flex flex-col mt-2 ml-1">
-              <h4 className="text-sm font-bold">{props.name}</h4>
-              <p className="text-xs font-bold opacity-80 leading-4 line-clamp-3 min-h-12">
-                {props.description}
-              </p>
-              <div className="flex items-center opacity-80 mt-2 -ml-1">
-                <div>
-                  <Icon name="pin" className="size-4 -mt-0.5 xs:mr-0.5" />
-                </div>
-                <h4 className="text-xs font-bold line-clamp-1">
-                  {props.hospital.name}
-                </h4>
+            <div className="p-2 bg-white shadow rounded-lg hover:shadow-md hover:cursor-pointer">
+              {/* doctor image */}
+              <div className="relative w-full h-72 xxs:h-44 xs:h-64 lg:h-72 xl:h-80">
+                <Image
+                  fill
+                  src={props.imgSrc}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  alt="doctor.png"
+                  style={{ objectFit: "cover", filter: "contrast(0.9)" }}
+                  priority
+                  className="rounded-lg"
+                />
               </div>
-            </div>
-            {/* appointment option */}
-            <div className="mt-3 md:mt-4">
-              <Link href={"/hospitals/doctors/#"}>
+              {/* doctor description */}
+              <div className="flex flex-col mt-2 ml-1">
+                <h4 className="text-sm font-bold">{props.name}</h4>
+                <p className="text-xs font-bold opacity-80 leading-4 line-clamp-3 min-h-12">
+                  {props.description}
+                </p>
+                <div className="flex items-center opacity-80 mt-2 -ml-1">
+                  <div>
+                    <Icon name="pin" className="size-4 -mt-0.5 xs:mr-0.5" />
+                  </div>
+                  <h4 className="text-xs font-bold line-clamp-1">
+                    {props.hospital.name}
+                  </h4>
+                </div>
+              </div>
+              {/* appointment option */}
+              <div className="mt-3 md:mt-4">
                 <Button
                   className="w-full h-10 center"
                   onClick={(e) => handleAppointmentModal(e, props)}
@@ -113,9 +119,9 @@ export default function Doctors() {
                     book appointment
                   </span>
                 </Button>
-              </Link>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
 
         {/* filter modal */}

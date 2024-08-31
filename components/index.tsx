@@ -25,10 +25,17 @@ export { default as DietPreference } from "./ui/patients/diet/Preferences"
 // doctors ui
 export { default as Doctors } from "./ui/doctors"
 export { default as SuggestedDoctors } from "./ui/doctors/SuggestedDoctors"
+export { default as DoctorDets } from "./ui/doctors/DoctorDets"
+
 // hospitals ui
 export { default as Hospitals } from "./ui/hospitals"
+
 // lottie
 export { default as WalkingDog } from "./fancy/WalkingDog"
+
+// no data / not found
+export { default as NoData } from "./ui/NoData"
+
 // modals
 export { default as Modal } from "./modals/Modal"
 export { default as PopoverModal } from "./modals/PopoverModal"
@@ -38,15 +45,20 @@ export { default as DoctorFilter } from "./modals/DoctorFilter"
 // inputs
 export { default as RadioInput } from "./inputs/RadioInput"
 export { default as Checkbox } from "./inputs/Checkbox"
+
 // recharts
 export { default as RenderNutritionChart } from "./recharts/NutritionChart"
+
 // map
 export { default as Map } from "./map"
+
 // sliders
 export { default as Slider } from "./sliders/Slider"
 export { default as Swiper } from "./sliders/SwipeCarousel"
+
 // appointment
 export { default as Appointments } from "./ui/patients/appoinments/Appointments"
 export { default as BookAppointment } from "./ui/patients/appoinments/BookAppointment"
+
 // dates
 export { default as ScrollingDateUI } from "./dates/ScrollingDates"

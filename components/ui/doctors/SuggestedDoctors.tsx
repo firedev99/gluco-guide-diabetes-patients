@@ -3,27 +3,46 @@
 import { Icon, Swiper } from "@/components"
 import { doctors, DoctorType } from "@/lib/dummy/doctors"
 import Image from "next/image"
-import { useState } from "react"
+import React, { useState } from "react"
 import { motion } from "framer-motion"
 
 type Props = {
   experience?: number
+  limit?: number
+  hospitalID?: string
+  nID?: string
+  children?: React.ReactNode
 }
 
-export default function SuggestedDoctors({ experience = 6 }: Props) {
-  const modDoctors = doctors.filter((item) => item.experience >= experience)
+export default function SuggestedDoctors({
+  experience,
+  hospitalID,
+  limit = 10,
+  nID,
+  children,
+}: Props) {
+  const modDoctors = hospitalID
+    ? doctors
+        .filter((item) => item.hospital.id === hospitalID && item.id !== nID)
+        .slice(0, limit)
+    : experience
+    ? doctors.filter((item) => item.experience >= experience).slice(0, limit)
+    : doctors.slice(0, limit)
 
   return (
-    <Swiper>
-      {modDoctors.map((doctor, idx) => (
-        <div
-          key={`carousel-${idx}`}
-          className="w-80 h-96 2xl:size-96 min-w-80 2xl:min-w-96"
-        >
-          <Component doctor={doctor} />
-        </div>
-      ))}
-    </Swiper>
+    <React.Fragment>
+      {modDoctors.length !== 0 && children}
+      <Swiper>
+        {modDoctors.map((doctor, idx) => (
+          <div
+            key={`carousel-${idx}`}
+            className="w-80 h-96 2xl:size-96 min-w-80 2xl:min-w-96"
+          >
+            <Component doctor={doctor} />
+          </div>
+        ))}
+      </Swiper>
+    </React.Fragment>
   )
 }
 

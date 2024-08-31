@@ -19,6 +19,11 @@ function groupByCategory<ItemType, K extends keyof ItemType>(
   return res
 }
 
+// generate an id
+function getID(): string {
+  return Math.random().toString(36).slice(2)
+}
+
 // get a unique array eg - getUniqueArr(data.map((item) => item.name))
 // function getSpecificArr<ItemType, K extends keyof ItemType>(
 //   data: ItemType[],
@@ -53,4 +58,5 @@ export const firey = {
   groupByCategory,
   convertMinToHourMinFormat,
   getSpecificArr,
+  getID,
 }

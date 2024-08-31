@@ -18,6 +18,9 @@
 body {
   background: #f8f8f8;
   color: #383838;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   /* padding: 0 1rem; */
 }
 
@@ -60,6 +63,10 @@ body {
     -webkit-box-shadow: inset 0px 0px 0px 2px #fff;
     -moz-box-shadow: inset 0px 0px 0px 2px #fff;
     box-shadow: inset 0px 0px 0px 2px #fff;
+  }
+
+  .mapboxgl-popup-content {
+    display: none !important;
   }
 
   .gradient-border-green::before {

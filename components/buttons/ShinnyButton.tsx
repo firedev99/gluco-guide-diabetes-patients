@@ -13,6 +13,9 @@ export default function ShinnyButton({ children, className }: Props) {
       className={`radial-gradient-shinny ${className}`}
       initial={{ "--x": "100%" } as any}
       animate={{ "--x": "-100%" } as any}
+      whileHover={{
+        y: -3,
+      }}
       whileTap={{
         scale: 0.975,
         transition: { ease: "easeInOut", duration: 0.2 },

@@ -1,11 +1,14 @@
 import { IconNames } from "@/types"
 import {
+  Monitoring,
   BeatGraphics,
   BellIcon,
   CalendarIcon,
   CapsulePillIcon,
   ChartGraphIcon,
   ChartPieIcon,
+  ChevronRightIcon,
+  CrossIcon,
   DoctorIcon,
   EditIcon,
   FireIcon,
@@ -18,6 +21,8 @@ import {
   HumanIcon,
   HumanJogginIcon,
   HumanYogaIcon,
+  InformationIcon,
+  LocationPinIcon,
   LogoutIcon,
   RightArrowIcon,
   RotatedArrowIcon,
@@ -31,6 +36,9 @@ import {
   WatchIcon,
   WeightMachineIcon,
   WrittenPageIcon,
+  SimpleLeftArrow,
+  SimpleRightArrow,
+  FilterIcon,
 } from "./svg"
 
 type Props = {
@@ -44,11 +52,34 @@ export default function Icon({ name, className, pathClassName }: Props) {
     case "search":
       return <SearchIcon className={className} pathClassName={pathClassName} />
 
+    case "monitoring":
+      return <Monitoring className={className} pathClassName={pathClassName} />
+
     case "bell":
       return <BellIcon className={className} pathClassName={pathClassName} />
 
+    case "simple-left-arrow":
+      return (
+        <SimpleLeftArrow className={className} pathClassName={pathClassName} />
+      )
+
+    case "filter":
+      return <FilterIcon className={className} pathClassName={pathClassName} />
+    case "simple-right-arrow":
+      return (
+        <SimpleRightArrow className={className} pathClassName={pathClassName} />
+      )
+
     case "home":
       return <HomeIcon className={className} pathClassName={pathClassName} />
+
+    case "pin":
+      return (
+        <LocationPinIcon className={className} pathClassName={pathClassName} />
+      )
+
+    case "chevron-right":
+      return <ChevronRightIcon className={className} />
 
     case "chart-pie":
       return (
@@ -58,6 +89,11 @@ export default function Icon({ name, className, pathClassName }: Props) {
     case "three-people":
       return (
         <ThreePeopleIcon className={className} pathClassName={pathClassName} />
+      )
+
+    case "information":
+      return (
+        <InformationIcon className={className} pathClassName={pathClassName} />
       )
 
     case "calendar":
@@ -87,6 +123,9 @@ export default function Icon({ name, className, pathClassName }: Props) {
       return (
         <TwoPeopleIcon className={className} pathClassName={pathClassName} />
       )
+
+    case "cross":
+      return <CrossIcon className={className} pathClassName={pathClassName} />
 
     case "logout":
       return <LogoutIcon className={className} pathClassName={pathClassName} />

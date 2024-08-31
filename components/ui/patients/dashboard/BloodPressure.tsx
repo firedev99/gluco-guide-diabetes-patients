@@ -35,7 +35,7 @@ export default function BloodPressure() {
             <h4 className="text-base md:text-xl font-bold">Blood Pressure</h4>
             <div className="flex items-center mt-1">
               <Icon name="heart-w-pulse" />
-              <span className="ml-2 -mt-1 opacity-75 text-sm font-bold">
+              <span className="ml-2 opacity-75 text-sm font-bold">
                 Pulse: 78BPM
               </span>
             </div>

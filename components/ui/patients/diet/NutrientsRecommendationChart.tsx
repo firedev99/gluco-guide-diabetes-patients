@@ -2,93 +2,9 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { PieChart, Pie, Sector, ResponsiveContainer } from "recharts"
-import Icon from "@/components/icons"
+import { PieChart, Pie, ResponsiveContainer } from "recharts"
 import { nutrientsChartData } from "@/lib/dummy/diets"
-
-// recharts component
-const renderActiveShape = (props: any) => {
-  const RADIAN = Math.PI / 180
-  const {
-    cx,
-    cy,
-    midAngle,
-    innerRadius,
-    outerRadius,
-    startAngle,
-    endAngle,
-    fill,
-    payload,
-    percent,
-    value,
-  } = props
-  const sin = Math.sin(-RADIAN * midAngle)
-  const cos = Math.cos(-RADIAN * midAngle)
-  const sx = cx + (outerRadius + 10) * cos
-  const sy = cy + (outerRadius + 10) * sin
-  const mx = cx + (outerRadius + 30) * cos
-  const my = cy + (outerRadius + 30) * sin
-  const ex = mx + (cos >= 0 ? 1 : -1) * 22
-  const ey = my
-  const textAnchor = cos >= 0 ? "start" : "end"
-
-  return (
-    <g>
-      <text
-        x={cx}
-        y={cy}
-        dy={6}
-        textAnchor="middle"
-        fill="#e1e1e1"
-        fontWeight="bold"
-      >
-        {payload.name}
-      </text>
-      <Sector
-        cx={cx}
-        cy={cy}
-        innerRadius={innerRadius}
-        outerRadius={outerRadius}
-        startAngle={startAngle}
-        endAngle={endAngle}
-        fill="#0f7ce2"
-      />
-      <Sector
-        cx={cx}
-        cy={cy}
-        startAngle={startAngle}
-        endAngle={endAngle}
-        innerRadius={outerRadius + 6}
-        outerRadius={outerRadius + 10}
-        fill="#e1e1e1"
-      />
-      <path
-        d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`}
-        stroke={fill}
-        fill="none"
-      />
-      <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
-      <text
-        x={ex + (cos >= 0 ? 1 : -1) * 12}
-        y={ey}
-        textAnchor={textAnchor}
-        fill="#e1e1e1"
-      >
-        {payload.name}
-      </text>
-
-      <text
-        x={ex + (cos >= 0 ? 1 : -1) * 12}
-        y={ey}
-        dy={18}
-        textAnchor={textAnchor}
-        fill="#e1e1e1"
-      >
-        &#8212; {value}g &#x2022; {(percent * 100).toFixed(2)}%
-      </text>
-    </g>
-  )
-}
+import { RenderNutritionChart, Icon } from "@/components"
 
 export default function NutrientsRecommendationChart() {
   const [activeNutrient, setActiveNutrient] = useState<number>(2)
@@ -99,14 +15,14 @@ export default function NutrientsRecommendationChart() {
 
   return (
     <div>
-      <div className="mt-5 relative overflow-hidden w-full rounded-xl bg-gradient-to-b from-[#8FAEFF] to-[#5574E1] min-h-[324px] lg:mt-3.5 center min-[425px]:block lg:w-[546px]">
+      <div className="mt-1 relative overflow-hidden w-full rounded-xl bg-gradient-to-b from-[#8FAEFF] to-[#5574E1] min-h-56 xs:min-h-[324px] lg:mt-3.5 center xs:block lg:w-[546px]">
         {/* food diet chart */}
-        <div className="hidden min-[425px]:block w-full h-[286px] relative z-10">
+        <div className="hidden xs:block w-full h-[286px] relative z-10">
           <ResponsiveContainer width="100%" height="100%">
             <PieChart className="-ml-12" width={400} height={400}>
               <Pie
                 activeIndex={activeNutrient}
-                activeShape={renderActiveShape}
+                activeShape={RenderNutritionChart}
                 data={nutrientsChartData}
                 cx="50%"
                 cy="50%"
@@ -120,13 +36,12 @@ export default function NutrientsRecommendationChart() {
           </ResponsiveContainer>
         </div>
 
-        <div className="flex w-40 items-center flex-col text-[--primary-white] mt-0 ml-0 mr-0 mb-0 min-[425px]:-mt-28 min-[425px]:mb-4 min-[425px]:ml-auto min-[425px]:mr-2">
-          {/* -mt-28 ml-auto mr-2 mb-4 */}
+        <div className="flex w-40 items-center flex-col text-[--primary-white] mt-0 ml-0 mr-0 mb-0 xs:-mt-36 xs:mb-4 xs:ml-auto xs:mr-4 lg:mr-10">
           <div>
             <div className="flex flex-col mb-3">
               {nutrientsChartData.map((nutrient, idx) => (
                 <span
-                  className="text-nowrap text-sm font-bold"
+                  className="text-nowrap text-base font-bold leading-5"
                   key={`nutrient_${idx}`}
                 >
                   &#x2022; {nutrient.name} &#8212; {nutrient.value}g
@@ -134,9 +49,11 @@ export default function NutrientsRecommendationChart() {
               ))}
             </div>
           </div>
-          <div className="flex -ml-4">
+          <div className="flex items-center -ml-4">
             <Icon name="fire" className="w-8 h-8 mr-0.5" />
-            <h3 className="text-2xl font-extrabold">2100 Kcal</h3>
+            <h3 className="text-[24px] lg:text-3xl font-extrabold">
+              2100 Kcal
+            </h3>
           </div>
 
           <span className="font-semibold text-sm opacity-70 ml-2">

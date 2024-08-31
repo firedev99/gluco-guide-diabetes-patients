@@ -3,6 +3,225 @@ type Props = {
   pathClassName?: string
 }
 
+export function CrossIcon({ className, pathClassName }: Props) {
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path className={pathClassName} d="M18 6 6 18"></path>
+      <path className={pathClassName} d="m6 6 12 12"></path>
+    </svg>
+  )
+}
+
+export function FilterIcon({ className, pathClassName }: Props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
+        className={pathClassName}
+      />
+    </svg>
+  )
+}
+
+export function InformationIcon({ className, pathClassName }: Props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z"
+        className={pathClassName}
+      />
+    </svg>
+  )
+}
+
+export function ChevronRightIcon({ className, pathClassName }: Props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+    >
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  )
+}
+
+export function LocationPinIcon({ className, pathClassName }: Props) {
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth="1.5"
+      stroke="currentColor"
+    >
+      <path
+        className={pathClassName}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+      />
+      <path
+        className={pathClassName}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+      />
+    </svg>
+  )
+}
+
+export function SimpleLeftArrow({ className, pathClassName }: Props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M15.75 19.5 8.25 12l7.5-7.5"
+        className={pathClassName}
+      />
+    </svg>
+  )
+}
+
+export function SimpleRightArrow({ className, pathClassName }: Props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+        className={pathClassName}
+      />
+    </svg>
+  )
+}
+
+export function Monitoring({ className, pathClassName }: Props) {
+  return (
+    <svg
+      width="49"
+      height="49"
+      viewBox="0 0 49 49"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <g clip-path="url(#clip0_1209_6654)">
+        <path
+          className={pathClassName}
+          d="M18.2616 44.1367C19.9393 41.9119 20.9377 39.2494 21.1366 36.4701"
+          stroke="black"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          className={pathClassName}
+          d="M29.7616 44.1367C28.0839 41.9119 27.0855 39.2494 26.8866 36.4701"
+          stroke="black"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          className={pathClassName}
+          d="M15.3866 44.1367H32.6366"
+          stroke="black"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          className={pathClassName}
+          d="M1.96993 30.7201H46.0533"
+          stroke="black"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          className={pathClassName}
+          d="M3.8866 3.88672H44.1366C44.1366 3.88672 46.0533 3.88672 46.0533 5.80339V34.5534C46.0533 34.5534 46.0533 36.4701 44.1366 36.4701H3.8866C3.8866 36.4701 1.96993 36.4701 1.96993 34.5534V5.80339C1.96993 5.80339 1.96993 3.88672 3.8866 3.88672Z"
+          stroke="black"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          className={pathClassName}
+          d="M1.96993 19.22H13.7785C13.9702 19.2204 14.1576 19.1632 14.3165 19.0559C14.4754 18.9486 14.5984 18.7962 14.6698 18.6182L15.3253 16.9756C15.3992 16.7911 15.5286 16.6342 15.6956 16.5265C15.8626 16.4188 16.059 16.3657 16.2575 16.3746C16.4561 16.3834 16.647 16.4537 16.8037 16.5759C16.9605 16.698 17.0755 16.8658 17.1327 17.0561L18.2923 20.922C18.3509 21.1203 18.472 21.2944 18.6377 21.4181C18.8033 21.5419 19.0045 21.6088 19.2113 21.6088C19.4181 21.6088 19.6193 21.5419 19.7849 21.4181C19.9506 21.2944 20.0717 21.1203 20.1303 20.922L22.9153 11.4556C22.9757 11.25 23.1033 11.0707 23.2776 10.9461C23.452 10.8216 23.6631 10.759 23.8771 10.7685C24.0912 10.778 24.2959 10.859 24.4586 10.9985C24.6212 11.1379 24.7324 11.3279 24.7744 11.538L27.1032 23.1799C27.1451 23.3888 27.2555 23.5778 27.4169 23.717C27.5783 23.8562 27.7815 23.9376 27.9943 23.9484C28.2072 23.9592 28.4175 23.8987 28.5922 23.7765C28.7668 23.6543 28.8957 23.4774 28.9585 23.2738L30.8752 17.0274C30.9335 16.838 31.049 16.6713 31.206 16.5503C31.3629 16.4292 31.5535 16.3599 31.7515 16.3517C31.9495 16.3435 32.1452 16.3969 32.3116 16.5045C32.478 16.6121 32.6069 16.7687 32.6807 16.9526L33.3477 18.624C33.419 18.8019 33.542 18.9544 33.7009 19.0617C33.8598 19.169 34.0472 19.2261 34.2389 19.2258H46.0533"
+          stroke="black"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_1209_6654">
+          <rect
+            width="48"
+            height="48"
+            fill="white"
+            transform="translate(0.0115967 0.0117188)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}
+
 export function SearchIcon({ className, pathClassName }: Props) {
   return (
     <svg

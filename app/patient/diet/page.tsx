@@ -1,27 +1,41 @@
 import {
+  DietPreference,
   FoodRecommendations,
   Icon,
   NutrientsRecommendationChart,
 } from "@/components"
-import { recommendationOptions } from "@/lib/dummy/diets"
+import { recommendedCategoryOptions } from "@/lib/dummy/recommededOptData"
 import Image from "next/image"
 
 export default function DietPage() {
+  // recommeded options
+  const options = recommendedCategoryOptions({
+    activity: 90,
+    water: 8,
+    sleep: 450,
+  })
+
   return (
-    <div>
+    <div className="pb-4 lg:pb-6">
       <div className="flex flex-col ml-1">
         <span className="text-sm font-bold opacity-70">for 17th, April</span>
         <h3 className="text-2xl font-extrabold leading-7">Daily Plan</h3>
       </div>
 
+      {/* preference customization popover modal */}
+      <DietPreference />
+
+      {/* meal recommendations */}
       <div className="flex flex-col lg:flex-row w-full lg:gap-2 lg:items">
         {/* recommendation categories */}
-        <div className="mt-7 grid grid-cols-2 2xl:grid-cols-4 gap-2 lg:w-full min-h-[324px] lg:items-center lg:mt-4">
-          {recommendationOptions.map((option, idx) => (
+        <div className="mt-3 md:mt-4 grid grid-cols-2 2xl:grid-cols-4 gap-2 lg:w-full min-h-[324px] lg:items-center">
+          {options.map((option, idx) => (
             <div
               key={`recommendation_option_${idx}`}
-              className={`cursor-pointer relative border-2 rounded-2xl  lg:h-full lg:max-h-full center flex-col ${
-                option.title === "Exercise" && "flex-col-reverse"
+              className={`cursor-pointer max-h-40 hover:shadow md:hover:shadow-md relative rounded-2xl lg:h-full lg:max-h-full center flex-col ${
+                option.title === "exercises"
+                  ? "flex-col-reverse bg-gradient-to-bl from-[#0172AF] from-10% to-[#69dea8] to-90%"
+                  : "border shadow-sm"
               }`}
             >
               <div className="center flex-col">
@@ -30,7 +44,13 @@ export default function DietPage() {
                     {option.info}
                   </span>
                 )}
-                <span className="font-bold mb-1">{option.title}</span>
+                <span
+                  className={`font-bold mb-1 ${
+                    option.title === "exercises" && "-mt-3"
+                  }`}
+                >
+                  {option.title}
+                </span>
               </div>
               <div
                 className={`relative ${
@@ -49,36 +69,18 @@ export default function DietPage() {
               </div>
               {option.title === "exercises" && (
                 <div className="absolute top-2 right-0 w-8 h-8">
-                  <Icon name="rotated-arrow" />
+                  <Icon name="rotated-arrow" pathClassName="fill-slate-100" />
                 </div>
               )}
             </div>
           ))}
         </div>
-        {/* customize btn mobile */}
-        <div className="flex lg:hidden items-center justify-end mr-1 mt-3">
-          <div>
-            <Icon name="edit-icon" className="w-[18px] h-[18px] opacity-80" />
-          </div>
-          <span className="text-sm ml-1 -mt-1 font-semibold opacity-80">
-            customize preference
-          </span>
-        </div>
+
         {/* Nutrition Chart */}
         <NutrientsRecommendationChart />
       </div>
 
-      {/* customize btn desktop */}
-      <div className="hidden lg:flex items-center justify-end mr-1 mt-3">
-        <div>
-          <Icon name="edit-icon" className="w-5 h-5" />
-        </div>
-        <span className="ml-1 -mt-1 font-semibold opacity-80">
-          customize preference
-        </span>
-      </div>
-
-      {/* food recommendations */}
+      {/* meal details */}
       <FoodRecommendations />
     </div>
   )

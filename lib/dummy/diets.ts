@@ -18,74 +18,7 @@ export const nutrientsChartData = [
   { name: "Carbs", value: 275 },
 ]
 
-export const partsOfDay = [
-  {
-    status: "breakfast",
-    start: 0,
-    end: 11,
-  },
-  {
-    status: "lunch",
-    start: 12,
-    end: 16,
-  },
-  {
-    status: "snacks",
-    start: 17,
-    end: 19,
-  },
-  {
-    status: "dinner",
-    start: 20,
-    end: 23,
-  },
-] as {
-  status: string
-  start: number
-  end: number
-}[]
-
-export const recommendationOptions = [
-  {
-    title: "daily activity",
-    imgSrc:
-      "https://res.cloudinary.com/dwhlynqj3/image/upload/v1720447731/glucoguide/diet/diet-activity.png",
-    position: "top",
-    info: "1h 30m",
-    size: "smaller",
-  },
-  {
-    title: "daily water",
-    imgSrc:
-      "https://res.cloudinary.com/dwhlynqj3/image/upload/v1720447731/glucoguide/diet/diet-water.png",
-    position: "top",
-    info: "8 cups",
-    size: "smaller",
-  },
-  {
-    title: "sleep duration",
-    imgSrc:
-      "https://res.cloudinary.com/dwhlynqj3/image/upload/v1720447731/glucoguide/diet/diet-sleep.png",
-    position: "top",
-    info: "7h 30m",
-    size: "larger",
-  },
-  {
-    title: "exercises",
-    imgSrc:
-      "https://res.cloudinary.com/dwhlynqj3/image/upload/v1720447731/glucoguide/diet/diet-exercise.png",
-    position: "top",
-    size: "larger",
-  },
-] as {
-  title: string
-  imgSrc: string
-  position: "top" | "bottom"
-  info?: string
-  size: "smaller" | "larger"
-}[]
-
-export const foodRecommendationOptions = [
+export const mealRecommendationOptions = [
   {
     title: "Breakfast",
     category: "breakfast",

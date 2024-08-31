@@ -43,3 +43,19 @@ export const upcomingAppointments = [
     location: "Banani 27, Prime Diabetics Diagnosis Center",
   },
 ] as AppointmentProps[]
+
+export const appointmentModes = [
+  "In-Person Consultation",
+  "Telemedicine (Video/Phone)",
+]
+
+export const appointmentPurposes = [
+  "General Checkup",
+  "Blood Sugar Management",
+  "Insulin Pump or CGM Setup",
+  "Medication Adjustment",
+  "Diet and Exercise Counseling",
+  "Complication Screening",
+  "Thyroid Function Evaluation",
+  "Weight Management",
+]

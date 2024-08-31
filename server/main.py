@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# root page 
+# root api 
 @app.get("/api")
 async def root():
   return {"message": "Hello, Fire!"}

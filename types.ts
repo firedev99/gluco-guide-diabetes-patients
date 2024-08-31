@@ -1,6 +1,8 @@
 export type IconNames =
   | "search"
+  | "monitoring"
   | "bell"
+  | "filter"
   | "home"
   | "chart-pie"
   | "three-people"
@@ -30,3 +32,21 @@ export type IconNames =
   | "doctor"
   | "edit-icon"
   | "watch"
+  | "cross"
+  | "information"
+  | "pin"
+  | "chevron-right"
+  | "simple-left-arrow"
+  | "simple-right-arrow"
+
+export type AppointmentCreationProps = {
+  doctor: string
+  appointmentMode: string
+  purposeOfVisit: string[]
+  selectedDate: Date
+  selectedMonth: string
+  selectedMonthDays: Date[]
+  notes: string
+  availableDays: string[]
+  time: string
+}

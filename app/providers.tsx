@@ -1,7 +1,5 @@
 "use client"
 
-import { AnimatePresence } from "framer-motion"
-import { usePathname } from "next/navigation"
 import { createContext, useState } from "react"
 
 type AppState = {

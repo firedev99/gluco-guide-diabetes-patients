@@ -1,7 +1,8 @@
 import React from "react"
-import { Icon, WalkingDog } from "@/components"
+import { FireyLink, Icon, WalkingDog } from "@/components"
 import { dates, days, upcomingAppointments } from "@/lib/dummy/appointments"
 import { recommendations } from "@/lib/dummy/recommendations"
+import Link from "next/link"
 
 export default function PendingTasks() {
   return (
@@ -89,6 +90,21 @@ export default function PendingTasks() {
               </div>
             )
           )}
+          <div className="ml-auto mr-0.5 xxs:mr-1 xl:mr-1.5 3xl:mr-2">
+            <FireyLink
+              href="/patient/appointments"
+              content="see all"
+              className="text-sm font-semibold
+              opacity-80"
+            />
+            {/* <Link
+              href="/patient/appointments"
+              className="text-sm font-semibold
+              opacity-80"
+            >
+              see all
+            </Link> */}
+          </div>
         </div>
       </div>
 
@@ -141,14 +157,7 @@ export default function PendingTasks() {
                       </div>
 
                       <div className="flex flex-col relative">
-                        <span
-                          // data-tooltip={`${
-                          //   type === "recommendation"
-                          //     ? `${info.toUpperCase()}`
-                          //     : `${type.toUpperCase()}`
-                          // } at ${start} - ${end}`}
-                          className="text-sm line-clamp-1 font-bold"
-                        >
+                        <span className="text-sm line-clamp-1 font-bold">
                           {`${start}-${end}`}
                         </span>
                         <span className="text-xs line-clamp-1 font-bold opacity-80 ">

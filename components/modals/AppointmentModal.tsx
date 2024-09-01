@@ -67,8 +67,17 @@ export default function AppointmentModal({
   }
 
   // handle date selection
-  function handleDateSelection(date: Date) {
-    setDetails((prev) => ({ ...prev, selectedDate: date }))
+  function handleDateSelection(date: Date, month?: string) {
+    const newPreviewDays = eachDayOfInterval({
+      start: startOfMonth(date),
+      end: endOfMonth(date),
+    })
+    setDetails((prev) => ({
+      ...prev,
+      selectedDate: date,
+      selectedMonth: month ? month : prev.selectedMonth,
+      selectedMonthDays: month ? newPreviewDays : prev.selectedMonthDays,
+    }))
   }
 
   // handle appointment mode

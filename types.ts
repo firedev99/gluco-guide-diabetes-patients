@@ -2,6 +2,7 @@ export type IconNames =
   | "search"
   | "monitoring"
   | "bell"
+  | "phone"
   | "filter"
   | "home"
   | "chart-pie"
@@ -20,6 +21,7 @@ export type IconNames =
   | "human"
   | "weight-machine"
   | "up-arrow"
+  | "mail"
   | "right-arrow"
   | "human-jogging"
   | "human-cycling"
@@ -38,6 +40,8 @@ export type IconNames =
   | "chevron-right"
   | "simple-left-arrow"
   | "simple-right-arrow"
+  | "blank-clipboard"
+  | "copied-clipboard"
 
 export type AppointmentCreationProps = {
   doctor: string

@@ -39,6 +39,10 @@ import {
   SimpleLeftArrow,
   SimpleRightArrow,
   FilterIcon,
+  PhoneIcon,
+  BlankClipboardIcon,
+  CopiedClipboardIcon,
+  MailIcon,
 } from "./svg"
 
 type Props = {
@@ -54,6 +58,28 @@ export default function Icon({ name, className, pathClassName }: Props) {
 
     case "monitoring":
       return <Monitoring className={className} pathClassName={pathClassName} />
+
+    case "phone":
+      return <PhoneIcon className={className} pathClassName={pathClassName} />
+
+    case "mail":
+      return <MailIcon className={className} pathClassName={pathClassName} />
+
+    case "blank-clipboard":
+      return (
+        <BlankClipboardIcon
+          className={className}
+          pathClassName={pathClassName}
+        />
+      )
+
+    case "copied-clipboard":
+      return (
+        <CopiedClipboardIcon
+          className={className}
+          pathClassName={pathClassName}
+        />
+      )
 
     case "bell":
       return <BellIcon className={className} pathClassName={pathClassName} />

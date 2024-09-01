@@ -29,6 +29,7 @@ export { default as DoctorDets } from "./ui/doctors/DoctorDets"
 
 // hospitals ui
 export { default as Hospitals } from "./ui/hospitals"
+export { default as ContactInformation } from "./ui/hospitals/ContactInformation"
 
 // lottie
 export { default as WalkingDog } from "./fancy/WalkingDog"

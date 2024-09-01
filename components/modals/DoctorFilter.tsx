@@ -13,12 +13,8 @@ type Props = {
   setValues: Dispatch<React.SetStateAction<DoctorFilterProps>>
 }
 
-const locations = firey.getSpecificArr(
-  HOSPITALS.map((item) => item.properties.city)
-)
-const hospitals = firey.getSpecificArr(
-  HOSPITALS.map((item) => item.properties.name)
-)
+const locations = firey.getSpecificArr(HOSPITALS.map((item) => item.city))
+const hospitals = firey.getSpecificArr(HOSPITALS.map((item) => item.name))
 
 export default function DoctorFilter({
   active,

@@ -136,4 +136,37 @@ body {
       border-radius: 28px;
     }
   }
+
+  /* fancy text heading */
+  .fancy {
+    background: -webkit-linear-gradient(
+      74deg,
+      #4285f4 0%,
+      #9b72cb 10%,
+      #d96570 20%,
+      #d96570 25%,
+      #9b72cb 35%,
+      #4285f4 45%,
+      #9b72cb 50%,
+      #d96570 55%,
+      #9b72cb 75%,
+      #4285f4 100%
+    );
+    background: linear-gradient(
+      74deg,
+      #4285f4 0%,
+      #9b72cb 10%,
+      #d96570 20%,
+      #d96570 25%,
+      #9b72cb 35%,
+      #4285f4 45%,
+      #9b72cb 50%,
+      #d96570 55%,
+      #9b72cb 75%,
+      #4285f4 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgb(0 0 0 / 20%);
+  }
 }

@@ -12,18 +12,6 @@ type Props = {
   coordinates?: number[]
 }
 
-type GeoCordProps = {
-  coordinates: number[]
-  type: string
-}
-
-type MapFeatureType = {
-  type: string
-  properties: any
-  geometry: GeoCordProps
-  id: string
-}
-
 export default function Map({ hospitals, coordinates }: Props) {
   const [viewState, setViewState] = useState({
     latitude: coordinates ? coordinates[1] : 23.752,
@@ -34,11 +22,12 @@ export default function Map({ hospitals, coordinates }: Props) {
   const [isLoaded, setIsLoaded] = useState(false)
   const mapRef = useRef<any>(null)
 
-  const [selectedHospital, setSelectedHospital] =
-    useState<MapFeatureType | null>(null)
+  const [selectedHospital, setSelectedHospital] = useState<HospitalType | null>(
+    null
+  )
 
   return (
-    <div className="w-full h-80 sm:h-[400px] mt-1">
+    <div className="w-full h-72 sm:h-[464px] mt-1">
       <ReactMap
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
         style={{ width: "100%", height: "100%" }}
@@ -74,7 +63,7 @@ export default function Map({ hospitals, coordinates }: Props) {
                 <Image
                   fill
                   src="https://res.cloudinary.com/dwhlynqj3/image/upload/v1720969669/glucoguide/gluco-guide-logo.png"
-                  alt={`${hospital.properties.name}.jpg`}
+                  alt={`${hospital.name}.jpg`}
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   priority
                 />
@@ -106,7 +95,7 @@ export default function Map({ hospitals, coordinates }: Props) {
               <div className="relative min-w-24 w-24 min-h-20">
                 <Image
                   fill
-                  src={selectedHospital.properties.img_src}
+                  src={selectedHospital.imgSrc}
                   alt="gluco-guide-logo.png"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="rounded-md object-cover"
@@ -114,10 +103,10 @@ export default function Map({ hospitals, coordinates }: Props) {
               </div>
               <div className="flex flex-col my-auto ml-2">
                 <h3 className="text-sm leading-4 font-semibold opacity-80 text-[--primary-black]">
-                  {selectedHospital.properties.name}
+                  {selectedHospital.name}
                 </h3>
                 <span className="text-xs opacity-80 leading-3 text-start">
-                  {selectedHospital.properties.address}
+                  {selectedHospital.address}
                 </span>
               </div>
             </div>

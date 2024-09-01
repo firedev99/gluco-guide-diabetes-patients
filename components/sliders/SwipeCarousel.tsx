@@ -6,9 +6,17 @@ import { motion } from "framer-motion"
 type Props = {
   children: React.ReactNode
   className?: string
+  dragging?: boolean
+  onDragStart?: () => void
+  onDragEnd?: () => void
 }
 
-export default function SwipeCarousel({ children, className }: Props) {
+export default function SwipeCarousel({
+  children,
+  className,
+  onDragStart,
+  onDragEnd,
+}: Props) {
   const wrapper = useRef<HTMLDivElement | null>(null)
   const items = useRef<HTMLDivElement | null>(null)
 
@@ -52,7 +60,7 @@ export default function SwipeCarousel({ children, className }: Props) {
   }, [])
 
   return (
-    <div ref={wrapper} className="relative overflow-hidden">
+    <div ref={wrapper} className="relative overflow-hidden max-w-fit">
       <motion.div
         ref={items}
         drag="x"
@@ -62,6 +70,8 @@ export default function SwipeCarousel({ children, className }: Props) {
         }}
         dragElastic={0.2}
         dragTransition={{ bounceDamping: 18 }}
+        onDragStart={onDragStart}
+        onDragEnd={onDragEnd}
         className={className ? className : `flex`}
       >
         {children}

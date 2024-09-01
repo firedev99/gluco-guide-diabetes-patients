@@ -1,7 +1,7 @@
 "use client"
 
 import { months } from "@/lib/dummy/calender"
-import { addDays, format, isSameDay } from "date-fns"
+import { addDays, format, isSameDay, startOfToday } from "date-fns"
 import { useCallback, useEffect, useRef } from "react"
 import { Icon } from "@/components"
 import { useTouchSlider } from "@/hooks/useTouchSlider"
@@ -9,7 +9,7 @@ import { AppointmentCreationProps } from "@/types"
 
 type Props = {
   values: AppointmentCreationProps
-  dateSelection: (date: Date) => void
+  dateSelection: (date: Date, month?: string) => void
   monthSelection: (month: string) => void
 }
 
@@ -74,8 +74,9 @@ export default function ScrollingDates({
   // handle automatic available date detection
   useEffect(() => {
     if (!dateAvailable(format(selectedDate, "iii"))) {
-      const newDate = addDays(selectedDate, 1)
-      dateSelection(newDate)
+      const updatedDate = addDays(selectedDate, 1)
+      const updatedMonth = format(updatedDate, "MMMM")
+      dateSelection(updatedDate, updatedMonth)
     }
 
     return

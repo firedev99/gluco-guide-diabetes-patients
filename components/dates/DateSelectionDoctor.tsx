@@ -13,7 +13,7 @@ type Props = {
   monthSelection: (month: string) => void
 }
 
-export default function ScrollingDates({
+export default function DoctorDates({
   values,
   dateSelection,
   monthSelection: handleMonthSelection,

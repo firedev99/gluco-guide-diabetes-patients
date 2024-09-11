@@ -18,9 +18,18 @@ export default function HospitalsSwiper() {
   const toggleWishlist = () => setWishlisted(!wishlisted)
 
   // handle navigation based on dragging status
-  function handleNavigation(id: string) {
-    if (!dragging) {
-      router.push(`/hospitals/${id}/details?type=view`)
+  function handleNavigation(
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    id: string
+  ) {
+    if (!dragging && typeof window !== "undefined") {
+      e.preventDefault()
+
+      if (e.ctrlKey) {
+        window.open(`/hospitals/${id}/details?type=view`, `_blank`)
+      } else {
+        router.push(`/hospitals/${id}/details?type=view`)
+      }
     }
   }
 
@@ -39,7 +48,7 @@ export default function HospitalsSwiper() {
               className="relative size-full rounded-lg hover:cursor-pointer active:cursor-grabbing"
               whileTap={{ scale: 0.988 }}
               transition={{ duration: 0.2 }}
-              onClick={() => handleNavigation(hospital.id)}
+              onClick={(e) => handleNavigation(e, hospital.id)}
             >
               <Image
                 fill

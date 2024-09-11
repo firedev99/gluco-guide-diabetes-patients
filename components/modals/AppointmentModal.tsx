@@ -2,7 +2,14 @@
 
 import Image from "next/image"
 import React, { useEffect, useState } from "react"
-import { Button, Icon, Modal, RadioInput, ScrollingDateUI } from "@/components"
+import {
+  Button,
+  Checkbox,
+  Icon,
+  Modal,
+  RadioInput,
+  DoctorDates,
+} from "@/components"
 import { appointmentModes, appointmentPurposes } from "@/lib/dummy/appointments"
 import { DoctorType } from "@/lib/dummy/doctors"
 import { AppointmentCreationProps } from "@/types"
@@ -35,12 +42,14 @@ const previewDays = eachDayOfInterval({
 
 export default function AppointmentModal({
   active,
-  closeHandler: handleModalClose,
+  closeHandler,
   doctor,
   type = "general",
 }: Props) {
   const [details, setDetails] = useState<AppointmentCreationProps>({
     doctor: doctor.name,
+    hospital: doctor.hospital.name,
+    address: doctor.hospital.address,
     appointmentMode: "In-Person Consultation",
     purposeOfVisit: ["General Checkup"],
     selectedDate: today,
@@ -105,15 +114,21 @@ export default function AppointmentModal({
     setDetails((prev) => ({ ...prev, notes: e.target.value }))
   }
 
+  function handleModalClose() {
+    setDetails((prev) => ({ ...prev, purposeOfVisit: ["General Checkup"] }))
+    closeHandler()
+  }
+
   // update the available time of doctors
   useEffect(() => {
     setDetails((prev) => ({
       ...prev,
       selectedDate: today,
+      doctor: doctor.name,
       availableDays: doctor.availableTimes.split(":")[0].split(", "),
       time: doctor.availableTimes.split(": ")[1],
     }))
-  }, [doctor.availableTimes])
+  }, [doctor])
 
   return (
     <React.Fragment>
@@ -122,7 +137,9 @@ export default function AppointmentModal({
         handler={handleModalClose}
         className="h-full sm:h-3/4 w-full max-w-[720px]"
         direction="center"
-        secondaryBtn={<Button>Confirm</Button>}
+        secondaryBtn={
+          <Button onClick={() => console.log(details)}>Confirm</Button>
+        }
       >
         <div className="overflow-x-hidden overflow-y-auto">
           {/* doctor details for clicks from profile buttons */}
@@ -158,7 +175,7 @@ export default function AppointmentModal({
             </div>
           )}
 
-          <ScrollingDateUI
+          <DoctorDates
             values={details}
             dateSelection={handleDateSelection}
             monthSelection={handleMonthSelection}
@@ -193,12 +210,14 @@ export default function AppointmentModal({
               {/* purpose of visit options */}
               <div className="flex flex-col mt-1 text-sm">
                 {appointmentPurposes.map((item, idx) => (
-                  <RadioInput
+                  <Checkbox
                     key={`alergyOpt-${idx}`}
                     name={`purpose_of_visit_${idx}_option`}
                     value={item}
                     active={details.purposeOfVisit.includes(item)}
                     onChange={handlePurposeOfVisit}
+                    direction="left"
+                    className="-ml-5 border-none has-[input:checked]:bg-transparent"
                   />
                 ))}
               </div>
@@ -227,6 +246,10 @@ export default function AppointmentModal({
                 Appointment details
               </h4>
               <div className="text-sm font-medium">
+                <span className="font-bold">Doctor: </span>
+                <span>{details.doctor}</span>
+              </div>
+              <div className="text-sm font-medium">
                 <span className="font-bold">Date: </span>
                 <span>
                   {format(details.selectedDate, "do MMMM, yyy")} (
@@ -249,14 +272,12 @@ export default function AppointmentModal({
                 <span className="font-bold">Location: </span>
                 <span>{doctor.hospital.address}.</span>
               </div>
-              <div className="text-sm font-medium">
-                <span className="font-bold">Notes: </span>
-                <span>
-                  {details.notes.length > 0
-                    ? `${details.notes}`
-                    : `Unavailable`}
-                </span>
-              </div>
+              {details.notes.length !== 0 && (
+                <div className="text-sm font-medium">
+                  <span className="font-bold">Special note: </span>
+                  <span>{details.notes}</span>
+                </div>
+              )}
             </div>
 
             {/* important info */}

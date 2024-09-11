@@ -43,6 +43,8 @@ import {
   BlankClipboardIcon,
   CopiedClipboardIcon,
   MailIcon,
+  UpChevIcon,
+  EllipsisIcon,
 } from "./svg"
 
 type Props = {
@@ -164,6 +166,11 @@ export default function Icon({ name, className, pathClassName }: Props) {
         <RotatedArrowIcon className={className} pathClassName={pathClassName} />
       )
 
+    case "ellipsis":
+      return (
+        <EllipsisIcon className={className} pathClassName={pathClassName} />
+      )
+
     case "fire":
       return <FireIcon className={className} pathClassName={pathClassName} />
 
@@ -177,6 +184,9 @@ export default function Icon({ name, className, pathClassName }: Props) {
 
     case "up-arrow":
       return <UpArrowIcon className={className} pathClassName={pathClassName} />
+
+    case "up-chevron":
+      return <UpChevIcon className={className} pathClassName={pathClassName} />
 
     case "right-arrow":
       return (

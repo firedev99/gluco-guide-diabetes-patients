@@ -10,14 +10,19 @@ import React, { useState } from "react"
 import SuggestedDoctors from "./SuggestedDoctors"
 import AppointmentModal from "@/components/modals/AppointmentModal"
 import { Modal } from "@/components"
+import { useSearchParams } from "next/navigation"
 
 type Props = {
   doctor: DoctorType
 }
 
 export default function DoctorDets({ doctor }: Props) {
-  const [openAppointment, setOpenAppointment] = useState(false)
+  const params = useSearchParams()
+  const popup = !!params.get("popup")
+
+  const [openAppointment, setOpenAppointment] = useState(false || popup)
   const [openContact, setOpenContact] = useState(false)
+
   const hospital = HOSPITALS.find((item) => item.id === doctor.hospital.id)
 
   return (

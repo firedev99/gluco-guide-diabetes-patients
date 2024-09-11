@@ -100,3 +100,91 @@ export const recommendations: RecommendationProps[] = [
     },
   },
 ]
+
+export type TYPERECOMMENDATIONS = {
+  id: string
+  patientId: string
+  appointmentId?: string
+  primaryGoal?: string
+  medications?: {
+    medicine: { name: string; amount: number; times: string[] }[]
+    expiry: number
+  }
+  dietary: {
+    time: "breakfast" | "lunch" | "dinner" | "snacks"
+    energy: number
+  }[]
+  nutritions: {
+    name: "protein" | "fat" | "carbs"
+    amount: number
+  }[]
+  energyGoal: number
+  hydration: string
+  sleep: string
+  exercises?: {
+    name: string
+    time: ("morning" | "afternoon" | "evening" | "night" | "morning")[]
+    duration: string
+  }[]
+  monitoring?: { name: string; time: string }[]
+  expiry: number
+  restrictions: string[]
+  generatedBy: "doctor" | "app"
+  recommendedIngredients: string[]
+}
+
+export const RECOMMENDATIONS: TYPERECOMMENDATIONS[] = [
+  {
+    id: "",
+    patientId: "",
+    appointmentId: "liqm7c7ivo",
+    primaryGoal: "Manage weight and improve overall metabolic health.",
+    medications: {
+      medicine: [
+        { name: "Metformin 500mg", amount: 1, times: ["morning"] },
+        { name: "Vitamin D", amount: 1, times: ["morning", "night"] },
+      ],
+      expiry: 15,
+    },
+    dietary: [
+      {
+        time: "breakfast",
+        energy: 580,
+      },
+      {
+        time: "lunch",
+        energy: 700,
+      },
+      {
+        time: "snacks",
+        energy: 120,
+      },
+      {
+        time: "dinner",
+        energy: 700,
+      },
+    ],
+    nutritions: [
+      { name: "protein", amount: 50 },
+      { name: "fat", amount: 78 },
+      { name: "carbs", amount: 275 },
+    ],
+    energyGoal: 2100,
+    hydration: "8",
+    sleep: "7-8",
+    exercises: [
+      { name: "Running", time: ["morning", "evening"], duration: "30-45mins" },
+      { name: "Rowing", time: ["morning"], duration: "15-20mins" },
+      { name: "Play Tennis", time: ["afternoon"], duration: "1-2hrs" },
+      { name: "Cycling", time: ["evening"], duration: "40-50mins" },
+    ],
+    monitoring: [
+      { name: "Track blood glucose level", time: "daily" },
+      { name: "Regular weigh-ins", time: "every week" },
+    ],
+    expiry: 30,
+    restrictions: ["Sugar", "Refined carbs"],
+    recommendedIngredients: ["berries", "bananas", "nuts", "avacado", "eggs"],
+    generatedBy: "doctor",
+  },
+]

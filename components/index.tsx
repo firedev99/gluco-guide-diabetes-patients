@@ -4,12 +4,15 @@ export { default as Menu } from "./ui/Menu"
 export { default as Sidebar } from "./ui/Sidebar"
 export { default as Navigation } from "./ui/Navigation"
 export { default as Icon } from "./icons"
+
 // buttons
 export { default as FlipEfButton } from "./buttons/FlipButton"
 export { default as ShinnyEfBtn } from "./buttons/ShinnyButton"
 export { default as Button } from "./buttons/Button"
-// links
+
+// links (fancy)
 export { default as FireyLink } from "./links/SimpleLink"
+
 // patient dashboard ui
 export { default as BloodGlucose } from "./ui/patients/dashboard/BloodGlucose"
 export { default as BloodPressure } from "./ui/patients/dashboard/BloodPressure"
@@ -17,11 +20,13 @@ export { default as HealthInformations } from "./ui/patients/dashboard/HealthInf
 export { default as PendingTasks } from "./ui/patients/dashboard/PendingTasks"
 export { default as ConnectDeviceBanner } from "./ui/patients/dashboard/ConnectDevice"
 export { default as ConsultDoctors } from "./ui/patients/dashboard/ConsultDoctors"
+
 // patient diet ui
 export { default as FoodRecommendations } from "./ui/patients/diet/FoodRecommendations"
 export { default as Meal } from "./ui/patients/diet/Meal"
 export { default as NutrientsRecommendationChart } from "./ui/patients/diet/NutrientsRecommendationChart"
 export { default as DietPreference } from "./ui/patients/diet/Preferences"
+
 // doctors ui
 export { default as Doctors } from "./ui/doctors"
 export { default as SuggestedDoctors } from "./ui/doctors/SuggestedDoctors"
@@ -34,14 +39,24 @@ export { default as ContactInformation } from "./ui/hospitals/ContactInformation
 // lottie
 export { default as WalkingDog } from "./fancy/WalkingDog"
 
+// content elements
+export { default as AlignContent } from "./contents/AlignContent"
+export { default as ListContent } from "./contents/ListContent"
+
 // no data / not found
 export { default as NoData } from "./ui/NoData"
 
 // modals
 export { default as Modal } from "./modals/Modal"
 export { default as PopoverModal } from "./modals/PopoverModal"
+export { default as SimpleModal } from "./modals/SimpleModal"
 export { default as AppointmentModal } from "./modals/AppointmentModal"
 export { default as DoctorFilter } from "./modals/DoctorFilter"
+export { default as AppoinmentDetailsModal } from "./modals/AppoinmentDetailsModal"
+export { default as BookAppointmentModal } from "./modals/BookAppointmentModal"
+
+// searchbox
+export { default as CustomSearchbox } from "./searchbox/CustomSearchbox"
 
 // inputs
 export { default as RadioInput } from "./inputs/RadioInput"
@@ -57,9 +72,12 @@ export { default as Map } from "./map"
 export { default as Slider } from "./sliders/Slider"
 export { default as Swiper } from "./sliders/SwipeCarousel"
 
-// appointment
-export { default as Appointments } from "./ui/patients/appoinments/Appointments"
-export { default as BookAppointment } from "./ui/patients/appoinments/BookAppointment"
+// appointments
+export { default as BookAppointment } from "./ui/patients/appoinments/BookAppointmentButton"
+export { default as RecentAppointments } from "./ui/patients/appoinments/RecentAppointments"
+export { default as UpcomingAppointments } from "./ui/patients/appoinments/UpcomingAppointments"
+export { default as Appointment } from "./appointment/Appointment"
 
 // dates
-export { default as ScrollingDateUI } from "./dates/ScrollingDates"
+export { default as DoctorDates } from "./dates/DateSelectionDoctor"
+export { default as AppointmentDates } from "./dates/DateSelectionAppointment"

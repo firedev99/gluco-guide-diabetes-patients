@@ -1,9 +1,9 @@
 import type { Metadata } from "next"
-import { Manrope } from "next/font/google"
 import "./globals.css"
 import Providers from "./providers"
+import { Manrope } from "next/font/google"
 
-const manrope = Manrope({ subsets: ["latin"] })
+const manrope = Manrope({ subsets: ["greek", "latin"] })
 
 export const metadata: Metadata = {
   title:

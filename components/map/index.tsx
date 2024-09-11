@@ -6,17 +6,28 @@ import "mapbox-gl/dist/mapbox-gl.css"
 import Image from "next/image"
 import Icon from "../icons"
 import { HospitalType } from "@/lib/dummy/hospitals"
+import Button from "../buttons/Button"
+import Link from "next/link"
 
 type Props = {
   hospitals: HospitalType[]
   coordinates?: number[]
+  className?: string
+  zoom?: number
+  disableResetBtn?: boolean
 }
 
-export default function Map({ hospitals, coordinates }: Props) {
+export default function Map({
+  hospitals,
+  coordinates,
+  className,
+  zoom = 12.5,
+  disableResetBtn = false,
+}: Props) {
   const [viewState, setViewState] = useState({
     latitude: coordinates ? coordinates[1] : 23.752,
     longitude: coordinates ? coordinates[0] : 90.391,
-    zoom: 12.5,
+    zoom: zoom,
   })
 
   const [isLoaded, setIsLoaded] = useState(false)
@@ -26,8 +37,21 @@ export default function Map({ hospitals, coordinates }: Props) {
     null
   )
 
+  function handleReset() {
+    if (!mapRef.current || !coordinates) return
+    mapRef.current.flyTo({
+      center: [coordinates[0], coordinates[1]],
+      zoom: 12.5,
+      speed: 1,
+    })
+  }
+
   return (
-    <div className="w-full h-72 sm:h-[464px] mt-1">
+    <div
+      className={`w-full h-80  flex flex-col ${
+        className ? className : `sm:h-[516px] mt-1`
+      }`}
+    >
       <ReactMap
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
         style={{ width: "100%", height: "100%" }}
@@ -102,9 +126,13 @@ export default function Map({ hospitals, coordinates }: Props) {
                 />
               </div>
               <div className="flex flex-col my-auto ml-2">
-                <h3 className="text-sm leading-4 font-semibold opacity-80 text-[--primary-black]">
-                  {selectedHospital.name}
-                </h3>
+                <Link
+                  href={`/hospitals/${selectedHospital.id}/details?type=view`}
+                >
+                  <h3 className="text-sm leading-4 font-semibold opacity-80 text-[--primary-black]">
+                    {selectedHospital.name}
+                  </h3>
+                </Link>
                 <span className="text-xs opacity-80 leading-3 text-start">
                   {selectedHospital.address}
                 </span>
@@ -113,6 +141,12 @@ export default function Map({ hospitals, coordinates }: Props) {
           </Popup>
         )}
       </ReactMap>
+
+      {!disableResetBtn && (
+        <Button type="outline" className="ml-auto mt-2" onClick={handleReset}>
+          reset map
+        </Button>
+      )}
     </div>
   )
 }

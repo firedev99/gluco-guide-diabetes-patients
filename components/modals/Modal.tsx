@@ -57,7 +57,7 @@ export default function PopupModal({
                 y: "var(--slide-from)",
               }}
               transition={{
-                duration: 0.18,
+                duration: 0.1,
                 ease: "easeInOut",
               }}
               className={`${

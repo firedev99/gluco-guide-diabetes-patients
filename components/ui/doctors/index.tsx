@@ -1,12 +1,6 @@
 "use client"
 
-import {
-  Button,
-  AppointmentModal,
-  Icon,
-  Modal,
-  DoctorFilter,
-} from "@/components"
+import { Button, AppointmentModal, Icon, DoctorFilter } from "@/components"
 import { doctors, DoctorType } from "@/lib/dummy/doctors"
 import Image from "next/image"
 import Link from "next/link"
@@ -73,13 +67,7 @@ export default function Doctors() {
         {modDoctors.map((props, idx) => (
           <Link
             key={`doctor_l_${idx}`}
-            href={{
-              pathname: "/hospitals/doctors/profile",
-              query: {
-                id: props.id,
-                type: "view",
-              },
-            }}
+            href={`/hospitals/doctors/profile?id=${props.id}&type=view`}
           >
             <div className="p-2 bg-white shadow rounded-lg hover:shadow-md hover:cursor-pointer">
               {/* doctor image */}

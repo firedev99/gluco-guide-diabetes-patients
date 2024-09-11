@@ -72,7 +72,7 @@ export const doctors: DoctorType[] = [
     description: "Expert in gestational diabetes and diabetic foot care.",
     hospital: {
       id: "df27fbaa1361c1990c2b9437dcac69d5",
-      name: "Ibne Sina Hospital Dhaka",
+      name: "Ibne Sina Hospital Dhaka (Dhanmondi)",
       address: "House No. 70, Road-15/A, Dhanmondi, Dhaka-1209",
       city: "Dhanmondi",
     },
@@ -89,7 +89,7 @@ export const doctors: DoctorType[] = [
       "Diabetologist with 20 years of experience in treating Type 1 and Type 2 Diabetes.",
     hospital: {
       id: "04381b26fb57743f044729ab015cbe15",
-      name: "Labaid Specialized Hospital",
+      name: "Labaid Specialized Hospital (Dhanmondi)",
       address: "House-1, Road-4, Dhanmondi Dhaka-1205",
       city: "Dhanmondi",
     },
@@ -106,7 +106,7 @@ export const doctors: DoctorType[] = [
       "Specializes in diabetes-related complications and prevention.",
     hospital: {
       id: "30d1ecd20fa91380fc8488c23414bf23",
-      name: "Popular Diagnostic Center",
+      name: "Popular Diagnostic Center (Dhanmondi)",
       address: "House-16, Road-2, Dhanmondi, Dhaka-1205",
       city: "Dhanmondi",
     },
@@ -190,7 +190,7 @@ export const doctors: DoctorType[] = [
     description: "Specialist in Diabetes Mellitus and Metabolic Disorders.",
     hospital: {
       id: "21f2fe0741e23cc2307cace23008ef76",
-      name: "Labaid Specialized Hospital",
+      name: "Labaid Specialized Hospital (Gulshan)",
       address: "House-13/A, Road-35, Gulshan-2, Dhaka-1212",
       city: "Gulshan",
     },
@@ -208,7 +208,7 @@ export const doctors: DoctorType[] = [
     hospital: {
       id: "f35230226fa2f1d6516aaf554bd1704e",
       name: "Anwar Khan Modern Hospital Dhaka",
-      address: "House-17, Road-8,Dhanmondi, Dhaka-1207",
+      address: "House-17, Road-8, Dhanmondi, Dhaka-1207",
       city: "Dhanmondi",
     },
     availableTimes: "Tue, Thu, Sun: 3 PM - 7 PM",
@@ -241,7 +241,7 @@ export const doctors: DoctorType[] = [
       "Specializes in the prevention and management of diabetes complications.",
     hospital: {
       id: "33222cb2c0ff1da1adc212b72fed821a",
-      name: "Popular Diagnostic Center",
+      name: "Popular Diagnostic Center (Uttara)",
       address:
         "House-25, Road-07, Sector-04, Jashim Uddin Moar, Uttara, Dhaka-1230",
       city: "Uttara",
@@ -259,7 +259,7 @@ export const doctors: DoctorType[] = [
       "Diabetologist with expertise in lifestyle modification and weight management.",
     hospital: {
       id: "35a5ba7dbf93d68ebc2e50d5780e1407",
-      name: "Ibne Sina Hospital Dhaka",
+      name: "Ibne Sina Hospital Dhaka (Mirpur)",
       address: "Hazi Road, Shiyalbari Moor, 2 Avenue-03, Mirpur-02, Dhaka-1216",
       city: "Mirpur",
     },
@@ -358,7 +358,7 @@ export const doctors: DoctorType[] = [
       "Endocrinologist with a focus on insulin therapy and diabetes education.",
     hospital: {
       id: "33222cb2c0ff1da1adc212b72fed821a",
-      name: "Popular Diagnostic Center",
+      name: "Popular Diagnostic Center (Uttara)",
       address:
         "House-25, Road-07, Sector-04, Jashim Uddin Moar, Uttara, Dhaka-1230",
       city: "Uttara",

@@ -40,9 +40,18 @@ export default function SuggestedDoctors({
     : doctors.slice(0, limit)
 
   // handle navigation based on dragging status
-  function handleNavigation(id: string) {
-    if (!dragging) {
-      router.push(`/hospitals/doctors/profile?id=${id}&type=view`)
+  function handleNavigation(
+    e: React.MouseEvent<HTMLDivElement, MouseEvent>,
+    id: string
+  ) {
+    if (!dragging && typeof window !== "undefined") {
+      e.preventDefault()
+
+      if (e.ctrlKey) {
+        window.open(`/hospitals/doctors/profile?id=${id}&type=view`, `_blank`)
+      } else {
+        router.push(`/hospitals/doctors/profile?id=${id}&type=view`)
+      }
     }
   }
 
@@ -60,10 +69,10 @@ export default function SuggestedDoctors({
           >
             <div className={`size-full p-2`}>
               <motion.div
-                className="relative size-full rounded-lg hover:cursor-pointer"
+                className="relative size-full rounded-lg hover:cursor-pointer active:cursor-grabbing"
                 whileTap={{ scale: 0.988 }}
                 transition={{ duration: 0.2 }}
-                onClick={() => handleNavigation(doctor.id)}
+                onClick={(e) => handleNavigation(e, doctor.id)}
               >
                 <Image
                   fill

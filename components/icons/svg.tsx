@@ -1349,6 +1349,48 @@ export function UpArrowIcon({ className, pathClassName }: Props) {
   )
 }
 
+export function UpChevIcon({ className, pathClassName }: Props) {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      <path
+        d="M3.32591 6.00842C3.32591 6.00842 5.22816 2.47926 6.83933 2.47926C8.45166 2.47926 10.3545 6.00842 10.3545 6.00842"
+        stroke="#141414"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={pathClassName}
+      />
+    </svg>
+  )
+}
+
+export function EllipsisIcon({ className, pathClassName }: Props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M6.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM12.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM18.75 12a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z"
+        className={pathClassName}
+      />
+    </svg>
+  )
+}
+
 export function RightArrowIcon({ className, pathClassName }: Props) {
   return (
     <svg

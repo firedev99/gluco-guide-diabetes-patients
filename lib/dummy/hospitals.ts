@@ -80,7 +80,7 @@ export const HOSPITALS: HospitalType[] = [
   },
   {
     id: "df27fbaa1361c1990c2b9437dcac69d5",
-    name: "Ibne Sina Hospital Dhaka",
+    name: "Ibne Sina Hospital Dhaka (Dhanmondi)",
     address: "House No. 70, Road-15/A, Dhanmondi, Dhaka-1209",
     city: "Dhanmondi",
     imgSrc:
@@ -96,7 +96,7 @@ export const HOSPITALS: HospitalType[] = [
   },
   {
     id: "04381b26fb57743f044729ab015cbe15",
-    name: "Labaid Specialized Hospital",
+    name: "Labaid Specialized Hospital (Dhanmondi)",
     address: "House-1, Road-4, Dhanmondi Dhaka-1205",
     city: "Dhanmondi",
     imgSrc:
@@ -112,7 +112,7 @@ export const HOSPITALS: HospitalType[] = [
   },
   {
     id: "21f2fe0741e23cc2307cace23008ef76",
-    name: "Labaid Specialized Hospital",
+    name: "Labaid Specialized Hospital (Gulshan)",
     address: "House-13/A, Road-35, Gulshan-2, Dhaka-1212",
     city: "Gulshan",
     imgSrc:
@@ -128,7 +128,7 @@ export const HOSPITALS: HospitalType[] = [
   },
   {
     id: "30d1ecd20fa91380fc8488c23414bf23",
-    name: "Popular Diagnostic Center",
+    name: "Popular Diagnostic Center (Dhanmondi)",
     address: "House-16, Road-2, Dhanmondi, Dhaka-1205",
     city: "Dhanmondi",
     imgSrc:
@@ -144,7 +144,7 @@ export const HOSPITALS: HospitalType[] = [
   },
   {
     id: "33222cb2c0ff1da1adc212b72fed821a",
-    name: "Popular Diagnostic Center",
+    name: "Popular Diagnostic Center (Uttara)",
     address:
       "House-25, Road-07, Sector-04, Jashim Uddin Moar, Uttara, Dhaka-1230",
     city: "Uttara",
@@ -161,7 +161,7 @@ export const HOSPITALS: HospitalType[] = [
   },
   {
     id: "35a5ba7dbf93d68ebc2e50d5780e1407",
-    name: "Ibne Sina Hospital Dhaka",
+    name: "Ibne Sina Hospital Dhaka (Mirpur)",
     address: "Hazi Road, Shiyalbari Moor, 2 Avenue-03, Mirpur-02, Dhaka-1216",
     city: "Mirpur",
     imgSrc:

@@ -21,6 +21,8 @@ export type IconNames =
   | "human"
   | "weight-machine"
   | "up-arrow"
+  | "up-chevron"
+  | "ellipsis"
   | "mail"
   | "right-arrow"
   | "human-jogging"
@@ -45,6 +47,8 @@ export type IconNames =
 
 export type AppointmentCreationProps = {
   doctor: string
+  hospital: string
+  address: string
   appointmentMode: string
   purposeOfVisit: string[]
   selectedDate: Date
@@ -53,4 +57,15 @@ export type AppointmentCreationProps = {
   notes: string
   availableDays: string[]
   time: string
+}
+
+export type LocationType = {
+  id: string
+  cityName: string
+}
+
+export type BookingModalProps = {
+  doctor: string
+  location: string
+  hospital: string
 }

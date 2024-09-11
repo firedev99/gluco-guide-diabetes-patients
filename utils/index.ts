@@ -1,5 +1,16 @@
-// group by category eg groupByCategory(mealRecommendations, "category")
+import { DoctorType } from "@/lib/dummy/doctors"
+import { HospitalType } from "@/lib/dummy/hospitals"
+import { LocationType } from "@/types"
 
+// generate a string e.g - a, b and c
+function makeString(arr: string[]) {
+  if (arr.length === 1) return arr[0]
+  const last = arr[arr.length - 1]
+  const rest = arr.slice(0, arr.length - 1)
+  return rest.join(", ") + " and " + last
+}
+
+// group by category eg groupByCategory(mealRecommendations, "category")
 function groupByCategory<ItemType, K extends keyof ItemType>(
   data: ItemType[],
   key: K
@@ -54,9 +65,26 @@ function convertMinToHourMinFormat(duration: number) {
   return `${convertedHours}h ${mins}m`
 }
 
+// custom type checker
+function isDoctorType(item: any): item is DoctorType {
+  return (item as DoctorType).gender !== undefined
+}
+
+function isHospitalLocationType(item: any): item is LocationType {
+  return (item as LocationType).cityName !== undefined
+}
+
+function isHospitalType(item: any): item is HospitalType {
+  return (item as HospitalType).geometry !== undefined
+}
+
 export const firey = {
   groupByCategory,
   convertMinToHourMinFormat,
   getSpecificArr,
   getID,
+  makeString,
+  isDoctorType,
+  isHospitalType,
+  isHospitalLocationType,
 }

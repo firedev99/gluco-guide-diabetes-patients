@@ -25,6 +25,10 @@ body {
 }
 
 @layer components {
+  .custom-scroll-track {
+    @apply [&::-webkit-scrollbar]:bg-transparent [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-zinc-100 [&::-webkit-scrollbar-thumb]:bg-zinc-300 [&::-webkit-scrollbar-thumb]:rounded-sm;
+  }
+
   .center {
     @apply flex items-center justify-center;
   }
@@ -168,5 +172,18 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     color: rgb(0 0 0 / 20%);
+  }
+
+  .bg-pattern {
+    background-color: #f1f1f1;
+    background-image: radial-gradient(
+        circle,
+        transparent 1rem,
+        rgba(245, 245, 245, 0.5) 1rem
+      ),
+      linear-gradient(rgb(180, 192, 211) 0.5rem, transparent 0.5rem),
+      linear-gradient(90deg, rgb(180, 192, 211) 0.5rem, transparent 0.5rem);
+    background-size: 5rem 5rem;
+    background-position: 2.75rem 2.75rem, 0 0, 0 0;
   }
 }

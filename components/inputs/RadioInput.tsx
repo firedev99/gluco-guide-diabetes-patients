@@ -28,11 +28,11 @@ export default function RadioInput({
         value={value}
         checked={active}
         onChange={onChange}
-        className={`peer/active ${inputClass} cursor-pointer`}
+        className={`peer/active ${inputClass} cursor-pointer appearance-none before:inline-block size-2.5 rounded-full bg-neutral-50 dark:bg-transparent border border-neutral-500 mt-1.5 checked:bg-blue-600 checked:ring-1 ring-offset-2 ring-blue-700`}
       />
       <label
         htmlFor={`${name}__id__f`}
-        className={`ml-1 cursor-pointer font-semibold opacity-80 peer-checked/active:opacity-100 ${labelClass}`}
+        className={`ml-2 cursor-pointer font-semibold opacity-80 peer-checked/active:opacity-100 ${labelClass}`}
       >
         {value}
       </label>

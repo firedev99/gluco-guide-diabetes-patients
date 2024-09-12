@@ -46,6 +46,9 @@ export { default as ListContent } from "./contents/ListContent"
 // no data / not found
 export { default as NoData } from "./ui/NoData"
 
+// menus
+export { default as ProfileMenu } from "./menu/ProfileMenu"
+
 // modals
 export { default as Modal } from "./modals/Modal"
 export { default as PopoverModal } from "./modals/PopoverModal"

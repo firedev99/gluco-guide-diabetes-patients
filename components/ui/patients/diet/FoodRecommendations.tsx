@@ -42,7 +42,7 @@ export default function FoodRecommendations() {
   return (
     <React.Fragment>
       {/* recommended meals */}
-      <h4 className="text-center text-sm lg:text-xl mt-8 lg:mt-10 ml-2 font-bold opacity-70 xl:text-start xl:text-base">
+      <h4 className="text-center text-sm lg:text-xl mt-8 lg:mt-10 ml-2 font-bold opacity-70 dark:opacity-100 xl:text-start xl:text-base">
         Recommended Foods
       </h4>
 

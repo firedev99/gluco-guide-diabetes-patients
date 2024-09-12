@@ -63,7 +63,7 @@ export default function UpcomingAppointmentModal({
         </Button>
       }
     >
-      <div className="p-4 flex flex-col gap-3 sm:gap-2 overflow-x-hidden overflow-y-auto">
+      <div className="p-4 flex flex-col gap-3 sm:gap-2 overflow-x-hidden overflow-y-auto custom-scroll">
         <h4 className="-ml-1 text-sm font-bold text-[--secondary-black] px-1.5 py-1 bg-zinc-300 size-fit rounded-md">
           Serial No. #{appointment.serial}
         </h4>

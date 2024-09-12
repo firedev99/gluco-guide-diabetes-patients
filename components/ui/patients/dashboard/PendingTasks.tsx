@@ -6,7 +6,7 @@ import Link from "next/link"
 
 export default function PendingTasks() {
   return (
-    <div className="bg-[#F0F0F0] rounded-xl col-span-2 lg:order-3 lg:col-span-1 lg:row-span-3 pt-6 pb-4">
+    <div className="bg-[#F0F0F0] dark:bg-neutral-800 rounded-xl col-span-2 lg:order-3 lg:col-span-1 lg:row-span-3 pt-6 pb-4">
       {/* upcoming appointments */}
       <div className="flex flex-col">
         <div className="flex flex-col px-3">
@@ -43,7 +43,7 @@ export default function PendingTasks() {
                 <div
                   className={`text-xs 2xl:text-sm font-bold z-[5] cursor-pointer ${
                     idx === 3 &&
-                    `lg:bg-white bg-[--primary-blue] w-7 h-7 center rounded-full text-[--primary-white] lg:text-[--primary-black]`
+                    `lg:bg-white dark:lg:bg-neutral-300 bg-[--primary-blue] w-7 h-7 center rounded-full text-[--primary-white] lg:text-[--primary-black]`
                   }`}
                 >
                   {dates[idx].split("-")[0]}
@@ -64,8 +64,8 @@ export default function PendingTasks() {
                 key={`appointment_dets_${idx}`}
                 className="flex items-center justify-between"
               >
-                <div className="flex items-center relative w-1/2 after:absolute after:contents[''] after:w-[3px] after:rounded-sm after:h-10 after:bg-neutral-300 after:right-0 after:hidden xl:after:block after:-mr-5 3xl:after:-mr-8">
-                  <div className="h-6 min-w-6 rounded-full center mr-3 relative before:absolute before:contents[''] before:w-1 before:h-10 before:bg-gradient-to-b before:border-dotted before:border-r-2 before:opacity-50 before:top-full before:left-1/2 before:-ml-0.5 bg-white">
+                <div className="flex items-center relative w-1/2 after:absolute after:contents[''] after:w-[3px] after:rounded-sm after:h-10 after:bg-neutral-300 dark:after:bg-neutral-600 after:right-0 after:hidden xl:after:block after:-mr-5 3xl:after:-mr-8">
+                  <div className="h-6 min-w-6 rounded-full center mr-3 relative before:absolute before:contents[''] before:w-1 before:h-10 before:bg-gradient-to-b before:border-dotted before:border-r-2 before:opacity-50 before:top-full before:left-1/2 before:-ml-0.5 bg-white dark:bg-neutral-300">
                     <Icon
                       name={type === "appointment" ? "doctor" : "beat-graphics"}
                     />
@@ -97,13 +97,6 @@ export default function PendingTasks() {
               className="text-sm font-semibold
               opacity-80"
             />
-            {/* <Link
-              href="/patient/appointments"
-              className="text-sm font-semibold
-              opacity-80"
-            >
-              see all
-            </Link> */}
           </div>
         </div>
       </div>
@@ -130,9 +123,9 @@ export default function PendingTasks() {
                     key={`daily_recommendations_${idx}`}
                     className="flex items-center justify-between min-h-[52px] xs:min-h-16"
                   >
-                    <div className="pl-3 flex items-center relative w-1/2 after:absolute after:contents[''] after:w-[3px] after:rounded-sm after:h-10 after:bg-neutral-300 after:right-0 after:hidden xl:after:block after:-mr-6 3xl:after:-mr-9">
+                    <div className="pl-3 flex items-center relative w-1/2 after:absolute after:contents[''] after:w-[3px] after:rounded-sm after:h-10 after:bg-neutral-300 dark:after:bg-neutral-600 after:right-0 after:hidden xl:after:block after:-mr-6 3xl:after:-mr-9">
                       <div
-                        className={`h-6 min-w-6 rounded-full center mr-3 relative before:absolute before:contents[''] before:w-1 before:h-10 before:bg-gradient-to-b before:border-dotted before:border-r-2 before:opacity-50 before:top-full before:left-1/2 before:-ml-0.5 bg-white ${
+                        className={`h-6 min-w-6 rounded-full center mr-3 relative before:absolute before:contents[''] before:w-1 before:h-10 before:bg-gradient-to-b before:border-dotted before:border-r-2 before:opacity-50 before:top-full before:left-1/2 before:-ml-0.5 bg-white dark:bg-neutral-300 ${
                           idx === recommendations.length - 1 && `before:hidden`
                         } ${
                           type === "medicine" &&

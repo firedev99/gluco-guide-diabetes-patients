@@ -5,9 +5,10 @@ import { motion } from "framer-motion"
 type Props = {
   children: string
   className?: string
+  onClick?: () => void
 }
 
-export default function ShinnyButton({ children, className }: Props) {
+export default function ShinnyButton({ children, className, onClick }: Props) {
   return (
     <motion.button
       className={`radial-gradient-shinny ${className}`}
@@ -31,6 +32,7 @@ export default function ShinnyButton({ children, className }: Props) {
           mass: 2,
         },
       }}
+      onClick={onClick}
     >
       <span className="linear-mask-shinny-light block relative tracking-wide font-light">
         {children}

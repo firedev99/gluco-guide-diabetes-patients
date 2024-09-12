@@ -31,7 +31,7 @@ export default function ConsultDoctors() {
 
       <FlipEfButton
         href="/hospitals/doctors"
-        className="bg-white/5 backdrop-blur-[10px] text-xs font-bold w-[116px] h-8 xxs:w-36 xxs:h-10 xs:text-sm xs:w-40 xs:h-10 md:w-44 md:h-12 2xl:w-48 2xl:h-14 rounded-3xl 2xl:rounded-[28px] mx-auto xs:ml-7 md:ml-12 lg:ml-7 2xl:ml-12 2xl:text-lg gradient-border-black mt-auto mb-6 2xl:mb-10"
+        className="bg-white/5 backdrop-blur-[10px] text-xs font-bold w-[116px] h-8 xxs:w-36 xxs:h-10 xs:text-sm xs:w-40 xs:h-10 md:w-44 md:h-12 2xl:w-48 2xl:h-14 rounded-3xl 2xl:rounded-[28px] mx-auto xs:ml-7 md:ml-12 lg:ml-7 2xl:ml-12 2xl:text-lg gradient-border-black mt-auto mb-6 2xl:mb-10 dark:text-neutral-700"
       >
         consult now
       </FlipEfButton>

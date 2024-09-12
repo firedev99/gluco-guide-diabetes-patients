@@ -27,7 +27,7 @@ export default function PopoverModal({
       <div
         className={`${modalClass ? modalClass : `size-56`} ${
           direction === "right" && `right-0`
-        } absolute invisible opacity-0 transition duration-300 z-[10] overflow-y-auto custom-scroll shadow-md border bg-neutral-100 rounded-md group-hover:opacity-100 group-hover:visible`}
+        } absolute invisible opacity-0 transition duration-300 z-[10] overflow-y-auto custom-scroll shadow-md border dark:border-neutral-500 bg-neutral-100 dark:bg-neutral-800 rounded-md group-hover:opacity-100 group-hover:visible`}
       >
         {children}
       </div>

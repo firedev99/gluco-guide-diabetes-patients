@@ -19,7 +19,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.className}`}>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if (localStorage.qqq === 'xxx' || (!('qqq' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  document.documentElement.classList.add('dark')
+} else {
+  document.documentElement.classList.remove('dark')
+}`,
+          }}
+        />
+      </head>
+      <body
+        className={`${manrope.className} dark:bg-zinc-900 dark:text-[#a3a3a3]`}
+      >
         <Providers>{children}</Providers>
       </body>
     </html>

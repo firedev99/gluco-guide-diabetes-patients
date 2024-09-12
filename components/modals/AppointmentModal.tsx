@@ -141,7 +141,7 @@ export default function AppointmentModal({
           <Button onClick={() => console.log(details)}>Confirm</Button>
         }
       >
-        <div className="overflow-x-hidden overflow-y-auto">
+        <div className="overflow-x-hidden overflow-y-auto custom-scroll">
           {/* doctor details for clicks from profile buttons */}
           {type === "profile" && doctor && (
             <div className="p-6 center flex-col">
@@ -233,7 +233,7 @@ export default function AppointmentModal({
               </label>
               <textarea
                 rows={4}
-                className="mt-2 p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 resize-none"
+                className="mt-2 p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-neutral-700 rounded-lg border border-gray-300 dark:border-neutral-500 focus:ring-blue-500 focus:border-blue-500 resize-none"
                 placeholder="Write special notes here..."
                 value={details.notes}
                 onChange={handleSpecialNotes}

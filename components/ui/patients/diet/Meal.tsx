@@ -22,7 +22,7 @@ export default function Meal({ meal, idx }: Props) {
 
   return (
     <motion.div
-      className="flex flex-col p-1 pb-2 lg:p-2 lg:pb-3 border shadow-sm rounded-2xl"
+      className="flex flex-col p-1 pb-2 lg:p-2 lg:pb-3 border dark:border-neutral-500 shadow-sm rounded-2xl"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1, transition: { delay: idx * 0.05 } }}
       exit={{ opacity: 0 }}
@@ -88,7 +88,11 @@ export default function Meal({ meal, idx }: Props) {
       </div>
       <div className="mt-auto pt-2 pl-1.5 pr-2 flex justify-between md:pt-4">
         <div className="flex -ml-0.5 sm:ml-0">
-          <Icon name="watch" className="w-4 h-4 opacity-70 2xl:w-5 2xl:h-5" />
+          <Icon
+            name="watch"
+            className="w-4 h-4 opacity-70 2xl:w-5 2xl:h-5"
+            pathClassName="dark:stroke-neutral-500"
+          />
           <span className="text-xs text-nowrap font-semibold opacity-80 ml-1 2xl:text-sm 2xl:opacity-75">
             {meal.time}
           </span>

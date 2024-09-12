@@ -24,13 +24,13 @@ export default function Button({
       disabled={disabled}
       className={`py-2 px-3 inline-flex items-center font-medium gap-x-2 text-sm rounded-lg border border-gray-200 ${className} ${
         type === "primary" &&
-        `bg-blue-600 text-white border-transparent hover:bg-blue-700`
+        `bg-blue-600 dark:bg-blue-700 text-white border-transparent hover:bg-blue-700`
       } ${
         type === "outline" &&
-        ` bg-white text-gray-800 shadow-sm hover:bg-gray-50`
+        ` bg-white dark:bg-neutral-300 text-gray-800 shadow-sm hover:bg-gray-50 dark:hover:bg-neutral-100`
       } ${
         type === "secondary" &&
-        `text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br`
+        `text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br dark:border-neutral-300`
       } disabled:opacity-50 disabled:pointer-events-none font-semibold`}
       onClick={onClick}
     >

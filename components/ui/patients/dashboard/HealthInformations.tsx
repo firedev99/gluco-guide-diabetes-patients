@@ -2,10 +2,10 @@ import { Icon } from "@/components"
 
 export default function HealthInformations() {
   return (
-    <div className="bg-[#f0f0f0] rounded-xl row-span-2 lg:col-span-1 lg:order-2 p-1.5 md:p-3 flex flex-col gap-2">
+    <div className="bg-[#f0f0f0] dark:bg-neutral-800 rounded-xl row-span-2 lg:col-span-1 lg:order-2 p-1.5 md:p-3 flex flex-col gap-2">
       {/* body temperature */}
-      <div className="bg-[--primary-white] rounded-lg">
-        <div className="flex justify-between py-2 px-1 md:p-3 border-b-2 border-b-[#f0f0f0]">
+      <div className="bg-[--primary-white] dark:bg-neutral-700 rounded-lg">
+        <div className="flex justify-between py-2 px-1 md:p-3 border-b-2 border-b-[#f0f0f0] dark:border-neutral-500">
           <div className="flex items-center 3xl:ml-3">
             <div>
               <Icon name="fire" className="w-7 h-7" />
@@ -24,8 +24,8 @@ export default function HealthInformations() {
       </div>
 
       {/* blood oxygen */}
-      <div className="bg-[--primary-white] rounded-lg">
-        <div className="flex justify-between py-2 px-1 md:p-3 border-b-2 border-b-[#f0f0f0]">
+      <div className="bg-[--primary-white] dark:bg-neutral-700 rounded-lg">
+        <div className="flex justify-between py-2 px-1 md:p-3 border-b-2 border-b-[#f0f0f0] dark:border-neutral-500">
           <div className="flex items-center ml-1 3xl:ml-4">
             <Icon name="heart-organ" className="w-7 h-7" />
             <span className="text-xs md:text-sm 2xl:text-base font-semibold ml-2 2xl:ml-3 mt-0.5">
@@ -44,8 +44,8 @@ export default function HealthInformations() {
       </div>
 
       {/* weight */}
-      <div className="bg-[--primary-white] rounded-lg">
-        <div className="flex justify-between py-2 px-1 md:p-3 border-b-2 border-b-[#f0f0f0]">
+      <div className="bg-[--primary-white] dark:bg-neutral-700 rounded-lg">
+        <div className="flex justify-between py-2 px-1 md:p-3 border-b-2 border-b-[#f0f0f0] dark:border-neutral-500">
           <div className="flex items-center ml-1 3xl:ml-3">
             <Icon name="human" className="w-[22px] h-[22px]" />
             <span className="text-xs md:text-sm 2xl:text-base font-semibold ml-1.5 2xl:ml-2 mt-0.5">
@@ -79,8 +79,8 @@ export default function HealthInformations() {
       </div>
 
       {/* BMI */}
-      <div className="bg-[--primary-white] rounded-lg h-full">
-        <div className="flex justify-between  py-2 px-1 md:p-3 border-b-2 border-b-[#f0f0f0]">
+      <div className="bg-[--primary-white] dark:bg-neutral-700 rounded-lg h-full">
+        <div className="flex justify-between  py-2 px-1 md:p-3 border-b-2 border-b-[#f0f0f0] dark:border-neutral-500">
           <div className="flex items-center ml-1 3xl:ml-3">
             <Icon name="weight-machine" className="w-5 h-5" />
             <span className="text-xs md:text-sm 2xl:text-base font-semibold ml-2 2xl:ml-3 mt-0.5">

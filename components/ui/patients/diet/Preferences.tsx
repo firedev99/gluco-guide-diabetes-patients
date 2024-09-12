@@ -178,8 +178,19 @@ export default function Preferences() {
         handler={handleModalClose}
         secondaryBtn={<Button>Save changes</Button>}
       >
-        {/*  */}
-        <div className="px-4 pt-2 pb-4 space-y-5 h-full overflow-x-hidden overflow-y-auto">
+        <div className="px-4 py-4 space-y-5 h-full overflow-x-hidden overflow-y-auto custom-scroll">
+          {/* intro */}
+          <div>
+            <h2 className="text-lg font-semibold">
+              Customize Your Diet Preferences
+            </h2>
+            <p className="text-sm font-medium opacity-85">
+              Tailor your diet to fit your lifestyle! Use the options below to
+              update your dietary preferences, such as food restrictions,
+              preferred cuisines, nutritional goals and many more. Make sure to
+              save your changes once you're done!
+            </p>
+          </div>
           {/* meal per day */}
           <fieldset>
             <legend className="text-base md:text-lg font-bold">
@@ -423,13 +434,13 @@ export default function Preferences() {
 
       {/* customize preferences */}
       <div
-        className="flex items-center bg-zinc-200 hover:bg-zinc-300 transition duration-300 px-2.5 py-2 lg:py-1.5 rounded-md w-fit ml-[2px] mt-2 cursor-pointer"
+        className="flex items-center bg-zinc-200 hover:bg-zinc-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 transition duration-300 px-2.5 py-2 rounded-md w-fit ml-[2px] mt-2 cursor-pointer"
         onClick={handleOpenModal}
       >
         <div>
           <Icon
             name="edit-icon"
-            className="w-4 h-4 opacity-80 md:w-5 md:h-5 mt-1"
+            className="w-4 h-4 opacity-80 md:w-5 md:h-5 mt-1 fill-neutral-400"
           />
         </div>
         <span className="text-sm ml-1 font-semibold opacity-80">

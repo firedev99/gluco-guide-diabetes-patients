@@ -28,14 +28,9 @@ export const routeLinks: Props[] = [
     dest: "/patient/appointments",
   },
   {
-    name: "Reports",
+    name: "Analytics",
     icon: "chart-graph",
-    dest: "/patient/reports",
-  },
-  {
-    name: "Medications",
-    icon: "written-page",
-    dest: "/patient/medications",
+    dest: "/patient/analytics",
   },
   {
     name: "Hospitals",

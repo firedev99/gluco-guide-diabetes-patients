@@ -26,17 +26,13 @@ export default function DietPage() {
       <DietPreference />
 
       {/* meal recommendations */}
-      <div className="flex flex-col lg:flex-row w-full lg:gap-2 lg:items">
+      <div className="flex flex-col 2xl:flex-row w-full 2xl:gap-2 lg:items">
         {/* recommendation categories */}
-        <div className="mt-3 md:mt-4 grid grid-cols-2 2xl:grid-cols-4 gap-2 lg:w-full min-h-[324px] lg:items-center">
+        <div className="mt-3 md:mt-4 grid grid-cols-3 2xl:grid-cols-3 gap-2 lg:w-full min-h-44 lg:items-center">
           {options.map((option, idx) => (
             <div
               key={`recommendation_option_${idx}`}
-              className={`cursor-pointer max-h-40 hover:shadow md:hover:shadow-md relative rounded-2xl lg:h-full lg:max-h-full center flex-col ${
-                option.title === "exercises"
-                  ? "flex-col-reverse bg-gradient-to-bl from-[#0172AF] from-10% to-[#69dea8] to-90%"
-                  : "border shadow-sm"
-              }`}
+              className={`cursor-pointer max-h-40 hover:shadow md:hover:shadow-md relative rounded-2xl lg:h-full lg:max-h-full center flex-col border dark:border-neutral-500 dark:bg-neutral-900/50 shadow-sm`}
             >
               <div className="center flex-col">
                 {option.info && (
@@ -45,8 +41,8 @@ export default function DietPage() {
                   </span>
                 )}
                 <span
-                  className={`font-bold mb-1 ${
-                    option.title === "exercises" && "-mt-3"
+                  className={`text-sm md:text-base font-bold mb-1 text-center ${
+                    idx === 2 && `-mb-3.5`
                   }`}
                 >
                   {option.title}
@@ -67,11 +63,6 @@ export default function DietPage() {
                   style={{ objectFit: "contain", filter: "contrast(0.9)" }}
                 />
               </div>
-              {option.title === "exercises" && (
-                <div className="absolute top-2 right-0 w-8 h-8">
-                  <Icon name="rotated-arrow" pathClassName="fill-slate-100" />
-                </div>
-              )}
             </div>
           ))}
         </div>

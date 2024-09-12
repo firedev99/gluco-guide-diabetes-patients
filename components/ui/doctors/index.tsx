@@ -57,7 +57,7 @@ export default function Doctors() {
       {/* </div> */}
       <div className="flex justify-end -mr-2">
         <button
-          className="size-10 rounded-full center hover:bg-zinc-200"
+          className="size-10 rounded-full center hover:bg-zinc-200 dark:hover:bg-neutral-700"
           onClick={() => setOpenFilter(true)}
         >
           <Icon name="filter" className="size-6 opacity-80" />
@@ -69,7 +69,7 @@ export default function Doctors() {
             key={`doctor_l_${idx}`}
             href={`/hospitals/doctors/profile?id=${props.id}&type=view`}
           >
-            <div className="p-2 bg-white shadow rounded-lg hover:shadow-md hover:cursor-pointer">
+            <div className="p-2 xl:p-2.5 bg-white dark:bg-zinc-800 shadow rounded-lg hover:shadow-md hover:cursor-pointer">
               {/* doctor image */}
               <div className="relative w-full h-72 xxs:h-44 xs:h-64 lg:h-72 xl:h-80">
                 <Image

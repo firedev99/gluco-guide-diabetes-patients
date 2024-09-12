@@ -127,7 +127,7 @@ export default function DoctorDates({
           ))}
         </div>
         <button
-          className={`absolute h-full w-12 top-0 left-0 hidden items-center bg-gradient-to-r from-[#f8f8f8] ${
+          className={`absolute h-10 -mt-2 -ml-0.5 w-12 top-0 left-0 hidden items-center bg-gradient-to-r from-[#f8f8f8] dark:from-neutral-700 ${
             hideMonthsPrevBtn ? `sm:hidden` : `sm:group-hover:flex`
           }`}
           onClick={handleMonthsPrevBtn}
@@ -135,7 +135,7 @@ export default function DoctorDates({
           <Icon name="simple-left-arrow" className="size-5 ml-1" />
         </button>
         <button
-          className={`absolute h-full w-9 top-0 right-0 hidden  items-center justify-end bg-gradient-to-l from-[#f8f8f8] ${
+          className={`absolute h-10 -mt-2 w-9 top-0 right-0 hidden  items-center justify-end bg-gradient-to-l from-[#f8f8f8] dark:from-neutral-700 ${
             hideMonthsNextBtn ? `sm:hidden` : `sm:group-hover:flex`
           }`}
           onClick={handleMonthsNextBtn}
@@ -154,7 +154,7 @@ export default function DoctorDates({
           {selectedMonthDays.map((date, idx) => (
             <div
               key={`scroll-calender-month-${idx}`}
-              className={`center flex-col min-w-20 size-20 bg-zinc-200/50 hover:cursor-pointer ${
+              className={`center flex-col min-w-20 size-20 bg-zinc-200/50 dark:bg-neutral-500 hover:cursor-pointer ${
                 !dateAvailable(format(date, "iii")) &&
                 `opacity-30 hover:cursor-not-allowed`
               }`}
@@ -164,15 +164,19 @@ export default function DoctorDates({
               }}
             >
               <span
-                className={`text-sm font-bold ${
-                  isSameDay(date, selectedDate) && `text-blue-600`
+                className={`text-sm font-bold  ${
+                  isSameDay(date, selectedDate)
+                    ? `text-blue-600 dark:text-blue-800`
+                    : `dark:text-neutral-100`
                 }`}
               >
                 {format(date, "dd")}
               </span>
               <span
-                className={`text-xs font-semibold ${
-                  isSameDay(date, selectedDate) ? `text-blue-600` : `opacity-60`
+                className={`text-xs font-semibold  ${
+                  isSameDay(date, selectedDate)
+                    ? `text-blue-600 dark:text-blue-800`
+                    : `opacity-60  dark:text-neutral-200`
                 }`}
               >
                 {format(date, "iii")}
@@ -182,7 +186,7 @@ export default function DoctorDates({
         </div>
         {/* date picker controls */}
         <div
-          className={`absolute h-full w-12 top-0 left-0 hidden items-center bg-gradient-to-r from-[#f8f8f8] ${
+          className={`absolute h-full w-12 top-0 left-0 hidden items-center bg-gradient-to-r from-[#f8f8f8] dark:from-neutral-700 ${
             hideDatesPrevBtn ? `sm:hidden` : `sm:group-hover:flex`
           }`}
           onClick={handleDatesPrevBtn}
@@ -191,11 +195,12 @@ export default function DoctorDates({
             <Icon
               name="simple-left-arrow"
               className="size-4 -ml-0.5 opacity-70"
+              pathClassName="dark:stroke-neutral-500"
             />
           </button>
         </div>
         <div
-          className={`absolute h-full w-12 top-0 right-0 hidden items-center justify-end bg-gradient-to-l from-[#f8f8f8] ${
+          className={`absolute h-full w-12 top-0 right-0 hidden items-center justify-end bg-gradient-to-l from-[#f8f8f8] dark:from-neutral-700 ${
             hideDatesNextBtn ? `sm:hidden` : `sm:group-hover:flex`
           }`}
           onClick={handleDatesNextBtn}
@@ -204,6 +209,7 @@ export default function DoctorDates({
             <Icon
               name="simple-right-arrow"
               className="size-4 -mr-0.5 opacity-70"
+              pathClassName="dark:stroke-neutral-700"
             />
           </button>
         </div>

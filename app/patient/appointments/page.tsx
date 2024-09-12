@@ -54,12 +54,13 @@ export default function AppointmentPage() {
         </div>
       </div>
 
+      {/* recent appointments */}
       {APPOINTMENTS.length > 0 && (
         <React.Fragment>
           <h1
             className={`${
               upcomingAppointments.length > 0 && `mt-2`
-            } ml-2 mb-2 text-2xl font-bold`}
+            } ml-2 mb-3 text-2xl font-bold`}
           >
             Recent Appointments
           </h1>

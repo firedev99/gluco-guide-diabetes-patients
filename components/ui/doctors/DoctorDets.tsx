@@ -49,7 +49,7 @@ export default function DoctorDets({ doctor }: Props) {
           <div className="mt-3 md:mt-0 md:w-full">
             <div className="flex flex-col items-center text-center">
               <h3 className="text-base font-bold">{doctor.name}</h3>
-              <p className="text-sm font-semibold text-cyan-900 opacity-70  leading-tight line-clamp-3">
+              <p className="text-sm font-semibold text-cyan-900 dark:text-neutral-400 opacity-70  leading-tight line-clamp-3">
                 {doctor.description}
               </p>
               <h5 className="text-sm mt-1 font-semibold opacity-80">
@@ -67,7 +67,7 @@ export default function DoctorDets({ doctor }: Props) {
 
             <div className="flex gap-3 md:gap-4 items-center mt-4 md:mt-5 max-w-96 mx-auto">
               {/* experice */}
-              <div className="w-1/3 border px-2 py-5 xxs:px-4 md:px-5 rounded-lg text-center">
+              <div className="w-1/3 border dark:border-neutral-500 px-2 py-5 xxs:px-4 md:px-5 rounded-lg text-center">
                 <h5 className="text-base text-nowrap xxs:text-lg font-bold -mb-2">
                   {doctor.experience} years+
                 </h5>
@@ -140,6 +140,7 @@ export default function DoctorDets({ doctor }: Props) {
         open={openContact}
         handler={() => setOpenContact(false)}
         direction="center"
+        disableDivider={true}
       >
         <Button
           className="flex items-center my-4"

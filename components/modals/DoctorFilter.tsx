@@ -85,7 +85,17 @@ export default function DoctorFilter({
         direction="center"
         secondaryBtn={<Button onClick={confirmFilter}>Confirm</Button>}
       >
-        <div className="overflow-x-hidden overflow-y-auto p-4">
+        <div className="overflow-x-hidden overflow-y-auto p-4 custom-scroll">
+          <div className="mb-4">
+            <h2 className="text-lg font-semibold">
+              Filter Doctors by Location or Hospital
+            </h2>
+            <p className="text-sm font-medium opacity-85">
+              Select a city or hospital name to find doctors that match your
+              preferences. This will help you narrow down your search and
+              quickly connect with the right professionals.
+            </p>
+          </div>
           <fieldset>
             <legend className="text-base md:text-lg font-bold">
               Nearby locations

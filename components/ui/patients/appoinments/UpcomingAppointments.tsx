@@ -41,7 +41,7 @@ export default function UpcomingAppointments({
   return (
     <React.Fragment>
       <div
-        className={`bg-slate-200/50 p-4 pb-5 rounded-lg overflow-hidden ${
+        className={`bg-slate-200/50 dark:bg-neutral-700 p-4 pb-5 rounded-lg overflow-hidden ${
           upcomingAppointments.length > 0 && `mb-4`
         }`}
       >

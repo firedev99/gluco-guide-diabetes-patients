@@ -23,7 +23,7 @@ export default function CheckInput({
 }: Props) {
   return (
     <div
-      className={`border-2 has-[input:checked]:bg-blue-50 px-3 py-2 rounded-md ${className}`}
+      className={`border-2 dark:border-neutral-500 has-[input:checked]:bg-blue-50 dark:has-[input:checked]:bg-transparent px-3 py-2 rounded-md ${className}`}
     >
       <label
         className={`cursor-pointer group flex items-center text-sm font-semibold ${
@@ -41,7 +41,7 @@ export default function CheckInput({
         />
         {value}
         <div
-          className={`ml-2.5 size-2.5 rounded-full group-has-[input:checked]:bg-blue-600 ring-1 ring-gray-400 group-has-[input:checked]:ring-offset-2 group-has-[input:checked]:ring-blue-600 ${
+          className={`ml-2.5 size-2.5 rounded-full group-has-[input:checked]:bg-blue-600 ring-1 ring-gray-400 group-has-[input:checked]:ring-offset-2 group-has-[input:checked]:ring-blue-700 dark:group-has-[input:checked]:bg-blue-700 dark:group-has-[input:checked]:ring-blue-800 ${
             direction === "left" && `mr-2`
           }`}
         />

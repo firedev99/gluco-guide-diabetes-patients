@@ -28,20 +28,18 @@ export default function BloodPressure() {
 
   return (
     // blood pressure informations
-    <div className="col-span-2 lg:order-5 lg:row-span-2 py-6 md:py-8 px-4 relative border-2 rounded-xl">
+    <div className="col-span-2 lg:order-5 lg:row-span-2 py-6 md:py-8 px-4 relative border-2 dark:border-neutral-600 rounded-xl">
       <div className="flex flex-col px-4">
-        <div className="flex items-center justify-between">
-          <div className="flex flex-col items-start -ml-4 md:ml-0">
-            <h4 className="text-base md:text-xl font-bold">Blood Pressure</h4>
-            <div className="flex items-center mt-1">
-              <Icon name="heart-w-pulse" />
-              <span className="ml-2 opacity-75 text-sm font-bold">
-                Pulse: 78BPM
-              </span>
-            </div>
-          </div>
-          <div className="w-8 h-8 md:w-10 md:h-10 bg-neutral-200 rounded-full -mt-2 md:-mt-4 -mr-4 center transition duration-300 hover:cursor-pointer hover:bg-neutral-300">
-            <Icon name="rotated-arrow" className="w-7 h-7 md:w-8 md:h-8" />
+        <div className="flex flex-col items-start -ml-4 md:ml-0">
+          <h4 className="text-base md:text-xl font-bold">Blood Pressure</h4>
+          <div className="flex items-center mt-1">
+            <Icon
+              name="heart-w-pulse"
+              pathClassName="dark:stroke-neutral-400"
+            />
+            <span className="ml-2 opacity-75 text-sm font-bold">
+              Pulse: 78BPM
+            </span>
           </div>
         </div>
         <div className="self-end">

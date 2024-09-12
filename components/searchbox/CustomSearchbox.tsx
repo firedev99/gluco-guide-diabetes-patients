@@ -110,10 +110,10 @@ export default function DoctorSearchbox({
       {/* type input */}
       <div className="relative">
         <div className="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-2.5">
-          <Icon name="search" />
+          <Icon name="search" pathClassName="dark:stroke-neutral-500" />
         </div>
         <input
-          className="border border-gray-200 rounded-lg text-sm w-full py-2.5 pe-4 ps-9 focus:border-blue-500  focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="border border-gray-200 dark:border-neutral-500 rounded-lg text-sm w-full py-2.5 pe-4 ps-9 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 bg-neutral-50 dark:bg-neutral-700"
           type="text"
           name="name"
           value={value}
@@ -128,10 +128,10 @@ export default function DoctorSearchbox({
         {isTouched && (
           <div
             ref={containerRef}
-            className={`absolute w-full max-h-80 py-3 lg:pt-4 bg-white border shadow-sm top-full mt-2 rounded-lg left-0 overflow-x-hidden overflow-y-auto flex flex-col custom-scroll-track ${containerClassName}`}
+            className={`absolute w-full max-h-80 py-3 lg:pt-4 bg-white dark:bg-neutral-700 border dark:border-none dark:shadow-[inset_0_0_0_1px_rgba(248,248,248,0.2)] shadow-sm top-full mt-2 rounded-lg left-0 overflow-x-hidden overflow-y-auto flex flex-col custom-scroll-track ${containerClassName}`}
           >
             <h3
-              className={`text-xs font-bold opacity-70 ${
+              className={`text-xs font-bold opacity-70 mb-1 ${
                 result.length === 0 ? `mx-auto` : `ml-3 uppercase`
               }`}
             >
@@ -140,7 +140,7 @@ export default function DoctorSearchbox({
             {result.map((item) => (
               <div
                 key={`booking-doctor-${item.id}`}
-                className="flex items-center gap-3 hover:bg-zinc-100 hover:cursor-pointer px-3 py-2"
+                className="flex items-center gap-3 hover:bg-zinc-100 dark:hover:bg-neutral-600 hover:cursor-pointer px-3 py-2"
                 onClick={() => {
                   if (!firey.isHospitalLocationType(item)) {
                     handleSelection(item, item.imgSrc)
@@ -168,7 +168,7 @@ export default function DoctorSearchbox({
 
                 {/* name */}
                 <div className="flex flex-col -mt-0.5">
-                  <h5 className="text-sm font-medium opacity-90">
+                  <h5 className="text-sm font-medium opacity-90 dark:text-neutral-300">
                     {!firey.isHospitalLocationType(item)
                       ? item.name
                       : item.cityName}
@@ -178,7 +178,6 @@ export default function DoctorSearchbox({
                       {item.availableTimes.split(":")[0]}
                     </p>
                   )}
-                  {/* details.availableTimes.split(":")[0].split(", ") */}
                 </div>
               </div>
             ))}

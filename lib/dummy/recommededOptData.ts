@@ -93,12 +93,5 @@ export function recommendedCategoryOptions({
       info: firey.convertMinToHourMinFormat(sleep),
       size: "larger",
     },
-    {
-      title: "exercises",
-      imgSrc:
-        "https://res.cloudinary.com/dwhlynqj3/image/upload/v1720447731/glucoguide/diet/diet-exercise.png",
-      position: "top",
-      size: "larger",
-    },
   ] as DietOptionProps[]
 }

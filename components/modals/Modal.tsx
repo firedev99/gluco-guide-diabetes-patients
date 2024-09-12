@@ -16,6 +16,7 @@ type Props = {
   handler?: void | (() => void)
   title?: string
   direction?: "bottom" | "center"
+  disableDivider?: boolean
 }
 
 export default function PopupModal({
@@ -26,6 +27,7 @@ export default function PopupModal({
   handler,
   title,
   direction = "bottom",
+  disableDivider = false,
 }: Props) {
   const modalRef = useRef<HTMLDivElement | null>(null)
 
@@ -62,20 +64,28 @@ export default function PopupModal({
               }}
               className={`${
                 className ? `${className}` : "h-3/4 w-full max-w-[720px]"
-              } [@media(max-height:400px)]:h-full shadow-2xl bg-[--primary-white] rounded-lg [--scale-to:100%] [--scale-from:100%] sm:[--scale-from:95%] [--slide-to:0px] [--slide-from:80px] sm:[--slide-from:0px] flex flex-col  ${
+              } [@media(max-height:400px)]:h-full shadow-2xl bg-[--primary-white] dark:bg-zinc-800 rounded-lg [--scale-to:100%] [--scale-from:100%] sm:[--scale-from:95%] [--slide-to:0px] [--slide-from:80px] sm:[--slide-from:0px] flex flex-col dark:shadow-[inset_0_0_0_1px_rgba(248,248,248,0.2)] ${
                 direction === "bottom" && `mt-auto sm:mt-0`
               }`}
             >
               {/* modal header controls */}
-              <div className="w-full flex justify-between py-3 items-center px-4 border-b">
+              <div
+                className={`w-full flex justify-between py-3 items-center px-4 dark:border-neutral-500 ${
+                  !disableDivider && `border-b`
+                }`}
+              >
                 <h3 className="font-bold mt-1 text-gray-800">{title}</h3>
                 <button
                   type="button"
-                  className="flex mt-1 justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none"
+                  className={`flex mt-1 justify-center items-center size-7 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 dark:hover:bg-neutral-700 disabled:opacity-50 disabled:pointer-events-none`}
                   onClick={() => handler && handler()}
                 >
                   <span className="sr-only">Close</span>
-                  <Icon name="cross" className="size-4" />
+                  <Icon
+                    name="cross"
+                    className="size-4"
+                    pathClassName="dark:stroke-neutral-300"
+                  />
                 </button>
               </div>
 
@@ -83,7 +93,11 @@ export default function PopupModal({
               {children}
 
               {/* modal footer controls */}
-              <div className="flex mt-auto w-full justify-end items-center gap-x-2 py-3 px-4 border-t">
+              <div
+                className={`flex mt-auto w-full justify-end items-center gap-x-2 py-3 px-4 ${
+                  !disableDivider && `border-t`
+                } dark:border-neutral-500`}
+              >
                 <Button type="outline" onClick={() => handler && handler()}>
                   Close
                 </Button>

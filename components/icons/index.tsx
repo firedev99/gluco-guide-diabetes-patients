@@ -45,6 +45,9 @@ import {
   MailIcon,
   UpChevIcon,
   EllipsisIcon,
+  HumanCircleIcon,
+  SunIcon,
+  MoonIcon,
 } from "./svg"
 
 type Props = {
@@ -85,6 +88,17 @@ export default function Icon({ name, className, pathClassName }: Props) {
 
     case "bell":
       return <BellIcon className={className} pathClassName={pathClassName} />
+
+    case "human-circle":
+      return (
+        <HumanCircleIcon className={className} pathClassName={pathClassName} />
+      )
+
+    case "sun":
+      return <SunIcon className={className} pathClassName={pathClassName} />
+
+    case "moon":
+      return <MoonIcon className={className} pathClassName={pathClassName} />
 
     case "simple-left-arrow":
       return (

@@ -70,6 +70,7 @@ export default function ContactInformation({ contactNumbers, emails }: Props) {
         open={isOpen}
         handler={() => setIsOpen(false)}
         direction="center"
+        disableDivider
       >
         <div className="flex gap-4">
           <Button className="center my-4 w-28" onClick={handleCopy}>

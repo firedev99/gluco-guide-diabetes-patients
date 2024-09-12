@@ -14,16 +14,11 @@ import { bloodGlucoseData } from "@/lib/dummy/health"
 
 export default function BloodGlucose() {
   return (
-    <div className="col-span-2 lg:order-1 lg:row-span-2 border-2 rounded-xl flex py-6 md:py-8 px-4 flex-col">
+    <div className="col-span-2 lg:order-1 lg:row-span-2 border-2  dark:border-neutral-600 rounded-xl flex py-6 md:py-8 px-4 flex-col">
       <div className="flex flex-col px-4">
-        <div className="flex justify-between">
-          <h4 className="text-base md:text-xl font-bold -ml-4 md:ml-0">
-            Blood Glucose
-          </h4>
-          <div className="w-8 h-8 md:w-10 md:h-10 bg-neutral-200 rounded-full -mt-2 md:-mt-4 -mr-4 center transition duration-300 hover:cursor-pointer hover:bg-neutral-300">
-            <Icon name="rotated-arrow" className="w-7 h-7 md:w-8 md:h-8" />
-          </div>
-        </div>
+        <h4 className="text-base md:text-xl font-bold -ml-4 md:ml-0">
+          Blood Glucose
+        </h4>
         <div className="self-end mt-4 md:mt-0">
           <h2 className="text-3xl md:text-4xl font-bold leading-8 md:leading-9">
             Daily

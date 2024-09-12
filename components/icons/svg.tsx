@@ -23,6 +23,55 @@ export function CrossIcon({ className, pathClassName }: Props) {
   )
 }
 
+export function SunIcon({ className, pathClassName }: Props) {
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <circle cx="12" cy="12" r="4" className={pathClassName}></circle>
+      <path d="M12 2v2" className={pathClassName}></path>
+      <path d="M12 20v2" className={pathClassName}></path>
+      <path d="m4.93 4.93 1.41 1.41" className={pathClassName}></path>
+      <path d="m17.66 17.66 1.41 1.41" className={pathClassName}></path>
+      <path d="M2 12h2" className={pathClassName}></path>
+      <path d="M20 12h2" className={pathClassName}></path>
+      <path d="m6.34 17.66-1.41 1.41" className={pathClassName}></path>
+      <path d="m19.07 4.93-1.41 1.41" className={pathClassName}></path>
+    </svg>
+  )
+}
+
+export function MoonIcon({ className, pathClassName }: Props) {
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path
+        d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"
+        className={pathClassName}
+      ></path>
+    </svg>
+  )
+}
+
 export function PhoneIcon({ className, pathClassName }: Props) {
   return (
     <svg
@@ -1391,6 +1440,26 @@ export function EllipsisIcon({ className, pathClassName }: Props) {
   )
 }
 
+export function HumanCircleIcon({ className, pathClassName }: Props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+        className={pathClassName}
+      />
+    </svg>
+  )
+}
+
 export function RightArrowIcon({ className, pathClassName }: Props) {
   return (
     <svg
@@ -1799,14 +1868,12 @@ export function EditIcon({ className, pathClassName }: Props) {
       <path
         className={pathClassName}
         d="M9 15.5C3.46275 15.5 1.5 13.5372 1.5 8C1.5 2.46275 3.46275 0.5 9 0.5C9.3105 0.5 9.5625 0.752 9.5625 1.0625C9.5625 1.373 9.3105 1.625 9 1.625C4.1145 1.625 2.625 3.1145 2.625 8C2.625 12.8855 4.1145 14.375 9 14.375C13.8855 14.375 15.375 12.8855 15.375 8C15.375 7.6895 15.627 7.4375 15.9375 7.4375C16.248 7.4375 16.5 7.6895 16.5 8C16.5 13.5372 14.5372 15.5 9 15.5Z"
-        fill="#383838"
       />
       <path
         className={pathClassName}
         fillRule="evenodd"
         clipRule="evenodd"
         d="M14.4274 6.03946L15.2214 5.14295C16.0854 4.1672 15.9939 2.67095 15.0189 1.8062C14.5464 1.3877 13.9359 1.1777 13.3089 1.2167C12.6789 1.25495 12.1014 1.53695 11.6829 2.00945L7.2699 6.99545C5.9019 8.53895 6.8379 10.5797 6.8784 10.6659C6.94515 10.8077 7.06815 10.9157 7.2174 10.9622C7.26015 10.9764 7.75815 11.1287 8.4144 11.1287C9.15315 11.1287 10.0929 10.9344 10.8069 10.1274L14.3081 6.17419C14.3312 6.15525 14.353 6.13419 14.3734 6.11104C14.3936 6.08829 14.4116 6.06434 14.4274 6.03946ZM7.80615 9.9467C8.2764 10.0322 9.3144 10.1162 9.96465 9.38195L13.1528 5.78215L11.2992 4.14049L8.1129 7.7417C7.4469 8.49245 7.65915 9.4937 7.80615 9.9467ZM12.0447 3.29798L13.8991 4.93945L14.3791 4.39745C14.8314 3.88595 14.7841 3.10145 14.2734 2.6492C14.0251 2.4302 13.7034 2.31845 13.3771 2.33945C13.0471 2.36045 12.7449 2.50745 12.5251 2.75495L12.0447 3.29798Z"
-        fill="#383838"
       />
     </svg>
   )

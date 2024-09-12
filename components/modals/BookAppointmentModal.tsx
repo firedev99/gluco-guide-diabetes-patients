@@ -242,7 +242,14 @@ export default function BookAppointmentModal({ isOpen, closeHandler }: Props) {
         </Button>
       }
     >
-      <div className="flex flex-col gap-3 p-4 overflow-x-hidden overflow-y-auto">
+      <div className="flex flex-col gap-3 p-4 overflow-x-hidden overflow-y-auto custom-scroll">
+        <div className="mb-3">
+          <h2 className="text-lg font-semibold">Book an Appointment</h2>
+          <p className="text-sm font-medium opacity-85">
+            Choose a doctor and schedule your appointment with just a few taps.
+            Select a time that works best for you!
+          </p>
+        </div>
         <div>
           <h4 className="text-xs font-bold opacity-85 uppercase mb-1">
             Doctor
@@ -381,7 +388,7 @@ export default function BookAppointmentModal({ isOpen, closeHandler }: Props) {
             </label>
             <textarea
               rows={4}
-              className="mt-2 p-2 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 resize-none"
+              className="mt-2 p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-neutral-700 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 resize-none"
               placeholder="Write special notes here..."
               value={details.notes}
               onChange={handleSpecialNotes}

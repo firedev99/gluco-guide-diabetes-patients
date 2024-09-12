@@ -26,7 +26,7 @@ export default function Menu() {
         animate="animate"
         exit="exit"
         ref={containerRef}
-        className="bg-[--primary-white] fixed z-50 min-h-full h-full w-60 top-0 left-0 pt-6 flex flex-col prevent-scroll md:hidden"
+        className="bg-[--primary-white] dark:bg-zinc-900 fixed z-50 min-h-full h-full w-60 top-0 left-0 pt-6 flex flex-col prevent-scroll md:hidden"
       >
         {/* logo */}
         <div className="center gap-2 mb-8">
@@ -40,20 +40,20 @@ export default function Menu() {
             <span className="text-xs text-opacity-70 ml-2 font-medium">
               Overview
             </span>
-            {content.slice(0, 7).map(({ name, icon, dest }, idx) => (
+            {content.slice(0, 6).map(({ name, icon, dest }, idx) => (
               <Link
                 href={dest ?? "#"}
                 className={`flex transition duration-200 items-center py-2 px-2 gap-2 rounded-md ${
                   pathname === dest
-                    ? `bg-[--primary-blue] hover:bg-[--primary-blue] text-[--primary-white]`
-                    : `hover:bg-neutral-200`
+                    ? `bg-[--primary-blue] dark:bg-neutral-800 hover:bg-[--primary-blue] text-[--primary-white]`
+                    : `hover:bg-neutral-200 dark:hover:bg-neutral-800`
                 }`}
                 key={`sidebar_upper_link_${idx}`}
               >
                 <div>
                   <Icon
                     name={icon}
-                    pathClassName={`transition duration-200 ${
+                    pathClassName={`transition duration-200  dark:stroke-neutral-300 ${
                       pathname === dest
                         ? `stroke-[--primary-white]`
                         : `opacity-90`
@@ -70,15 +70,18 @@ export default function Menu() {
             <span className="text-xs text-opacity-70 ml-2  font-medium">
               Support
             </span>
-            {content.slice(7, content.length).map(({ name, icon }, idx) => (
+            {content.slice(6, content.length).map(({ name, icon }, idx) => (
               <button key={`sidebar_bottom_link_${idx}`}>
                 <div
-                  className={`flex items-center transition duration-200 py-2 px-2 gap-2 rounded-md hover:bg-neutral-200 ${
+                  className={`flex items-center transition duration-200 py-2 px-2 gap-2 rounded-md hover:bg-neutral-200 dark:hover:bg-neutral-800 ${
                     idx === 2 && `mt-8`
                   }`}
                 >
                   <div>
-                    <Icon pathClassName="opacity-90" name={icon} />
+                    <Icon
+                      pathClassName="opacity-90 dark:stroke-neutral-300"
+                      name={icon}
+                    />
                   </div>
                   <span className="text-sm font-bold">{name}</span>
                 </div>

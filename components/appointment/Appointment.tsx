@@ -27,13 +27,14 @@ export default function UpcomingAppointmentComponent({
   }
 
   return (
-    <div className="relative bg-slate-50 px-3 pt-2 md:pt-3 pb-3 md:pb-4 rounded-lg">
+    <div className="relative bg-slate-50 dark:bg-neutral-800 px-3 pt-2 md:pt-3 pb-3 md:pb-4 rounded-lg">
       {/* time and type of the appointment */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2 md:gap-2.5">
           <div
             className={`size-3 rounded-full ${
-              appointment.status !== "upcoming" && `bg-zinc-300`
+              appointment.status !== "upcoming" &&
+              `bg-zinc-300 dark:bg-neutral-600 `
             } ${
               appointment.type === "consultation"
                 ? `bg-orange-400`
@@ -59,10 +60,10 @@ export default function UpcomingAppointmentComponent({
         <SimpleModal
           open={openOptions}
           closeModal={() => setOpenOptions(false)}
-          className="border shadow-md rounded-lg right-4 top-11 flex flex-col w-40 bg-[--primary-white]"
+          className="border dark:border-none dark:shadow-[inset_0_0_0_1px_rgba(248,248,248,0.2)] shadow-md rounded-lg right-4 top-11 flex flex-col w-40 bg-[--primary-white] dark:bg-neutral-700"
           content={
             <button
-              className="top: 0 relative size-8 center hover:bg-zinc-200/80 rounded-full"
+              className="top: 0 relative size-8 center hover:bg-zinc-200/80 dark:hover:bg-neutral-700 rounded-full"
               onClick={toggleModal}
             >
               <Icon name="ellipsis" className="size-6" />
@@ -70,12 +71,12 @@ export default function UpcomingAppointmentComponent({
           }
         >
           <button
-            className="py-1 size-full hover:bg-zinc-200/70 rounded-md"
+            className="py-1 size-full hover:bg-zinc-200/70 dark:hover:bg-neutral-600 rounded-md"
             onClick={handleViewBtn}
           >
             <span className="text-sm font-bold">View</span>
           </button>
-          <button className="py-1 hover:bg-zinc-200/70 rounded-md size-full">
+          <button className="py-1 hover:bg-zinc-200/70 dark:hover:bg-neutral-600 rounded-md size-full">
             <span className="text-sm font-bold">Cancel</span>
           </button>
         </SimpleModal>

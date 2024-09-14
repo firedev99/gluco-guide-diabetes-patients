@@ -243,7 +243,7 @@ export const APPOINTMENTS: TYPEAPPOINTMENT[] = [
       name: "Labaid Specialized Hospital",
       address: "House-1, Road-4, Dhanmondi Dhaka-1205",
     },
-    status: "upcoming",
+    status: "completed",
     date: "2024-09-11T18:00:00.000Z",
     time: "3 PM - 7 PM",
   },

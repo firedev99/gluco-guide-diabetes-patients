@@ -188,7 +188,7 @@ export default function Preferences() {
               Tailor your diet to fit your lifestyle! Use the options below to
               update your dietary preferences, such as food restrictions,
               preferred cuisines, nutritional goals and many more. Make sure to
-              save your changes once you're done!
+              save your changes once you&apos;re done!
             </p>
           </div>
           {/* meal per day */}

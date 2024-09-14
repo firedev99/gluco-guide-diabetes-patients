@@ -56,7 +56,7 @@ export default function ThemeSwitch() {
           <Icon className="size-4 mt-[1px]" name="moon" />
         </div>
       </div>
-      <span className="text-sm font-semibold opacity-80"> Theme</span>
+      <span className="-mt-0.5 text-sm font-semibold opacity-80"> Theme</span>
     </div>
   )
 }

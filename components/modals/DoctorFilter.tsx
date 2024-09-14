@@ -111,6 +111,7 @@ export default function DoctorFilter({
                   active={selected.locations.includes(name)}
                   onChange={handleLocations}
                   direction="left"
+                  className="rounded-lg"
                 />
               ))}
             </div>
@@ -130,6 +131,7 @@ export default function DoctorFilter({
                   active={selected.hospitals.includes(name)}
                   onChange={handleHospitals}
                   direction="left"
+                  className="rounded-lg"
                 />
               ))}
             </div>

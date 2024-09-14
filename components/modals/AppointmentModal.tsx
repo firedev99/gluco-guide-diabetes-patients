@@ -217,7 +217,8 @@ export default function AppointmentModal({
                     active={details.purposeOfVisit.includes(item)}
                     onChange={handlePurposeOfVisit}
                     direction="left"
-                    className="-ml-5 border-none has-[input:checked]:bg-transparent"
+                    className="-ml-[26px] border-none has-[input:checked]:bg-transparent"
+                    roundedInput
                   />
                 ))}
               </div>

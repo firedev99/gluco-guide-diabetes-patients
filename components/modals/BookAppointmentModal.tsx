@@ -363,7 +363,7 @@ export default function BookAppointmentModal({ isOpen, closeHandler }: Props) {
             </legend>
 
             {/* purpose of visit options */}
-            <div className="flex flex-col text-sm">
+            <div className="flex flex-wrap mt-2 -ml-1 gap-2">
               {appointmentPurposes.map((item, idx) => (
                 <Checkbox
                   key={`alergyOpt-${idx}`}
@@ -372,7 +372,7 @@ export default function BookAppointmentModal({ isOpen, closeHandler }: Props) {
                   active={details.purposeOfVisit.includes(item)}
                   onChange={handlePurposeOfVisit}
                   direction="left"
-                  className="-ml-5 border-none has-[input:checked]:bg-transparent"
+                  // className="-ml-5 border-none has-[input:checked]:bg-transparent"
                 />
               ))}
             </div>
@@ -388,7 +388,7 @@ export default function BookAppointmentModal({ isOpen, closeHandler }: Props) {
             </label>
             <textarea
               rows={4}
-              className="mt-2 p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-neutral-700 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 resize-none"
+              className="mt-2 p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-neutral-700 rounded-lg border border-gray-300 dark:border-neutral-400 focus:ring-blue-500 focus:border-blue-500 resize-none"
               placeholder="Write special notes here..."
               value={details.notes}
               onChange={handleSpecialNotes}

@@ -1,8 +1,7 @@
 "use client"
 
-import { Icon, SimpleModal } from "@/components"
+import { Icon, SimpleModal, ThemeSwitch } from "@/components"
 import Link from "next/link"
-import ThemeSwitch from "../switch/ThemeSwitch"
 
 type Props = {
   open: boolean
@@ -15,7 +14,7 @@ export default function ProfileMenu({ open, toggleModal, closeModal }: Props) {
     <SimpleModal
       open={open}
       closeModal={closeModal}
-      className="border dark:border-transparent shadow-md dark:shadow-[inset_0_0_0_1px_rgba(248,248,248,0.2)] px-3 py-2 rounded-lg right-4 top-14 flex flex-col bg-[--primary-white] dark:bg-zinc-800 select-none"
+      className="border dark:border-transparent shadow-md dark:shadow-[inset_0_0_0_1px_rgba(248,248,248,0.2)] px-3 py-2 rounded-lg right-4 top-14 flex flex-col bg-[--primary-white] dark:bg-neutral-800 select-none"
       content={
         <div
           className="w-9 h-9 rounded-full hover:cursor-pointer bg-slate-600"
@@ -23,7 +22,7 @@ export default function ProfileMenu({ open, toggleModal, closeModal }: Props) {
         />
       }
     >
-      <div className="flex flex-col divide-y-2 dark:divide-neutral-700">
+      <div className="min-w-44 flex flex-col divide-y-2 dark:divide-neutral-700">
         {/* user basic information */}
         <div className="flex items-center gap-2 px-2 py-1.5">
           <div className="min-w-9 size-9 rounded-full bg-slate-300/75" />

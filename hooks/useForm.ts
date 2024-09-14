@@ -32,17 +32,19 @@ export function useForm<T>({
     const touchedFields = Object.keys(touched)
     // create a new string of arrays w the validation errors
     // then filter thoese fields that has been touched
-    const touchedErrors = Object.keys(validationErrors)
-      .filter((field) => touchedFields.includes(field))
-      .reduce<CustomHookFormErrorType>((acc, field) => {
-        // create the specific error if not exists
-        if (!acc[field]) {
-          acc[field] = validationErrors[field]
-        }
-        return acc
-      }, {})
+    if (validationErrors) {
+      const touchedErrors = Object.keys(validationErrors)
+        .filter((field) => touchedFields.includes(field))
+        .reduce<CustomHookFormErrorType>((acc, field) => {
+          // create the specific error if not exists
+          if (!acc[field]) {
+            acc[field] = validationErrors[field]
+          }
+          return acc
+        }, {})
 
-    setErrors((err) => ({ ...err, ...touchedErrors }))
+      setErrors((err) => ({ ...err, ...touchedErrors }))
+    }
     // eslint-disable-next-line
   }, [touched])
 

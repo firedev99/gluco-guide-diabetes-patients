@@ -31,6 +31,10 @@ body {
 }
 
 @layer components {
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    @apply [filter:invert(100%)] dark:[filter:invert(0%)];
+  }
+
   .custom-scroll-track {
     @apply [&::-webkit-scrollbar]:bg-transparent [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-zinc-100 dark:[&::-webkit-scrollbar-track]:bg-neutral-600 [&::-webkit-scrollbar-thumb]:bg-zinc-300 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500 [&::-webkit-scrollbar-thumb]:rounded-sm;
   }

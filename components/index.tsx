@@ -49,6 +49,9 @@ export { default as NoData } from "./ui/NoData"
 // menus
 export { default as ProfileMenu } from "./menu/ProfileMenu"
 
+// switches
+export { default as ThemeSwitch } from "./switch/ThemeSwitch"
+
 // modals
 export { default as Modal } from "./modals/Modal"
 export { default as PopoverModal } from "./modals/PopoverModal"
@@ -57,13 +60,18 @@ export { default as AppointmentModal } from "./modals/AppointmentModal"
 export { default as DoctorFilter } from "./modals/DoctorFilter"
 export { default as AppoinmentDetailsModal } from "./modals/AppoinmentDetailsModal"
 export { default as BookAppointmentModal } from "./modals/BookAppointmentModal"
+export { default as ProfileEditModal } from "./modals/ProfileEditModal"
 
 // searchbox
 export { default as CustomSearchbox } from "./searchbox/CustomSearchbox"
 
+// selects
+export { default as BasicSelect } from "./selects/BasicSelect"
+
 // inputs
 export { default as RadioInput } from "./inputs/RadioInput"
 export { default as Checkbox } from "./inputs/Checkbox"
+export { default as TextInput } from "./inputs/TextInput"
 
 // recharts
 export { default as RenderNutritionChart } from "./recharts/NutritionChart"
@@ -84,3 +92,4 @@ export { default as Appointment } from "./appointment/Appointment"
 // dates
 export { default as DoctorDates } from "./dates/DateSelectionDoctor"
 export { default as AppointmentDates } from "./dates/DateSelectionAppointment"
+export { default as DatePicker } from "./dates/DatePicker"

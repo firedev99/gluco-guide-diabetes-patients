@@ -56,6 +56,19 @@ function getSpecificArr<ItemType>(data: ItemType[]): ItemType[] {
   return Array.from(data.reduce((set, e) => set.add(e), new Set<ItemType>()))
 }
 
+// camelize a text or word
+function camelize(text: string): string {
+  let _text = text
+    .toLowerCase()
+    .trim()
+    .split(/[.\-_\s]/g) // removes all (- space _ .)
+    .reduce(
+      (str, nextWord) => str + nextWord[0].toUpperCase() + nextWord.slice(1)
+    )
+
+  return _text
+}
+
 // convert minutes to `h:m` format
 function convertMinToHourMinFormat(duration: number) {
   const hours = duration / 60
@@ -87,4 +100,5 @@ export const firey = {
   isDoctorType,
   isHospitalType,
   isHospitalLocationType,
+  camelize,
 }

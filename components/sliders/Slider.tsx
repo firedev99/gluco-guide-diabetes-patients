@@ -29,11 +29,6 @@ export default function Slider({ data }: Props) {
     setOriginX(event.clientX)
   }
 
-  // function dragMove(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
-  //   if (!sliderRef.current || !isDragging) return
-
-  // }
-
   function dragEnd(event: React.MouseEvent<HTMLDivElement>) {
     if (!sliderRef.current) return
     if (!isDragging) return

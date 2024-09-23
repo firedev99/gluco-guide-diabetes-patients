@@ -232,6 +232,7 @@ export default function ProfileEditModal() {
               />
               <BasicSelect
                 name="Gender"
+                className="-ml-0.5"
                 values={["Male", "Female", "Others"]}
                 onChange={(e) =>
                   setValues((prev) => ({
@@ -304,6 +305,7 @@ export default function ProfileEditModal() {
               />
               <BasicSelect
                 name="Blood Group"
+                className="-ml-0.5"
                 values={bloodGroups}
                 onChange={(e) =>
                   setValues((prev) => ({ ...prev, bloodGroup: e.target.value }))

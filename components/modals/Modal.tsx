@@ -64,7 +64,7 @@ export default function PopupModal({
               }}
               className={`${
                 className ? `${className}` : "h-3/4 w-full max-w-[720px]"
-              } [@media(max-height:400px)]:h-full shadow-2xl bg-[--primary-white] dark:bg-zinc-800 rounded-lg [--scale-to:100%] [--scale-from:100%] sm:[--scale-from:95%] [--slide-to:0px] [--slide-from:80px] sm:[--slide-from:0px] flex flex-col dark:shadow-[inset_0_0_0_1px_rgba(248,248,248,0.2)] ${
+              } [@media(max-height:556px)]:h-full shadow-2xl bg-[--primary-white] dark:bg-zinc-800 rounded-lg [--scale-to:100%] [--scale-from:100%] sm:[--scale-from:95%] [--slide-to:0px] [--slide-from:80px] sm:[--slide-from:0px] flex flex-col dark:shadow-[inset_0_0_0_1px_rgba(248,248,248,0.2)] ${
                 direction === "bottom" && `mt-auto sm:mt-0`
               }`}
             >

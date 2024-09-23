@@ -42,7 +42,7 @@ export default function AppointmentPage() {
         <div
           className={
             upcomingAppointments.length > 0
-              ? `md:w-2/3 md:bg-pattern rounded-lg mb-4 pb-16 md:border`
+              ? `md:w-2/3 md:bg-pattern dark:md:bg-pattern-dark rounded-lg mb-4 pb-16 md:border`
               : `ml-auto`
           }
         >

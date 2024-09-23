@@ -1,6 +1,6 @@
 "use client"
 
-import { BookAppointmentModal, Button, Icon, Modal } from "@/components"
+import { BookAppointmentModal, Button } from "@/components"
 import { useMotionValueEvent, useScroll, motion } from "framer-motion"
 import React, { useState } from "react"
 

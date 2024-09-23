@@ -4,11 +4,17 @@ type Props = {
   name: string
   values: string[]
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void
+  className?: string
 }
 
-export default function BasicSelection({ name, values, onChange }: Props) {
+export default function BasicSelection({
+  name,
+  className,
+  values,
+  onChange,
+}: Props) {
   return (
-    <div className="-ml-0.5">
+    <div className={className}>
       <h4 className="text-sm font-semibold opacity-90 mb-0.5">{name}</h4>
       <select
         onChange={onChange}

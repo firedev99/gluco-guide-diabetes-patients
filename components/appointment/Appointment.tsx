@@ -45,13 +45,14 @@ export default function UpcomingAppointmentComponent({
             {appointment.time}
           </span>
           <div
-            className={`text-xs font-bold px-1.5 md:px-2 py-1 rounded-md text-blue-950/70 ${
-              appointment.status !== "upcoming" && `bg-zinc-300`
-            } ${
-              appointment.type === "consultation"
-                ? `bg-orange-300/80`
-                : `bg-blue-300/80`
-            }`}
+            className={`text-xs font-bold px-1.5 md:px-2 py-0.5 md:py-1  rounded-sm ${
+              appointment.status !== "upcoming"
+                ? `bg-zinc-400 text-neutral-800/70`
+                : appointment.type === "consultation"
+                ? `bg-orange-300/80 text-orange-800/70`
+                : `bg-blue-300/80 text-blue-950/70`
+            }
+            `}
           >
             #{appointment.type}
           </div>
@@ -60,10 +61,12 @@ export default function UpcomingAppointmentComponent({
         <SimpleModal
           open={openOptions}
           closeModal={() => setOpenOptions(false)}
-          className="border dark:border-none dark:shadow-[inset_0_0_0_1px_rgba(248,248,248,0.2)] shadow-md rounded-lg right-4 top-11 flex flex-col w-40 bg-[--primary-white] dark:bg-neutral-700"
+          className="border dark:border-none dark:shadow-[inset_0_0_0_1px_rgba(248,248,248,0.2)] shadow-md rounded-lg right-4 top-12 flex flex-col w-40 bg-[--primary-white] dark:bg-neutral-800"
           content={
             <button
-              className="top: 0 relative size-8 center hover:bg-zinc-200/80 dark:hover:bg-neutral-700 rounded-full"
+              className={`top-0 relative size-8 center ${
+                openOptions && `bg-zinc-200/80 dark:bg-neutral-700`
+              } hover:bg-zinc-200/80 dark:hover:bg-neutral-700 rounded-full`}
               onClick={toggleModal}
             >
               <Icon name="ellipsis" className="size-6" />
@@ -71,12 +74,12 @@ export default function UpcomingAppointmentComponent({
           }
         >
           <button
-            className="py-1 size-full hover:bg-zinc-200/70 dark:hover:bg-neutral-600 rounded-md"
+            className="py-1 size-full hover:bg-zinc-200/70 dark:hover:bg-neutral-700 rounded-md"
             onClick={handleViewBtn}
           >
             <span className="text-sm font-bold">View</span>
           </button>
-          <button className="py-1 hover:bg-zinc-200/70 dark:hover:bg-neutral-600 rounded-md size-full">
+          <button className="py-1 hover:bg-zinc-200/70 dark:hover:bg-neutral-700 rounded-md size-full">
             <span className="text-sm font-bold">Cancel</span>
           </button>
         </SimpleModal>
@@ -97,18 +100,20 @@ export default function UpcomingAppointmentComponent({
           </Link>
         )}
         <Link
-          className="text-xs md:text-sm font-bold size-fit opacity-95 hover:opacity-100 hover:text-blue-800"
+          className="text-xs md:text-sm font-semibold leading-4 md:leading-4 size-fit opacity-95 hover:opacity-100 hover:text-blue-800"
           href={`/hospitals/${appointment.hospital.id}/details?type=view`}
         >
           {appointment.hospital.name}
         </Link>
-        <p className="text-xs md:text-sm font-semibold opacity-90">
+        <p className="text-xs md:text-sm font-semibold opacity-90 leading-3 md:leading-4">
           {appointment.hospital.address}
         </p>
         {appointment.status !== "upcoming" && (
-          <div className="flex flex-col text-xs font-semibold opacity-75">
-            <span>{appointment.time}</span>
-            <span>{format(appointment.date, "d/MM/yyy")}</span>
+          <div className="flex mt-1.5 flex-col text-xs font-semibold opacity-75">
+            <span className="leading-3">{appointment.time}</span>
+            <span className="leading-3">
+              {format(appointment.date, "d/MM/yyy")}
+            </span>
           </div>
         )}
       </div>

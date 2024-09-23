@@ -195,7 +195,18 @@ body {
       linear-gradient(90deg, rgb(180, 192, 211) 0.5rem, transparent 0.5rem);
     background-size: 5rem 5rem;
     background-position: 2.75rem 2.75rem, 0 0, 0 0;
+  }
 
-    @apply dark:bg-neutral-700 dark:bg-gradient-to-r dark:from-cyan-500 dark:to-blue-500;
+  .bg-pattern-dark {
+    background-color: #ffffff;
+    background-image: radial-gradient(
+        circle,
+        transparent 1rem,
+        rgba(245, 245, 245, 0.5) 1rem
+      ),
+      linear-gradient(rgb(70, 70, 70) 0.5rem, transparent 0.5rem),
+      linear-gradient(90deg, rgb(61, 61, 61) 0.5rem, transparent 0.5rem);
+    background-size: 5rem 5rem;
+    background-position: 2.75rem 2.75rem, 0 0, 0 0;
   }
 }

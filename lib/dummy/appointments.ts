@@ -247,4 +247,51 @@ export const APPOINTMENTS: TYPEAPPOINTMENT[] = [
     date: "2024-09-11T18:00:00.000Z",
     time: "3 PM - 7 PM",
   },
+  {
+    id: "nbd2132rav1ro",
+    serial: "0008",
+    mode: "online",
+    type: "consultation",
+    doctor: {
+      id: "vrsq4cpp3a",
+      name: "Dr. Farhana Khan",
+    },
+    purposeOfVisit: [
+      "Weight Management",
+      "Diet and Exercise Counseling",
+      "Medication Adjustment",
+    ],
+    hospital: {
+      id: "f733e9e895b4c4ae6dc6aa1ed0a076fd",
+      name: "Square Hospital Dhaka",
+      address: "18/F, West Panthapath",
+    },
+    status: "completed",
+    date: "2024-09-14T18:00:00.000Z",
+    time: "2 PM - 6 PM",
+  },
+  {
+    id: "abz1q21v5ab",
+    serial: "0009",
+    mode: "online",
+    type: "test",
+    testName: "Hemoglobin (HbA1C)",
+    doctor: {
+      id: "swc6l0sk2uh",
+      name: "Dr. Rafiq Azad",
+    },
+    purposeOfVisit: [
+      "Weight Management",
+      "Diet and Exercise Counseling",
+      "Medication Adjustment",
+    ],
+    hospital: {
+      id: "04381b26fb57743f044729ab015cbe15",
+      name: "Labaid Specialized Hospital",
+      address: "House-1, Road-4, Dhanmondi Dhaka-1205",
+    },
+    status: "completed",
+    date: "2024-09-17T18:00:00.000Z",
+    time: "3 PM - 7 PM",
+  },
 ]

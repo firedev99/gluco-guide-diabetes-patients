@@ -388,7 +388,7 @@ export default function BookAppointmentModal({ isOpen, closeHandler }: Props) {
             </label>
             <textarea
               rows={4}
-              className="mt-2 p-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-neutral-700 rounded-lg border border-gray-300 dark:border-neutral-400 focus:ring-blue-500 focus:border-blue-500 resize-none"
+              className="mt-2 p-2 w-full text-sm text-gray-900 dark:text-neutral-400 bg-gray-50 dark:bg-neutral-700 rounded-lg border border-gray-300 dark:border-neutral-400 focus:ring-blue-500 focus:border-blue-500 resize-none"
               placeholder="Write special notes here..."
               value={details.notes}
               onChange={handleSpecialNotes}

@@ -1,4 +1,5 @@
 import { DoctorType } from "@/lib/dummy/doctors"
+import { TYPEMONITORING } from "@/lib/dummy/health"
 import { HospitalType } from "@/lib/dummy/hospitals"
 import { LocationType } from "@/types"
 
@@ -33,6 +34,20 @@ function groupByCategory<ItemType, K extends keyof ItemType>(
 // generate an id
 function getID(): string {
   return Math.random().toString(36).slice(2)
+}
+
+// generate random number between two numbers
+function generateRandomNum(
+  numbers: [number, number],
+  floating?: boolean,
+  fixed?: number
+) {
+  const min = numbers[0]
+  const max = numbers[1]
+
+  return floating
+    ? (Math.random() * (max - min) + min).toFixed(fixed ? fixed : 1)
+    : Math.floor(Math.random() * (max - min + 1) + min)
 }
 
 // get a unique array eg - getUniqueArr(data.map((item) => item.name))
@@ -96,6 +111,7 @@ export const firey = {
   convertMinToHourMinFormat,
   getSpecificArr,
   getID,
+  generateRandomNum,
   makeString,
   isDoctorType,
   isHospitalType,

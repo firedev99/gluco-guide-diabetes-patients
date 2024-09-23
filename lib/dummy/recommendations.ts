@@ -123,10 +123,10 @@ export type TYPERECOMMENDATIONS = {
   sleep: string
   exercises?: {
     name: string
-    time: ("morning" | "afternoon" | "evening" | "night" | "morning")[]
+    times: ("morning" | "afternoon" | "evening" | "night" | "morning")[]
     duration: string
   }[]
-  monitoring?: { name: string; time: string }[]
+  monitoring?: { name: string; times: string }[]
   expiry: number
   restrictions: string[]
   generatedBy: "doctor" | "app"
@@ -173,14 +173,14 @@ export const RECOMMENDATIONS: TYPERECOMMENDATIONS[] = [
     hydration: "8",
     sleep: "7-8",
     exercises: [
-      { name: "Running", time: ["morning", "evening"], duration: "30-45mins" },
-      { name: "Rowing", time: ["morning"], duration: "15-20mins" },
-      { name: "Play Tennis", time: ["afternoon"], duration: "1-2hrs" },
-      { name: "Cycling", time: ["evening"], duration: "40-50mins" },
+      { name: "Running", times: ["morning", "evening"], duration: "30-45mins" },
+      { name: "Rowing", times: ["morning"], duration: "15-20mins" },
+      { name: "Play Tennis", times: ["evening"], duration: "1-2hrs" },
+      { name: "Cycling", times: ["evening"], duration: "40-50mins" },
     ],
     monitoring: [
-      { name: "Track blood glucose level", time: "daily" },
-      { name: "Regular weigh-ins", time: "every week" },
+      { name: "Track blood glucose level", times: "daily" },
+      { name: "Regular weigh-ins", times: "every week" },
     ],
     expiry: 30,
     restrictions: ["Sugar", "Refined carbs"],

@@ -208,7 +208,7 @@ export default function UpcomingAppointmentModal({
                 values={recommendations.exercises.map(
                   (item) =>
                     `${item.name} for ${item.duration} at ${firey.makeString(
-                      item.time
+                      item.times
                     )}.`
                 )}
               />

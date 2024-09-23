@@ -21,7 +21,7 @@ export default function ConnectDevice() {
       </div>
       <ShinnyEfBtn
         className="absolute 2xl:left-12 text-neutral-100 bottom-6 xxs:bottom-10 md:bottom-14 text-xs xxs:text-sm px-5 xs:px-8 py-3 xs:text-lg  gradient-border-green rounded-3xl z-10 backdrop-blur-[20px]"
-        onClick={() => router.push("/patient/analytics")}
+        onClick={() => router.push("/patient/monitoring")}
       >
         connect device
       </ShinnyEfBtn>
